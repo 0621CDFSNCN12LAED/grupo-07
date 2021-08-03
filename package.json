@@ -1,0 +1,22 @@
+{
+  "name": "grupo-07",
+  "version": "1.0.0",
+  "description": "HAMPI YURA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0621CDFSNCN12LAED/grupo-07.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0621CDFSNCN12LAED/grupo-07/issues"
+  },
+  "homepage": "https://github.com/0621CDFSNCN12LAED/grupo-07#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
