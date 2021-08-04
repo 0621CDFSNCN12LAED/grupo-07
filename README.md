@@ -25,3 +25,7 @@ https://www.urbanoutfitters.com/beauty-products - por el diseño en 3 secciones 
 https://uniquenaturalcosmetics.com/ - filosofía y estética similar a nuestro producto
 https://naturalmentemediterraneo.es/ - carrito de 
 https://www.freshlycosmetics.com/es/ - sección de valores y filosofía
+
+
+Tablero Trello:
+https://trello.com/b/d6lblv3l/digital-house-grupo7
