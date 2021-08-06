@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px;
+  margin: 0 auto;
+}
+
+#main-content {
+  padding: 5%;
+}
+
+.logo-hy {
+  width: 100px;
+}
+
+.icon-burger {
+  font-size: 24px;
+  color: whitesmoke;
+}
+
+.fa-smile {
+  font-size: 24px;
+  color: whitesmoke;
+}
+
+.secciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 16px;
+  margin: 0 auto;
+}
+
+.frases-home {
+  font-size: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.fa-pagelines,
+.fa-air-freshener,
+.fa-globe-americas {
+  font-size: 24px;
+}
+.valores {
+  padding: 5%;
+}
+
+article {
+  margin-bottom: 16px;
+}
+
+.box-shadow {
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.filosofia {
+  margin-top: 16px;
+}
+
+.boton-filo {
+  font-size: 14px;
+  color: white;
+  background-color: #84c3c3;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin: auto;
+  border: #84c3c3;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px;
+}
+.fa-instagram {
+  font-size: 24px;
+  color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px;
+}
+
+/*colores de background*/
+.bg-blanco {
+  background-color: whitesmoke;
+}
+
+.bg-todo-oscuro {
+  background-color: #422613;
+}
+.bg-todo-medio {
+  background-color: #dd9859;
+}
+.bg-todo-claro {
+  background-color: #f2c59f;
+}
+
+.bg-cuidadopiel-claro {
+  background-color: #daa4a1;
+}
+
+.bg-cuidadopiel-oscuro {
+  background-color: #a67d7e;
+}
+
+.bg-medicina-oscuro {
+  background-color: #3d5f2b;
+}
+
+.bg-medicina-claro {
+  background-color: #477c34;
+}
+
+.bg-higiene-claro {
+  background-color: #84c3c3;
+}
+
+.bg-higiene-oscuro {
+  background-color: #0a4c4c;
+}
+
+/*colores de texto*/
+.tx-blanco {
+  color: whitesmoke;
+}
+
+.tx-todo-oscuro {
+  color: #422613;
+}
+.tx-todo-medio {
+  color: #dd9859;
+}
+.tx-todo-claro {
+  color: #f2c59f;
+}
+
+.tx-cuidadopiel-claro {
+  color: #daa4a1;
+}
+
+.tx-cuidadopiel-oscuro {
+  color: #a67d7e;
+}
+
+.tx-medicina-oscuro {
+  color: #3d5f2b;
+}
+
+.tx-medicina-claro {
+  color: #477c34;
+}
+
+.tx-higiene-claro {
+  color: #84c3c3;
+}
+
+.tx-higiene-oscuro {
+  color: #0a4c4c;
+}
+
+h2 {
+  font-size: 22px;
+}
