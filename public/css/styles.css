@@ -15,10 +15,6 @@ header {
   margin: 0 auto;
 }
 
-#main-content {
-  padding: 5%;
-}
-
 .logo-hy {
   width: 100px;
 }
@@ -33,9 +29,14 @@ header {
   color: whitesmoke;
 }
 
-.secciones {
+#main-content {
+  padding: 5%;
+}
+
+.tres-bloques {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   padding-bottom: 16px;
