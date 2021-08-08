@@ -1,0 +1,10 @@
+/* Detalle de producto */
+.otros-productos{
+  width: 40%;
+}
+
+.product-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+

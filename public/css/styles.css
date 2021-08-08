@@ -16,11 +16,7 @@ header {
 }
 
 #main-content {
-<<<<<<< HEAD
   padding: 0%;
-=======
-    padding: 5%;
->>>>>>> 3c1ba10291cd0d299ed8cf075a6950133796cefb
 }
 
 .logo-hy {
@@ -105,7 +101,6 @@ footer {
 }
 
 /* Detalle de producto */
-<<<<<<< HEAD
 .detalle-producto{
   margin: 0 auto;
   border-bottom: solid 1px #daa4a1;
@@ -138,32 +133,6 @@ footer {
   border-radius: 5px;
   text-align: center;
   margin-top: 15px;
-=======
-.otros-productos {
-    margin: auto;
-    width: 70%;
-    padding-bottom: 10%;
-}
-
-.boton-cantidad {
-    width: 50%;
-    border: 1px solid white;
-    text-align: center;
-    padding: 10px;
-}
-
-.boton-añadir {
-    width: 70%;
-    font-size: 14px;
-    color: rgb(77, 68, 68);
-    background-color: #daa4a1;
-    border: 1px solid white;
-    display: block;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 15px;
->>>>>>> 3c1ba10291cd0d299ed8cf075a6950133796cefb
 }
 
 /*colores de background*/
