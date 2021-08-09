@@ -116,8 +116,9 @@ footer {
 }
 
 .boton-cantidad{
-  width: 50%;
-  border: 1px solid white;
+  width: 60%;
+  border: 1px solid #f2c59f;
+  background-color: #f2c59f;
   text-align: center;
   padding: 5px;
 }
@@ -133,6 +134,72 @@ footer {
   border-radius: 5px;
   text-align: center;
   margin-top: 15px;
+}
+
+/*carrito de compra*/
+
+.producto-compra{
+    position: relative;
+}
+
+.producto-imagen{
+    width: 50%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.producto-detalle{
+    position: absolute;
+    top: 1%;
+    left: 60%;
+}
+
+.boton-finalizar{
+    width: 60%;
+    background-color: #dd9859;
+    font-weight: bold;
+    border-style: none;
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
+    margin-left: 20%;
+    margin-bottom: 15%;
+}
+
+.boton-eliminar{
+    width: 60%;
+    background-color: white;
+    color: #a67d7e;
+    border-style: none;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.parrafo-nota{
+    text-align: center;
+    font-weight: bold;
+    color: #a67d7e;
+    font-size: 14px;
+}
+
+#nota{
+    width: 90%;
+    height: 100px;
+    margin: 5% 5%;
+    border: solid 2px #a67d7e;
+}
+
+/* register */
+
+.register-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.register-input {
+    max-width: 100%;
 }
 
 /*colores de background*/
@@ -217,14 +284,4 @@ h2 {
     font-size: 22px;
 }
 
-/* register */
 
-.register-form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-around;
-}
-.register-input {
-    max-width: 100%;
-}

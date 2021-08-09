@@ -8,3 +8,8 @@
     flex-wrap: wrap;
 }
 
+/* Carrito de compras */
+.boton-finalizar{
+  width: 40%;
+  margin-left: 30%;
+}
