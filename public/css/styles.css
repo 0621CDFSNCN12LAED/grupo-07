@@ -16,7 +16,7 @@ header {
 }
 
 #main-content {
-  padding: 0%;
+    padding: 0%;
 }
 
 .logo-hy {
@@ -101,38 +101,38 @@ footer {
 }
 
 /* Detalle de producto */
-.detalle-producto{
-  margin: 0 auto;
-  border-bottom: solid 1px #daa4a1;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
+.detalle-producto {
+    margin: 0 auto;
+    border-bottom: solid 1px #daa4a1;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
-.otros-productos{
-  margin:auto;
-  width: 80%;
-  padding-bottom: 5%;
-  margin-bottom: 10px;
+.otros-productos {
+    margin: auto;
+    width: 80%;
+    padding-bottom: 5%;
+    margin-bottom: 10px;
 }
 
-.boton-cantidad{
-  width: 50%;
-  border: 1px solid white;
-  text-align: center;
-  padding: 5px;
+.boton-cantidad {
+    width: 50%;
+    border: 1px solid white;
+    text-align: center;
+    padding: 5px;
 }
 
-.boton-añadir{
-  width: 70%;
-  font-size: 14px;
-  color: rgb(77, 68, 68);
-  background-color: #daa4a1;
-  border: 1px solid white;
-  display: block;
-  padding: 5px;
-  border-radius: 5px;
-  text-align: center;
-  margin-top: 15px;
+.boton-añadir {
+    width: 70%;
+    font-size: 14px;
+    color: rgb(77, 68, 68);
+    background-color: #daa4a1;
+    border: 1px solid white;
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 15px;
 }
 
 /*colores de background*/
@@ -227,4 +227,10 @@ h2 {
 }
 .register-input {
     max-width: 100%;
+}
+.register-he_leido {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    padding: 15px;
 }

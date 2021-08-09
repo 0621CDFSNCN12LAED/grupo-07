@@ -21,24 +21,35 @@
         <main id="main-content">
             <section class="main_form">
                 <div>
-                    <form class="register-form" action="action">
+                    <form
+                        class="register-form"
+                        action="/ruta-form"
+                        method="POST"
+                    >
                         <div>
                             <h2>Iniciar sesion</h2>
                         </div>
-                        <label for="email">Direccion de email</label>
-                        <input
-                            class="register-input"
-                            type="text"
-                            id="email"
-                            name="email"
-                        />
-                        <label for="password">Contrasenia</label>
-                        <input
-                            class="register-input"
-                            type="text"
-                            id="password"
-                            name="password"
-                        />
+
+                        <div>
+                            <label for="email">Direccion de email</label><br />
+                            <input
+                                class="register-input"
+                                type="text"
+                                id="email"
+                                name="email"
+                            />
+                        </div>
+
+                        <div>
+                            <label for="password">Contrasenia</label><br />
+                            <input
+                                class="register-input"
+                                type="text"
+                                id="password"
+                                name="password"
+                            />
+                        </div>
+
                         <button class="boton-filo">Iniciar sesion</button>
                         <div>
                             <p>Aun no tenes una cuenta? Crear una</p>
