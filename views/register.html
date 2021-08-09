@@ -21,40 +21,56 @@
         <main id="main-content">
             <section class="main_form">
                 <div>
-                    <form class="register-form" action="action">
+                    <form
+                        class="register-form"
+                        action="/ruta-form"
+                        method="POST"
+                    >
                         <div>
                             <h2>Registrar</h2>
                         </div>
-                        <label for="fname">Nombre</label>
-                        <input
-                            class="register-input"
-                            type="text"
-                            id="fname"
-                            name="fname"
-                        />
-                        <label for="lname">Apellido</label>
-                        <input
-                            class="register-input"
-                            type="text"
-                            id="lname"
-                            name="lname"
-                        />
-                        <label for="email">Direccion de email</label>
-                        <input
-                            class="register-input"
-                            type="text"
-                            id="email"
-                            name="email"
-                        />
+
                         <div>
-                            <p>
+                            <label for="fname">Nombre</label><br />
+                            <input
+                                class="register-input"
+                                type="text"
+                                id="fname"
+                                name="fname"
+                            />
+                        </div>
+
+                        <div>
+                            <label for="lname">Apellido</label><br />
+                            <input
+                                class="register-input"
+                                type="text"
+                                id="lname"
+                                name="lname"
+                            />
+                        </div>
+
+                        <div>
+                            <label for="email">Direccion de email</label><br />
+                            <input
+                                class="register-input"
+                                type="text"
+                                id="email"
+                                name="email"
+                            />
+                        </div>
+
+                        <div>
+                            <p class="register-he_leido">
+                                <input type="checkbox" value="1" />
                                 He leido y acepto el tratamiento de mis datos
                                 explicado en la politica de privacidad y en los
                                 terminos y condiciones
                             </p>
                         </div>
-
-                        <button class="boton-filo">Crear cuenta</button>
+                        <div>
+                            <button class="boton-filo">Crear cuenta</button>
+                        </div>
                     </form>
                 </div>
             </section>
