@@ -1,0 +1,22 @@
+.icon-burger {
+  display: none;
+}
+
+/* Detalle de producto */
+.otros-productos {
+  width: 20%;
+}
+
+.product-wrapper {
+  width: 25%;
+}
+
+.selec-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.selec-wrapper {
+  width: 30%;
+}

@@ -1,19 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Register</title>
+        <link rel="stylesheet" href="\css\styles.css" />
+        <link rel="stylesheet" href="\css\normalize.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="\css\styles.css">
-    <link rel="stylesheet" href="\css\normalize.css">
-</head>
+    <body class="body">
+        <header class="bg-higiene-oscuro">
+            <a href="#" class="icon-burger">
+                <i class="fas fa-bars"></i>
+            </a>
+            <img class="logo-hy" src="/img/logo1.png" alt="Logo Hampi Yura" />
+            <i class="far fa-smile"></i>
+        </header>
 
-<body>
+        <main id="main-content">
+            <section class="main_form">
+                <div>
+                    <form
+                        class="register-form"
+                        action="/ruta-form"
+                        method="POST"
+                    >
+                        <div>
+                            <h2>Registrar</h2>
+                        </div>
 
-    Texto de prueba
+                        <div>
+                            <label for="fname">Nombre</label><br />
+                            <input
+                                class="register-input"
+                                type="text"
+                                id="fname"
+                                name="fname"
+                            />
+                        </div>
 
-</body>
+                        <div>
+                            <label for="lname">Apellido</label><br />
+                            <input
+                                class="register-input"
+                                type="text"
+                                id="lname"
+                                name="lname"
+                            />
+                        </div>
 
+                        <div>
+                            <label for="email">Direccion de email</label><br />
+                            <input
+                                class="register-input"
+                                type="text"
+                                id="email"
+                                name="email"
+                            />
+                        </div>
+
+                        <div>
+                            <p class="register-he_leido">
+                                <input type="checkbox" value="1" />
+                                He leido y acepto el tratamiento de mis datos
+                                explicado en la politica de privacidad y en los
+                                terminos y condiciones
+                            </p>
+                        </div>
+                        <div>
+                            <button class="boton-filo">Crear cuenta</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-higiene-oscuro">
+            <i class="fab fa-instagram"></i>
+            <img class="logo-hy" src="/img/logo1.png" alt="Logo Hampi Yura" />
+            <p class="tx-blanco">Contactanos</p>
+        </footer>
+    </body>
 </html>
