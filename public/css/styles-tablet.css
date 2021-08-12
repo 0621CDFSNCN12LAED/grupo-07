@@ -31,17 +31,46 @@
 }
 
 /* Detalle de producto */
-.otros-productos{
+.otros-productos {
   width: 40%;
 }
 
-.product-wrapper{
-    display: flex;
-    flex-wrap: wrap;
+.product-wrapper {
+  width: 50%;
 }
 
 /* Carrito de compras */
-.boton-finalizar{
+.boton-finalizar {
   width: 40%;
   margin-left: 30%;
+}
+
+/*valores*/
+
+.valores-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.valores-wrapper {
+  position: relative;
+}
+
+.valores p {
+  text-align: center;
+}
+
+.valores i {
+  position: absolute;
+}
+
+/*Filosofía Humpi*/
+
+.filo-wrapper {
+  width: 50%;
+}
+
+.boton-filo {
+  position: absolute;
 }
