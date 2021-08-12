@@ -33,6 +33,10 @@ header {
     color: whitesmoke;
 }
 
+.main-nav{
+    display:none;
+}
+
 .secciones {
     display: flex;
     flex-wrap: wrap;
@@ -115,20 +119,11 @@ footer {
     margin-bottom: 10px;
 }
 
-<<<<<<< HEAD
-.boton-cantidad{
-  width: 60%;
-  border: 1px solid #f2c59f;
-  background-color: #f2c59f;
-  text-align: center;
-  padding: 5px;
-=======
 .boton-cantidad {
     width: 50%;
     border: 1px solid white;
     text-align: center;
     padding: 5px;
->>>>>>> 7d98668c1dd0dfe448162b7ccd419fbf4eff64bd
 }
 
 .boton-añadir {
@@ -293,8 +288,6 @@ h2 {
 }
 
 
-<<<<<<< HEAD
-=======
 .register-form {
     display: flex;
     align-items: center;
@@ -310,4 +303,3 @@ h2 {
     margin: auto;
     padding: 15px;
 }
->>>>>>> 7d98668c1dd0dfe448162b7ccd419fbf4eff64bd

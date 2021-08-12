@@ -1,3 +1,35 @@
+/* header */
+.icon-burger{
+  display: none;
+}
+
+#main-nav{
+  display:flex;
+  justify-content: space-between;
+  margin-right: 7%;
+}
+
+#main-nav ul{
+  display: flex;
+}
+
+#main-nav li{
+  margin: 0% 20px;
+  font-size: 14px;
+  list-style: none;
+  font-weight: bold;
+}
+
+#main-nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+#main-nav a :hover{
+  background-color: black;
+  text-decoration: underline;
+}
+
 /* Detalle de producto */
 .otros-productos{
   width: 40%;
