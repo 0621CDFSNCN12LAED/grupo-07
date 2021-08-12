@@ -7,6 +7,17 @@
   width: 20%;
 }
 
+.img-pd{
+  width: 80%;
+  margin: auto;
+}
+
+.texto-pd{
+  width: 70%;
+  margin: auto;
+}
+
+/* Barbi */
 .selec-flex {
   display: flex;
   flex-wrap: wrap;
