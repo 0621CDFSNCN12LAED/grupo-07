@@ -5,8 +5,6 @@
 
 #main-nav{
   display:flex;
-  justify-content: space-between;
-  margin-right: 7%;
 }
 
 #main-nav ul{
@@ -14,7 +12,9 @@
 }
 
 #main-nav li{
-  margin: 0% 20px;
+  margin: auto;
+  width: 100px;
+  text-align: center;
   font-size: 14px;
   list-style: none;
   font-weight: bold;
@@ -25,28 +25,24 @@
   color: white;
 }
 
-#main-nav a :hover{
-  background-color: black;
-  text-decoration: underline;
+a:hover{
+  background-color: #3d5f2b;
+  opacity: 0.3;
 }
 
 /* Detalle de producto */
 .otros-productos {
   width: 40%;
+  margin: auto;
+  margin-bottom: 10px;
 }
 
 .product-wrapper {
-  width: 50%;
+  width: 100%;
 }
 
-/* Carrito de compras */
-.boton-finalizar {
-  width: 40%;
-  margin-left: 30%;
-}
 
-/*valores*/
-
+/* Barbi */
 .valores-flex {
   display: flex;
   flex-wrap: wrap;
@@ -65,7 +61,7 @@
   position: absolute;
 }
 
-/*Filosofía Humpi*/
+/* Filosofia Hampi */
 
 .filo-wrapper {
   width: 50%;

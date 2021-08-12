@@ -7,10 +7,6 @@
   width: 20%;
 }
 
-.product-wrapper {
-  width: 25%;
-}
-
 .selec-flex {
   display: flex;
   flex-wrap: wrap;
