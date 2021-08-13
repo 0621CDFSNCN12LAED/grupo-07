@@ -30,6 +30,10 @@ header {
     color: whitesmoke;
 }
 
+#main-nav {
+    display: none;
+}
+
 .secciones {
     display: flex;
     flex-wrap: wrap;
@@ -131,15 +135,23 @@ footer {
     margin-bottom: 10px;
 }
 
-.boton-cantidad {
+.product-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.boton-cantidad-product {
     width: 50%;
     border: 1px solid white;
     text-align: center;
     padding: 5px;
+    margin-left: 25%;
 }
 
 .boton-añadir {
-    width: 70%;
+    width: 50%;
+    margin-left: 25%;
     font-size: 14px;
     color: rgb(77, 68, 68);
     background-color: #daa4a1;
@@ -151,7 +163,7 @@ footer {
     margin-top: 15px;
 }
 
-/*carrito de compra*/
+/* carrito de compras */
 
 .producto-compra {
     position: relative;
@@ -167,6 +179,13 @@ footer {
     position: absolute;
     top: 1%;
     left: 60%;
+}
+.boton-cantidad-cart {
+    width: 50%;
+    border: 1px solid white;
+    text-align: center;
+    padding: 5px;
+    margin-left: 0%;
 }
 
 .boton-finalizar {
@@ -196,6 +215,7 @@ footer {
     font-weight: bold;
     color: #a67d7e;
     font-size: 14px;
+    padding: 1%;
 }
 
 #nota {
@@ -205,7 +225,8 @@ footer {
     border: solid 2px #a67d7e;
 }
 
-/*colores de background*/
+/* colores de background */
+
 .bg-blanco {
     background-color: whitesmoke;
 }
@@ -244,7 +265,8 @@ footer {
     background-color: #0a4c4c;
 }
 
-/*colores de texto*/
+/* colores de texto */
+
 .tx-blanco {
     color: whitesmoke;
 }
