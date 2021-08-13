@@ -122,7 +122,8 @@ footer {
 
 /* Detalle de producto */
 .detalle-producto {
-  margin: 0 auto;
+  width: 80%;
+  margin: 5% auto;
   border-bottom: solid 1px #daa4a1;
   margin-bottom: 10px;
   padding-bottom: 10px;
