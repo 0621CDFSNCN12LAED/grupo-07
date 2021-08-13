@@ -30,36 +30,60 @@
                             <h2>Registrar</h2>
                         </div>
 
-                        <div>
-                            <label for="fname">Nombre</label><br />
-                            <input
-                                class="register-input"
-                                type="text"
-                                id="fname"
-                                name="fname"
-                            />
+                        <div class="form-input">
+                            <label class="main-label" for="name"
+                                >Nombre y apellido</label
+                            >
+                            <input id="name" type="text" name="name" />
+                            <p class="required-message">campo obligatorio</p>
                         </div>
-
-                        <div>
-                            <label for="lname">Apellido</label><br />
+                        <div class="form-input">
+                            <label class="main-label" for="birthdate"
+                                >Fecha de nacimiento</label
+                            >
                             <input
-                                class="register-input"
-                                type="text"
-                                id="lname"
-                                name="lname"
+                                id="birthdate"
+                                type="date"
+                                name="birthdate"
                             />
+                            <p class="required-message">campo obligatorio</p>
                         </div>
-
-                        <div>
-                            <label for="email">Direccion de email</label><br />
+                        <div class="form-input">
+                            <label class="main-label" for="address"
+                                >Domicilio</label
+                            >
+                            <input id="address" type="text" name="address" />
+                            <p class="required-message">campo obligatorio</p>
+                        </div>
+                        <div class="form-input">
+                            <label class="main-label" for="email"
+                                >Dirección de email</label
+                            >
+                            <input id="email" type="email" name="email" />
+                            <p class="required-message">campo obligatorio</p>
+                        </div>
+                        <div class="form-input">
+                            <label class="main-label" for="pasword"
+                                >Contraseña</label
+                            >
                             <input
-                                class="register-input"
-                                type="text"
-                                id="email"
-                                name="email"
+                                id="password"
+                                type="password"
+                                name="pasword"
                             />
+                            <p class="required-message">campo obligatorio</p>
                         </div>
-
+                        <div class="form-input">
+                            <label class="main-label" for="confirm-pasword"
+                                >Confirmar contraseña</label
+                            >
+                            <input
+                                id="confirm-password"
+                                type="password"
+                                name="confirm-pasword"
+                            />
+                            <p class="required-message">campo obligatorio</p>
+                        </div>
                         <div>
                             <p class="register-he_leido">
                                 <input type="checkbox" value="1" />
@@ -68,8 +92,13 @@
                                 terminos y condiciones
                             </p>
                         </div>
-                        <div>
-                            <button class="boton-filo">Crear cuenta</button>
+                        <div class="register-buttons">
+                            <button class="boton-filo" type="reset">
+                                Borrar
+                            </button>
+                            <button class="boton-filo" type="submit">
+                                Crear cuenta
+                            </button>
                         </div>
                     </form>
                 </div>

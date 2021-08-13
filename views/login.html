@@ -27,32 +27,37 @@
                         method="POST"
                     >
                         <div>
-                            <h2>Iniciar sesion</h2>
+                            <h2>Iniciar sesión</h2>
                         </div>
-
-                        <div>
-                            <label for="email">Direccion de email</label><br />
-                            <input
-                                class="register-input"
-                                type="text"
-                                id="email"
-                                name="email"
-                            />
+                        <div class="form-input">
+                            <label class="main-label" for="email"
+                                >Dirección de email</label
+                            >
+                            <input id="email" type="email" name="email" />
+                            <p class="required-message">campo obligatorio</p>
                         </div>
-
-                        <div>
-                            <label for="password">Contrasenia</label><br />
+                        <div class="form-input">
+                            <label class="main-label" for="pasword"
+                                >Contraseña</label
+                            >
                             <input
-                                class="register-input"
-                                type="text"
                                 id="password"
-                                name="password"
+                                type="password"
+                                name="pasword"
                             />
+                            <p class="required-message">campo obligatorio</p>
                         </div>
 
-                        <button class="boton-filo">Iniciar sesion</button>
+                        <div class="register-buttons">
+                            <button class="boton-filo" type="submit">
+                                Iniciar sesión
+                            </button>
+                        </div>
                         <div>
-                            <p>Aun no tenes una cuenta? Crear una</p>
+                            <p>
+                                Aun no tenes una cuenta?
+                                <a href="#">Crear una</a>
+                            </p>
                         </div>
                     </form>
                 </div>
