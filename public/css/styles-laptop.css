@@ -3,19 +3,43 @@
 }
 
 /* Detalle de producto */
+
+.flex-prod{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-pd{
+  width: 50%;
+}
+
+.texto-pd{
+  width: 50%;
+  padding-left: 10%;
+}
+
 .otros-productos {
   width: 20%;
 }
 
-.img-pd{
-  width: 80%;
-  margin: auto;
+.price{
+    padding-left: 35%;
 }
 
-.texto-pd{
-  width: 70%;
-  margin: auto;
+.prod{
+    padding-left: 25%;
 }
+
+.boton-cantidad-op{
+    display: none;
+}
+
+.boton-añadir-op{
+    width:80%;
+    margin-left: 10%;
+}
+
+
 
 /* Barbi */
 .selec-flex {

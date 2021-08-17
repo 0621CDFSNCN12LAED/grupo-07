@@ -41,6 +41,50 @@ a:hover {
     width: 100%;
 }
 
+.price{
+    width: 20%;
+    padding-left: 15%;
+}
+
+.prod{
+    padding-left: 5%;
+}
+
+.boton-cantidad-op{
+    width: 30%;
+    margin-left: 5%;
+}
+
+.boton-añadir-op{
+    width:50%;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+/* Detalle de compra */
+.producto-detalle {
+    width: 20%;
+}
+
+.prod-cart{
+    font-size: 16px;
+}
+
+.price-cart{
+    font-size: 16px;
+}
+
+.boton-cantidad-cart{
+    width: 90%;
+    padding: 5%;
+}
+
+.boton-eliminar{
+    width: 100%;
+    padding: 5%;
+    font-size: 16px;
+}
+
 /* Barbi */
 .valores-flex {
     display: flex;
