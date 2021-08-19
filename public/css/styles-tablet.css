@@ -31,33 +31,28 @@ a:hover {
 }
 
 /* Detalle de producto */
-.otros-productos {
-    width: 40%;
-    margin: auto;
-    margin-bottom: 10px;
+.contenedor-scroll{
+  padding-bottom: 70px;
 }
 
-.product-wrapper {
-    width: 100%;
+.card{
+    width: 50%;
+    height: 300px;
+    padding: 5%;
 }
 
 .price{
     width: 20%;
-    padding-left: 30%;
+    padding-left: 50%;
 }
 
 .prod{
     padding-left: 5%;
 }
 
-.boton-cantidad-op{
-    width: 30%;
-    margin-left: 5%;
-}
-
 .boton-añadir-op{
     width:50%;
-    margin-left: 10px;
+    margin-left: 25%;
     padding: 5px;
 }
 

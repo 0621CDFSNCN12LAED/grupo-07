@@ -4,6 +4,11 @@
 
 /* Detalle de producto */
 
+.detalle-producto {
+  padding-bottom: 15px;
+    border-bottom: solid 4px #daa4a1;
+}
+
 .flex-prod{
   display: flex;
   flex-wrap: wrap;
@@ -18,12 +23,22 @@
   padding-left: 10%;
 }
 
-.otros-productos {
-  width: 20%;
+.contenedor-scroll{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 0px;
+  padding-left: 30px;
+}
+
+.card{
+    width: 25%;
+    height: auto;
+    padding-left: 5px;
 }
 
 .price{
-    padding-left: 35%;
+    padding-left: 16%;
 }
 
 .prod{

@@ -135,17 +135,22 @@ footer {
     margin-left: 10%;
 }
 
-.otros-productos {
-    margin: auto;
-    width: 90%;
-    padding-bottom: 5%;
-    margin-bottom: 10px;
+.contenedor-scroll{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  padding-bottom: 20%;
+  padding-right: 10px;
 }
 
-.product-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.contenedor-scroll .card {
+  flex-shrink: 0;
+}
+
+.card{
+    width: 50%;
+    height: 250px;
+    padding-left: 10px;
 }
 
 .contenedor{
@@ -154,30 +159,33 @@ footer {
 }
 
 .price{
-    padding-left: 41%;
+    padding-left: 35%;
     margin-top: 1%;
     font-weight: bold;
+    font-size: 10px;
 }
 
 .prod{
-    padding-left: 12%;
+    padding-left: 10%;
     margin-top: 1%;
     font-weight: bold;
+    font-size: 10px;
 }
 
 .boton-cantidad-op{
+    display: none;
     width: 30%;
     margin-left: 12%;
     border-style: none;
-    font-size: 12px;
+    font-size: 10px;
     padding: 5px;
     border-radius: 5px;
 }
 
 .boton-añadir-op{
-    width:50%;
-    margin-left: 10px;
-    font-size: 12px;
+    width:80%;
+    margin-left: 15px;
+    font-size: 10px;
     border-style: none;
     color: white;
     background-color:#a67d7e;
