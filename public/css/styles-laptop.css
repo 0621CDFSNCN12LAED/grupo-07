@@ -1,68 +1,78 @@
 .icon-burger {
-  display: none;
+    display: none;
 }
 
 /* Detalle de producto */
 
 .detalle-producto {
-  padding-bottom: 15px;
+    padding-bottom: 15px;
     border-bottom: solid 4px #daa4a1;
 }
 
-.flex-prod{
-  display: flex;
-  flex-wrap: wrap;
+.flex-prod {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.img-pd{
-  width: 50%;
+.img-pd {
+    width: 50%;
 }
 
-.texto-pd{
-  width: 50%;
-  padding-left: 10%;
+.texto-pd {
+    width: 50%;
+    padding-left: 10%;
 }
 
-.contenedor-scroll{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding-bottom: 0px;
-  padding-left: 30px;
+.contenedor-scroll {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 0px;
+    padding-left: 30px;
 }
 
-.card{
+.card {
     width: 25%;
     height: auto;
     padding-left: 5px;
 }
 
-.price{
+.price {
     padding-left: 16%;
 }
 
-.prod{
+.prod {
     padding-left: 10%;
 }
 
-.boton-cantidad-op{
+.boton-cantidad-op {
     display: none;
 }
 
-.boton-añadir-op{
-    width:80%;
+.boton-añadir-op {
+    width: 80%;
     margin-left: 10%;
 }
 
-
-
 /* Barbi */
 .selec-flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .selec-wrapper {
-  width: 30%;
+    width: 30%;
+}
+
+/* Forms */
+
+.form-input input {
+    width: 40%;
+    border: solid rgb(77, 68, 68) 1px;
+}
+.register-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
 }

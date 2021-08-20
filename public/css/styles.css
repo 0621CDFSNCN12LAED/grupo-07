@@ -122,7 +122,7 @@ footer {
 
 /* Detalle de producto */
 
-.texto-pd{
+.texto-pd {
     text-align: center;
     padding: 5%;
 }
@@ -131,48 +131,48 @@ footer {
     border-bottom: solid 4px #daa4a1;
 }
 
-.titulo-otros{
+.titulo-otros {
     margin-left: 10%;
 }
 
-.contenedor-scroll{
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  padding-bottom: 20%;
-  padding-right: 10px;
+.contenedor-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    padding-bottom: 20%;
+    padding-right: 10px;
 }
 
 .contenedor-scroll .card {
-  flex-shrink: 0;
+    flex-shrink: 0;
 }
 
-.card{
+.card {
     width: 50%;
     height: 250px;
     padding-left: 10px;
 }
 
-.contenedor{
+.contenedor {
     display: flex;
     flex-wrap: wrap;
 }
 
-.price{
+.price {
     padding-left: 35%;
     margin-top: 1%;
     font-weight: bold;
     font-size: 10px;
 }
 
-.prod{
+.prod {
     padding-left: 10%;
     margin-top: 1%;
     font-weight: bold;
     font-size: 10px;
 }
 
-.boton-cantidad-op{
+.boton-cantidad-op {
     display: none;
     width: 30%;
     margin-left: 12%;
@@ -182,13 +182,13 @@ footer {
     border-radius: 5px;
 }
 
-.boton-añadir-op{
-    width:80%;
+.boton-añadir-op {
+    width: 80%;
     margin-left: 15px;
     font-size: 10px;
     border-style: none;
     color: white;
-    background-color:#a67d7e;
+    background-color: #a67d7e;
     border-radius: 5px;
     padding: 5px;
     font-weight: bold;
@@ -376,7 +376,7 @@ h2 {
 }
 .main-label {
     padding: 10px 0;
-    text-align: left;
+    text-align: center;
 }
 .form-input {
     width: 70%;
@@ -389,8 +389,8 @@ h2 {
 }
 .form-input input {
     width: 100%;
-    border-radius: 3%;
-    border: solid rgb(77, 68, 68);
+    border: solid rgb(77, 68, 68) 1px;
+    padding: 10px;
 }
 .form-input input[type="checkbox"],
 .form-input input[type="radio"] {
@@ -401,7 +401,7 @@ h2 {
     margin-top: 0;
     color: red;
     font-size: 8px;
-    text-align: left;
+    text-align: center;
 }
 
 .register-he_leido {
@@ -414,4 +414,16 @@ h2 {
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+.boton-form {
+    font-size: 14px;
+    color: white;
+    background-color: #84c3c3;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 16px auto;
+    border: #84c3c3;
 }
