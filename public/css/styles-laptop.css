@@ -34,15 +34,15 @@
 .card {
     width: 25%;
     height: auto;
-    padding-left: 5px;
-}
-
-.price {
-    padding-left: 16%;
+    padding-left: 10px;
 }
 
 .prod {
-    padding-left: 10%;
+    padding-left: 30px;
+}
+
+.price{
+    padding-left: 10px;
 }
 
 .boton-cantidad-op {
