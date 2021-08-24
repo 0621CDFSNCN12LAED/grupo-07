@@ -121,7 +121,6 @@ footer {
 }
 
 /* Detalle de producto */
-
 .texto-pd {
     text-align: center;
     padding: 5%;
@@ -360,6 +359,7 @@ footer {
 
 h2 {
     font-size: 22px;
+    color: #0a4c4c;
 }
 
 /* forms */
