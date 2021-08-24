@@ -382,6 +382,11 @@ h2 {
     width: 70%;
     text-align: center;
 }
+
+.border-radius{
+    border-radius: 5px;
+}
+
 .form-input .main-label {
     display: block;
     font-size: 18px;
