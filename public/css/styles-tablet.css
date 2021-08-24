@@ -1,34 +1,3 @@
-/* header */
-.icon-burger {
-    display: none;
-}
-
-#main-nav {
-    display: flex;
-}
-
-#main-nav ul {
-    display: flex;
-}
-
-#main-nav li {
-    margin: auto;
-    width: 100px;
-    text-align: center;
-    font-size: 14px;
-    list-style: none;
-    font-weight: bold;
-}
-
-#main-nav li a {
-    text-decoration: none;
-    color: white;
-}
-
-a:hover {
-    background-color: #3d5f2b;
-    opacity: 0.3;
-}
 
 /* Detalle de producto */
 .contenedor-scroll {
