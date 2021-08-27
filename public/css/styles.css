@@ -11,6 +11,10 @@ header {
   /*height: 130px;*/
   justify-content: space-around;
   margin: 0 auto;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 24px 24px 0px 24px;
 }
 
 .logo-hy {
@@ -25,6 +29,10 @@ header {
 .fa-smile {
   font-size: 24px;
   color: whitesmoke;
+}
+
+#main-content {
+  margin-top: 220px;
 }
 
 #main-nav {
@@ -68,7 +76,9 @@ header {
 
 .filo-wrapper {
   padding: 16px;
+  /*
   position: relative;
+  */
 }
 
 .contenido-producto {
@@ -82,6 +92,7 @@ article {
 
 .box-shadow {
   box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  border-radius: 8px;
 }
 
 .margin-top {
@@ -366,6 +377,8 @@ h2 {
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
+  background-color: #0a4c4cb6;
+  border-radius: 8px;
 }
 .register-input {
   max-width: 100%;
@@ -379,10 +392,6 @@ h2 {
   text-align: center;
 }
 
-.border-radius {
-  border-radius: 5px;
-}
-
 .form-input .main-label {
   display: block;
   font-size: 18px;
@@ -390,8 +399,8 @@ h2 {
 }
 .form-input input {
   width: 100%;
-  border: solid rgb(77, 68, 68) 1px;
   padding: 10px;
+  border: none;
 }
 .form-input input[type="checkbox"],
 .form-input input[type="radio"] {
@@ -477,4 +486,17 @@ h2 {
 
 .margin-auto {
   margin: auto;
+}
+
+.border-top-8 {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.border-5 {
+  border-radius: 5px;
+}
+
+.border-8 {
+  border-radius: 8px;
 }

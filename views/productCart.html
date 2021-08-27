@@ -1,84 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Carrito de compras</title>
+    <title>Carrito de compras</title>
 
-        <link rel="stylesheet" href="\css\styles.css" />
-        <link
-            rel="stylesheet"
-            href="\css\styles-tablet.css"
-            media="(min-width:480px)"
-        />
-        <link
-            rel="stylesheet"
-            href="\css\styles-laptop.css"
-            media="(min-width:768px)"
-        />
-        <link
-            rel="stylesheet"
-            href="\css\styles-desktop.css"
-            media="(min-width:1280)"
-        />
-        <link rel="stylesheet" href="\css\normalize.css" />
+    <link rel="stylesheet" href="\css\styles.css" />
+    <link
+      rel="stylesheet"
+      href="\css\styles-tablet.css"
+      media="(min-width:480px)"
+    />
+    <link
+      rel="stylesheet"
+      href="\css\styles-laptop.css"
+      media="(min-width:768px)"
+    />
+    <link
+      rel="stylesheet"
+      href="\css\styles-desktop.css"
+      media="(min-width:1280)"
+    />
+    <link rel="stylesheet" href="\css\normalize.css" />
 
-        <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-            rel="stylesheet"
-        />
-    </head>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-    <body>
-        <header class="bg-higiene-oscuro">
-            <a href="#" class="icon-burger">
-                <i class="fas fa-bars"></i>
-            </a>
-            <img class="logo-hy" src="/img/logo1.png" alt="Logo Hampi Yura" />
-            <i class="far fa-smile"></i>
+  <body>
+    <header class="bg-higiene-oscuro flex padding-48">
+      <div class="flex justify-between align-center w-100">
+        <a href="#" class="icon-burger">
+          <i class="fas fa-bars"></i>
+        </a>
+        <a href="/" class="ms-auto-margin">
+          <img class="logo-hy" src="/img/logo1.png" alt="Logo Hampi Yura" />
+        </a>
+        <a href="#" class="ms-hide">
+          <i class="far fa-smile"></i>
+        </a>
+      </div>
 
-            <nav id="main-nav">
-                <ul>
-                    <li><a href="/productos">Productos</a></li>
-                    <li><a href="/fitoterapia">Fitoterapia</a></li>
-                    <li><a href="/filosofia">Filosofia Hampi</a></li>
-                    <li><a href="/contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
+      <nav id="main-nav" class="w-100 flex">
+        <ul class="flex w-70">
+          <li class="margin-auto"><a href="/productos">PRODUCTOS</a></li>
+          <li class="margin-auto"><a href="/fitoterapia">FITOTERAPIA</a></li>
+          <li class="margin-auto"><a href="/filosofia">FILOSOFÍA HAMPI</a></li>
+          <li class="margin-auto"><a href="/contacto">CONTACTO</a></li>
+        </ul>
+        <ul class="flex w-30 justify-end">
+          <li class="margin-0">
+            <a href="/contacto"><i class="fab fa-instagram padding-16"></i></a>
+          </li>
+          <li class="margin-0">
+            <a href="/contacto"><i class="far fa-smile padding-16"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-        <main id="main-content">
-            <section>
-                <article class="producto-compra">
-                    <div class="producto-imagen">
-                        <img src="/img/prod5.jpg" width="100%" />
-                    </div>
+    <main id="main-content">
+      <section>
+        <article class="producto-compra">
+          <div class="producto-imagen">
+            <img src="/img/prod5.jpg" width="100%" />
+          </div>
 
-                    <div class="producto-detalle">
-                        <p class="prod-cart">Producto 1</p>
-                        <p class="price-cart">$12.99</p>
-                        <button class="boton-cantidad-cart">- 1 +</button>
-                        <button class="boton-eliminar">Eliminar</button>
-                    </div>
-                </article>
+          <div class="producto-detalle">
+            <p class="prod-cart">Producto 1</p>
+            <p class="price-cart">$12.99</p>
+            <button class="boton-cantidad-cart">- 1 +</button>
+            <button class="boton-eliminar">Eliminar</button>
+          </div>
+        </article>
 
-                <p class="parrafo-nota">
-                    Añade una dedicatoria o nota para que nuestro equipo lo
-                    tenga en cuenta al momento de preparar tu pedido
-                </p>
-                <form action="/productCart" method="POST">
-                    <label for="nota"></label>
-                    <textarea name="nota" id="nota"></textarea>
-                </form>
-                <button class="boton-finalizar">FINALIZAR COMPRA</button>
-            </section>
-        </main>
-        <footer class="bg-higiene-oscuro">
-            <i class="fab fa-instagram"></i>
-            <img class="logo-hy" src="/img/logo1.png" alt="Logo Hampi Yura" />
-            <p class="tx-blanco">Contactanos</p>
-        </footer>
-    </body>
+        <p class="parrafo-nota">
+          Añade una dedicatoria o nota para que nuestro equipo lo tenga en
+          cuenta al momento de preparar tu pedido
+        </p>
+        <form action="/productCart" method="POST">
+          <label for="nota"></label>
+          <textarea name="nota" id="nota"></textarea>
+        </form>
+        <button class="boton-finalizar">FINALIZAR COMPRA</button>
+      </section>
+    </main>
+    <footer class="bg-higiene-oscuro">
+      <i class="fab fa-instagram"></i>
+      <img class="logo-hy" src="/img/logo1.png" alt="Logo Hampi Yura" />
+      <p class="tx-blanco">Contactanos</p>
+    </footer>
+  </body>
 </html>
