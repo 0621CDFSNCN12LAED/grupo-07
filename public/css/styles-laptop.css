@@ -1,3 +1,7 @@
+.logo-hy {
+  width: 200px;
+}
+
 .icon-burger {
   display: none;
 }
@@ -6,15 +10,15 @@
   display: contents;
 }
 
-
+#main-nav ul {
+  padding-inline-start: 0px;
+  margin-top: 48px;
+}
 
 #main-nav li {
-  margin: auto;
-  width: 100px;
   text-align: center;
   font-size: 14px;
   list-style: none;
-  f
 }
 
 #main-nav li a {
