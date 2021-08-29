@@ -1,0 +1,74 @@
+/* forms */
+
+.register-form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #0a4c4cb6;
+  border-radius: 8px;
+}
+
+.register-input {
+  max-width: 100%;
+}
+
+.main-label {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.form-input {
+  width: 70%;
+  text-align: center;
+}
+
+.form-input .main-label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.form-input input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+}
+
+.form-input input[type="checkbox"],
+.form-input input[type="radio"] {
+  width: auto;
+  margin-bottom: 10px;
+}
+
+.required-message {
+  margin-top: 0;
+  color: red;
+  font-size: 8px;
+  text-align: center;
+}
+
+.register-he_leido {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  padding: 10px 0;
+}
+.register-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.boton-form {
+  font-size: 14px;
+  color: white;
+  background-color: #84c3c3;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 16px auto;
+  border: #84c3c3;
+}
