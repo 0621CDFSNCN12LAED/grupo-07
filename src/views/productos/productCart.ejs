@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--Acá va el head-->
+  <%- include ("../parcials/head.ejs") %>
+
+  <body>
+    <!--Acá va el header-->
+    <%- include ("../parcials/header.ejs") %>
+
+    <main id="main-content">
+      <section>
+        <article class="producto-compra">
+          <div class="producto-imagen">
+            <img src="/img/prod5.jpg" width="100%" />
+          </div>
+
+          <div class="producto-detalle">
+            <p class="prod-cart">Producto 1</p>
+            <p class="price-cart">$12.99</p>
+            <button class="boton-cantidad-cart">- 1 +</button>
+            <button class="boton-eliminar">Eliminar</button>
+          </div>
+        </article>
+
+        <p class="parrafo-nota">
+          Añade una dedicatoria o nota para que nuestro equipo lo tenga en
+          cuenta al momento de preparar tu pedido
+        </p>
+        <form action="/productCart" method="POST">
+          <label for="nota"></label>
+          <textarea name="nota" id="nota"></textarea>
+        </form>
+        <button class="boton-finalizar">FINALIZAR COMPRA</button>
+      </section>
+    </main>
+    <!--Acá va el footer-->
+    <%- include ("../parcials/footer.ejs") %>
+  </body>
+</html>
