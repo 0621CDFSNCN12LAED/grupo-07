@@ -1,0 +1,84 @@
+/* colores de background */
+
+.bg-blanco {
+  background-color: whitesmoke;
+}
+
+.bg-todo-oscuro {
+  background-color: #422613;
+}
+.bg-todo-medio {
+  background-color: #dd9859;
+}
+.bg-todo-claro {
+  background-color: #f2c59f;
+}
+
+.bg-cuidadopiel-claro {
+  background-color: #daa4a1;
+}
+
+.bg-cuidadopiel-oscuro {
+  background-color: #a67d7e;
+}
+
+.bg-medicina-oscuro {
+  background-color: #3d5f2b;
+}
+
+.bg-medicina-claro {
+  background-color: #477c34;
+}
+
+.bg-higiene-claro {
+  background-color: #84c3c3;
+}
+
+.bg-higiene-oscuro {
+  background-color: #0a4c4c;
+}
+
+/* colores de texto */
+
+.tx-blanco {
+  color: whitesmoke;
+}
+
+.tx-todo-oscuro {
+  color: #422613;
+}
+.tx-todo-medio {
+  color: #dd9859;
+}
+.tx-todo-claro {
+  color: #f2c59f;
+}
+
+.tx-cuidadopiel-claro {
+  color: #daa4a1;
+}
+
+.tx-cuidadopiel-oscuro {
+  color: #a67d7e;
+}
+
+.tx-medicina-oscuro {
+  color: #3d5f2b;
+}
+
+.tx-medicina-claro {
+  color: #477c34;
+}
+
+.tx-higiene-claro {
+  color: #84c3c3;
+}
+
+.tx-higiene-oscuro {
+  color: #0a4c4c;
+}
+
+h2 {
+  font-size: 22px;
+  color: #0a4c4c;
+}

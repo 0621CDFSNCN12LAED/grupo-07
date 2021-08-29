@@ -18,6 +18,7 @@ app.use("/productos", rutasProductos);
 app.use("/", rutasMain);
 
 // Servidor
+app.set("views", "./src/views");
 
 app.listen(3000, () => {
     console.log("servidor en puerto 3000");
