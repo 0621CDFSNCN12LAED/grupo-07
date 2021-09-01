@@ -19,7 +19,7 @@ header {
   position: fixed;
   top: 0px;
   width: 100%;
-  padding: 24px 24px 0px 24px;
+  padding: 24px 24px 24px 24px;
 }
 
 .logo-hy {
@@ -37,7 +37,7 @@ header {
 }
 
 #main-content {
-  margin-top: 200px;
+  margin-top: 150px;
 }
 
 #main-nav {

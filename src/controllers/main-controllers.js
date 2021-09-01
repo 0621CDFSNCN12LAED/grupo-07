@@ -2,29 +2,41 @@ module.exports= {
     index: (req, res) => {
         res.render("index");
     },
+
+    // users
     login: (req, res) => {
-        res.render("login");
+        res.render("users/login");
     },
     register: (req, res) => {
-        res.render("register");
+        res.render("users/register");
     },
+    contacto: (req, res) => {
+        res.render("users/contacto");
+    },
+
+    // products
     productDetail: (req, res) => {
-        res.render("productDetail");
+        res.render("products/productDetail");
     },
     productCart: (req, res) => {
-        res.render("productCart");
+        res.render("products/productCart");
     },
     productForm: (req, res) => {
-        res.render("productForm");
+        res.render("products/productForm");
     },
     productos: (req, res) => {
-        res.render("productos");
+        res.render("products/productos");
     },  
     fitoterapia: (req, res) => {
-        res.render("fitoterapia");
+        res.render("products/fitoterapia");
     },
+
+    // otras
     infoplantas: (req, res) => {
         res.render("infoplantas");
+    },
+    filosofia: (req, res) => {
+        res.render("filosofia");
     },
 }
     

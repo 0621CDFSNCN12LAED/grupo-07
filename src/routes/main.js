@@ -12,5 +12,6 @@ router.get("/productos", mainController.productos);
 router.get("/productForm", mainController.productForm);
 router.get("/fitoterapia", mainController.fitoterapia);
 router.get("/infoplantas", mainController.infoplantas);
+router.get("/contacto", mainController.contacto);
 
 module.exports = router;
