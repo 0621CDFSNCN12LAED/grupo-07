@@ -22,7 +22,7 @@ const productService = {
     });
   },
 
-  findOnebyId(id) {
+  findOneById(id) {
     const product = products.find((product) => {
       return product.id == id;
     });

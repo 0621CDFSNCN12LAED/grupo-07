@@ -1,11 +1,13 @@
+/****media=min-width:1280px + *****/
+
 /* Forms */
 
 .form-input input {
-    width: 30%;
-    border: solid rgb(77, 68, 68) 1px;
+  width: 30%;
+  border: solid rgb(77, 68, 68) 1px;
 }
 .register-buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 30%;
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
 }

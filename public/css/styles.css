@@ -37,7 +37,7 @@ header {
 }
 
 #main-content {
-  margin-top: 150px;
+  margin-top: 160px;
 }
 
 #main-nav {
@@ -104,11 +104,8 @@ article {
 }
 
 footer {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  padding: 16px;
 }
 
 .fa-instagram {
