@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "name": "Shampoo sólido - cabello graso",
+    "price": 600,
+    "desription": "Sahmpoo sólido para cabello graso",
+    "category": "Higiene",
+    "image": "shampoo-graso.jpg",
+    "delete": true
+  },
+  {
+    "id": 2,
+    "name": "Shampoo sólido - cabello seco",
+    "price": 600,
+    "desription": "Sahmpoo sólido para cabello seco",
+    "category": "Higiene",
+    "image": "shampoo-seco.jpg",
+    "delete": false
+  },
+  {
+    "id": 3,
+    "name": "Shampoo sólido - cabello con rulos",
+    "price": 600,
+    "desription": "Sahmpoo sólido para cabello con rulos",
+    "category": "Higiene",
+    "image": "shampoo-rulos.jpg",
+    "delete": false
+  },
+  {
+    "id": 4,
+    "name": "Pasta dental",
+    "price": 300,
+    "desription": "Pasta dental para que tengas lo mejores dientes",
+    "category": "Higiene",
+    "image": "pasta-dental.png",
+    "delete": false
+  },
+  {
+    "id": 6,
+    "name": "Crema post solar",
+    "price": 1200,
+    "desription": "Crema post solar",
+    "category": "Belleza",
+    "image": "pasta-dental.png",
+    "delete": false
+  },
+  {
+    "id": 7,
+    "name": "Protectos solar facial",
+    "price": 1000,
+    "desription": "Cuidá tu cara con este increíble protector",
+    "category": "Belleza",
+    "image": "pasta-dental.png",
+    "delete": false
+  },
+  {
+    "id": 8,
+    "name": "Crema humectante - día",
+    "price": 900,
+    "desription": "Crema humectante para el día",
+    "category": "Belleza",
+    "image": "crema-humectante-dia.png",
+    "delete": false
+  },
+  {
+    "id": 9,
+    "name": "Crema humectante - noche",
+    "price": 900,
+    "desription": "Crema humectante para la noche",
+    "category": "Belleza",
+    "image": "pasta-dental.png",
+    "delete": false
+  },
+  {
+    "id": 10,
+    "name": "Cannabis microdosis",
+    "price": 1500,
+    "desription": "Tintura madre",
+    "category": "Medicina",
+    "image": "cannabis.png",
+    "delete": false
+  }
+]
