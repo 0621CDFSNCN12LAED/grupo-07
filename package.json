@@ -4,7 +4,7 @@
   "description": "HAMPI YURA",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon src/app.js"
+    "start": "nodemon -e js src/app.js"
   },
   "repository": {
     "type": "git",

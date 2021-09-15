@@ -27,7 +27,7 @@ app.use("/", rutasMain);
 app.use("/products", rutasProducts);
 
 //Error
-//app.use((req, res, next) => next(createError(404)));
+app.use((req, res, next) => next(createError(404)));
 
 // Servidor //
 app.listen(3000, () => {

@@ -17,6 +17,7 @@ const controller = {
       res.render("productDetail", { product });
     } else {
       //error
+      res.send("Qué rompimo'?");
     }
   },
 
@@ -39,14 +40,14 @@ const controller = {
   // Update - Method to update
   update: (req, res) => {
     productService.editOne(req.params.id, req.body, req.file);
-    res.redirect("/products");
+    res.redirect("/products/");
   },
 
   // Delete - Delete one product from DB
   destroy: (req, res) => {
     productService.destroyOne(req.params.id);
 
-    res.redirect("products");
+    res.redirect("/products");
   },
 
   productCart: (req, res) => {

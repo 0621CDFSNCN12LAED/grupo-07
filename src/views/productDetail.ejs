@@ -31,9 +31,10 @@
                 </article>
 
                 <button class="boton-cantidad-product">- 1 +</button>
-                <button class="boton-añadir">Añadir al carrito</button>
-                <button class="boton-añadir">Editar</button>
-                <button class="boton-añadir">Eliminar</button>
+                <button class="boton-añadir"><a href= "#" >Añadir al carrito</a></button>
+                <button class="boton-añadir"><a href="/products/<%= product.id %>/edit">Editar</a></button>
+                <form action="/products/<%= product.id %>?_method=DELETE" method="POST" >
+                <button type="submit" class="boton-añadir">ELIMINAR</button></form>
 
 
 
