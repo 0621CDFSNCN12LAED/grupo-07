@@ -29,6 +29,7 @@ const productService = {
         return product;
     },
 
+<<<<<<< HEAD
     createOne(payload, image) {
         const lastProduct = products[products.length - 1];
         const biggestProductId = products.length > 0 ? lastProduct.id : 1;
@@ -58,6 +59,37 @@ const productService = {
         product.deleted = true;
         this.save();
     },
+=======
+  createOne(payload, image) {
+    const lastProduct = products[products.length - 1];
+    const biggestProductId = products.length > 0 ? lastProduct.id : 1;
+    const product = {
+      ...payload,
+      id: biggestProductId + 1,
+      price: Number(payload.price),
+      image: image ? image.filename : "default-image.png",
+      delete: false,
+    };
+    products.push(product);
+    this.save();
+  },
+
+  editOne(id, payload, image) {
+    const product = this.findOneById(id);
+    product.name = payload.name;
+    product.price = Number(payload.price);
+    product.discount = Number(payload.discount);
+    product.category = payload.category;
+    product.description = payload.description;
+    product.image = image ? image.filename : product.image;
+    this.save();
+  },
+  destroyOne(id) {
+    const product = this.findOneById(id);
+    product.deleted = true;
+    this.save();
+  },
+>>>>>>> c791fad6753d97e6933e91c458b199a21b13523f
 
     save() {
         const jsonString = JSON.stringify(products, null, 4);

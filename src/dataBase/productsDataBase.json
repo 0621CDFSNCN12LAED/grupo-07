@@ -6,7 +6,12 @@
         "desription": "Sahmpoo sólido para cabello graso",
         "category": "Higiene",
         "image": "shampoo-graso.jpg",
+<<<<<<< HEAD
         "delete": true
+=======
+        "delete": true,
+        "deleted": true
+>>>>>>> c791fad6753d97e6933e91c458b199a21b13523f
     },
     {
         "id": 2,
@@ -15,7 +20,12 @@
         "desription": "Sahmpoo sólido para cabello seco",
         "category": "Higiene",
         "image": "shampoo-seco.jpg",
+<<<<<<< HEAD
         "delete": false
+=======
+        "delete": false,
+        "deleted": true
+>>>>>>> c791fad6753d97e6933e91c458b199a21b13523f
     },
     {
         "id": 3,
@@ -24,7 +34,12 @@
         "desription": "Sahmpoo sólido para cabello con rulos",
         "category": "Higiene",
         "image": "shampoo-rulos.jpg",
+<<<<<<< HEAD
         "delete": false
+=======
+        "delete": false,
+        "deleted": true
+>>>>>>> c791fad6753d97e6933e91c458b199a21b13523f
     },
     {
         "id": 4,
@@ -33,16 +48,29 @@
         "desription": "Pasta dental para que tengas lo mejores dientes",
         "category": "Higiene",
         "image": "pasta-dental.png",
+<<<<<<< HEAD
         "delete": false
+=======
+        "delete": false,
+        "deleted": true
+>>>>>>> c791fad6753d97e6933e91c458b199a21b13523f
     },
     {
         "id": 6,
         "name": "Crema post solar",
+<<<<<<< HEAD
         "price": 1200,
         "desription": "Crema post solar",
         "category": "Belleza",
         "image": "pasta-dental.png",
         "delete": false
+=======
+        "price": 120,
+        "desription": "Crema post solar",
+        "image": "pasta-dental.png",
+        "delete": false,
+        "discount": null
+>>>>>>> c791fad6753d97e6933e91c458b199a21b13523f
     },
     {
         "id": 7,
@@ -79,5 +107,19 @@
         "category": "Medicina",
         "image": "cannabis.png",
         "delete": false
+<<<<<<< HEAD
     }
 ]
+=======
+    },
+    {
+        "name": "prueba",
+        "price": 12,
+        "description": "prueba",
+        "category": "cat1",
+        "id": 11,
+        "image": "1631748370500.png",
+        "delete": false
+    }
+]
+>>>>>>> c791fad6753d97e6933e91c458b199a21b13523f
