@@ -1,80 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!--Acá va el head-->
-  <%- include ("./partials/head.ejs") %>
+    <!--Acá va el head-->
+    <%- include ("./partials/head.ejs") %>
 
-  <body class="body">
-    <!--Acá va el header-->
-    <%- include ("./partials/header.ejs") %>
-    <main id="main-content">
-      <section class="padding-24">
-        <div>
-          <form class="register-form" action="/ruta-form" method="POST">
-            <div>
-              <h2 class="tx-blanco">Agregar y editar productos</h2>
-            </div>
+    <body class="body">
+        <!--Acá va el header-->
+        <%- include ("./partials/header.ejs") %>
+        <main id="main-content">
+            <section class="padding-24">
+                <div>
+                    <form
+                        class="register-form"
+                        action="/ruta-form"
+                        method="POST"
+                    >
+                        <div>
+                            <h2 class="tx-blanco">
+                                Agregar y editar productos
+                            </h2>
+                        </div>
 
-            <div class="form-input">
-              <label class="main-label" for="name"></label>
-              <input
-                class="border-5"
-                type="text"
-                name="name"
-                placeholder="Nombre del producto"
-                required
-              />
-            </div>
-            <div class="form-input">
-              <label class="main-label" for="name"></label>
-              <input
-                class="border-5"
-                type="text"
-                name="desc"
-                placeholder="Descripcion"
-                required
-              />
-            </div>
-            <div class="form-input">
-              <label class="main-label" for="name"></label>
-              <input
-                class="border-5"
-                type="file"
-                name="foto"
-                placeholder="Foto del producto"
-                required
-              />
-            </div>
-            <div class="form-input">
-              <label class="main-label" for="name"></label>
-              <select
-                class="border-5"
-                type="text"
-                name="cat"
-                placeholder="Categoria"
-                required
-              >
-                <option>cat1</option>
-                <option>cat2</option>
-                <option>cat3</option>
-              </select>
-            </div>
-            <!-- <div class="form-input">
+                        <div class="form-input">
+                            <label class="main-label" for="name"></label>
+                            <input
+                                class="border-5"
+                                type="text"
+                                name="name"
+                                placeholder="Nombre del producto"
+                                required
+                            />
+                        </div>
+                        <div class="form-input">
+                            <label class="main-label" for="name"></label>
+                            <input
+                                class="border-5"
+                                type="text"
+                                name="desc"
+                                placeholder="Descripcion"
+                                required
+                            />
+                        </div>
+                        <div class="form-input">
+                            <label class="main-label" for="name"></label>
+                            <input
+                                class="border-5"
+                                type="file"
+                                name="foto"
+                                placeholder="Foto del producto"
+                                required
+                            />
+                        </div>
+                        <div class="form-input">
+                            <label class="main-label" for="name"></label>
+                            <select
+                                class="border-5"
+                                type="text"
+                                name="cat"
+                                placeholder="Categoria"
+                                required
+                            >
+                                <option>cat1</option>
+                                <option>cat2</option>
+                                <option>cat3</option>
+                            </select>
+                        </div>
+                        <!-- <div class="form-input">
                 <label class="main-label" for="name"></label>
                 <select class="border-5" type="text" name="name" placeholder="Tamaños" required >
                   <option>tam1</option>
                   <option>tam2</option>
                 </select>
               </div> -->
-            <div class="register-buttons">
-              <button class="boton-form" type="reset">Borrar</button>
-              <button class="boton-form" type="submit">Cargar datos</button>
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
+                        <div class="register-buttons">
+                            <button class="boton-form" type="reset">
+                                Borrar
+                            </button>
+                            <button class="boton-form" type="submit">
+                                Cargar datos
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
 
-    <!--Acá va el footer-->
-    <%- include ("./partials/footer.ejs") %>
-  </body>
+        <!--Acá va el footer-->
+        <%- include ("./partials/footer.ejs") %>
+    </body>
 </html>

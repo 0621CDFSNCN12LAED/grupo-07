@@ -31,5 +31,5 @@ app.use("/products", rutasProducts);
 
 // Servidor //
 app.listen(3000, () => {
-  console.log("servidor en puerto 3000");
+    console.log("servidor en puerto 3000");
 });

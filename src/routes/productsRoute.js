@@ -6,14 +6,14 @@ const multer = require("multer");
 const path = require("path");
 
 const storage = multer.diskStorage({
-  destination: path.join(__dirname, "../../public/images/products"),
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + path.extname(file.originalname));
-  },
+    destination: path.join(__dirname, "../../public/images/products"),
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + path.extname(file.originalname));
+    },
 });
 
 const uploader = multer({
-  storage,
+    storage,
 });
 
 const productsControllers = require("../controllers/productsControllers");
