@@ -46,7 +46,8 @@
         "desription": "Crema post solar",
         "image": "pasta-dental.png",
         "delete": false,
-        "discount": null
+        "discount": null,
+        "deleted": true
     },
     {
         "id": 7,

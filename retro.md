@@ -15,3 +15,9 @@ Si bien para el sprint 2 tuvimos que entregar en paralelo un trabajo individual 
 Como equipo, nos apoyamos entre todos para intentar lograr el mejor resultado, ayudándonos en lo que no sabemos hacer y respetándonos en todo momento.
 
 Tenemos algunos puntos pendiendes a seguir trabajando sobre nuestro proyecto, pero que poco a poco vamos cumplimentando para llegar al producto final que queremos.
+
+Sprint 3:
+
+Consideramos que como equipo continuamos colaborando y llegando a un acuerdo entre todos respecto a dias, horarios, y consignas a realizar a pesar que estamos en distintas partes del mundo.
+
+Sabemos que estamos un poco atrasados en cuando a los estilos, o el diseño visual del proyecto pero estuvimos dandole mayor prioridad a la funcionalidad del sitio; y cuando ya quede totalmente funcional ir acomodando el html, los estilos de css, imagenes, etc.
