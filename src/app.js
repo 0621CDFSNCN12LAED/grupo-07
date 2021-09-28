@@ -5,7 +5,7 @@ const logger = require("morgan");
 const path = require("path");
 const methodOverride = require("method-override");
 const session = require("express-session");
-
+const cookieParser = require("cookie-parser");
 //Express
 const app = express();
 
@@ -15,6 +15,7 @@ app.use(express.static(publicPath));
 app.use(logger("dev"));
 app.use(methodOverride("_method"));
 app.use(session({ secret: "Sh! Esto es un secreto" }));
+app.use(cookieParser());
 
 //Template engine
 app.set("view engine", "ejs");
