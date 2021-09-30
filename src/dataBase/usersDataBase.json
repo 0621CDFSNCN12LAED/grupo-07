@@ -1,38 +1,18 @@
 [
     {
         "id": 1,
-        "firstName": "Juan",
-        "lastName": "Lopez",
-        "email": "jlopez@gmail.com",
-        "contraseña": "juanlopez2020",
-        "image": "shampoo-graso.jpg",
+        "name": "Claudio",
+        "email": "ramaclau@gmail.com",
+        "birthdate": "14/10/1994",
+        "password": "laramatemueve",
         "delete": false
     },
     {
         "id": 2,
-        "firstName": "Ana",
-        "lastName": "Gutierrez",
-        "email": "anitakpa@gmail.com",
-        "contraseña": "anakpa2021",
-        "image": "shampoo-graso.jpg",
-        "delete": false
-    },
-    {
-        "id": 3,
-        "firstName": "Rocio",
-        "lastName": "Pepa",
-        "email": "awantelapepa@gmail.com",
-        "contraseña": "pepapig2021",
-        "image": "shampoo-graso.jpg",
-        "delete": false
-    },
-    {
-        "id": 4,
-        "firstName": "Claudio",
-        "lastName": "Ramirez",
-        "email": "ramaclau@gmail.com",
-        "contraseña": "laramatemueve",
-        "image": "shampoo-graso.jpg",
+        "name": "Yasmin",
+        "email": "jasayup342@gmail.com",
+        "birthdate": "1994-01-30",
+        "password": "123",
         "delete": false
     }
 ]

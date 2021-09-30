@@ -5,8 +5,9 @@ const {body} = require("express-validator")
 const userController = require("../controllers/userControllers");
 
 const validations = [
+    body("name").notEmpty().withMessage("Debe insertar un nombre para registrarse"),
     body("email").isEmail().withMessage("Debe insertar un mail válido"),
-    body("password").notEmpty().withMessage("Debe insertar una contraseña válida para el registro"),
+    body("password").notEmpty().withMessage("Debe insertar una contraseña para el registro"),
 ]
 
 

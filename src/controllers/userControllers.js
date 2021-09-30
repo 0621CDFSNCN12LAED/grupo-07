@@ -1,22 +1,38 @@
 const fs = require("fs");
 const path = require("path");
 
-const { validationResult }=require("express-validator");
+const { validationResult } = require("express-validator");
+
+const usersFilePath = path.join(__dirname, "../dataBase/usersDataBase.json");
+const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
 const controller = {
     register: (req, res) => {
         return res.render("register");
     },
     processRegister: (req, res) => {
-       const resultValidation = validationResult(req);
+       let errors = validationResult(req);
+       if(errors.isEmpty()){
+        const lastUser = users[users.length - 1];
+        const biggestUserId = users.length > 0 ? lastUser.id : 1;
+        const user = {
+            id: biggestUserId + 1,
+            name: req.body.name,
+            email: req.body.email,
+            birthdate: req.body.birthdate,
+            password: req.body.password,
+            //image: image ? image.filename : "default-image.png",
+            delete: false,
+        };
+        users.push(user);
 
-       if(resultValidation.errors.length > 0){
-           return res.render("register", {
-               errors: resultValidation.mapped(),
-               oldData: req.body,
-           });  
+        const jsonString = JSON.stringify(users, null, 4);
+        fs.writeFileSync(usersFilePath, jsonString);
+        
+       }else{
+           res.render("register", {errors: errors.array(), old: req.body})
        }
-       return res.send("Ok, las validaciones se pasaron y no tienes errores")
+       return res.send("hola estas en tu perfil");
     },
     login: (req, res) => {
         return res.render("login");
