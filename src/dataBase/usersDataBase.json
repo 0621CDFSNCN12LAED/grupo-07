@@ -14,5 +14,21 @@
         "birthdate": "1994-01-30",
         "password": "123",
         "delete": false
+    },
+    {
+        "id": 3,
+        "name": " juan ",
+        "email": "juansv2k2@hotmail.com",
+        "birthdate": "2021-10-05",
+        "password": "123",
+        "delete": false
+    },
+    {
+        "id": 4,
+        "name": "Juan Vassallo",
+        "email": "juansv2k2@hotmail.com",
+        "birthdate": "2021-10-05",
+        "password": "$2a$10$uhCy9ZpARFxdnRiXY/oU6OW5p1ZjVUhnqq8z3YOzCtHxuu.RagsIC",
+        "delete": false
     }
 ]
