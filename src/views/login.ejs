@@ -10,11 +10,13 @@
     <main>
       <section id="main-content">
         <div>
-          <form class="register-form" action="/ruta-form" method="POST">
+          <form class="register-form" action="/user/login" method="POST">
             <div>
               <h2>Ingresar</h2>
             </div>
-
+            <% if (locals.errors) { %> <% for (let error in errors) { %>
+            <p><%= errors[error].msg %></p>
+            <% } %> <% } %>
             <div class="form-input">
               <label class="main-label" for="email">Dirección de email</label>
               <input class="border-5" id="email" type="email" name="email" />
@@ -25,7 +27,7 @@
                 class="border-5"
                 id="password"
                 type="password"
-                name="pasword"
+                name="password"
               />
             </div>
 

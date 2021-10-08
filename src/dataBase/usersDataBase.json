@@ -12,7 +12,7 @@
         "name": "Yasmin",
         "email": "jasayup342@gmail.com",
         "birthdate": "1994-01-30",
-        "password": "123",
+        "password": "123456",
         "delete": false
     },
     {
@@ -20,7 +20,7 @@
         "name": " juan ",
         "email": "juansv2k2@hotmail.com",
         "birthdate": "2021-10-05",
-        "password": "123",
+        "password": "123456",
         "delete": false
     },
     {
@@ -29,6 +29,22 @@
         "email": "juansv2k2@hotmail.com",
         "birthdate": "2021-10-05",
         "password": "$2a$10$uhCy9ZpARFxdnRiXY/oU6OW5p1ZjVUhnqq8z3YOzCtHxuu.RagsIC",
+        "delete": false
+    },
+    {
+        "id": 5,
+        "name": "Barbara Rivas",
+        "email": "bar@gmail.com",
+        "birthdate": "2021-10-14",
+        "password": "$2a$10$5eZJMBt0Qad4MN4l2jjmf.thrpsEiZoS5tlktuhLvaPxPljQk5WFy",
+        "delete": false
+    },
+    {
+        "id": 6,
+        "name": "Barbara Rivas",
+        "email": "bar.rivas10@gmail.com",
+        "birthdate": "2021-10-27",
+        "password": "$2a$10$mtEoKlzR/2TlMG5pALd0oO63ZmeEUBTacyA4jfnoeyWh0RC.LzHkK",
         "delete": false
     }
 ]

@@ -41,6 +41,36 @@ const controller = {
     return res.render("login");
   },
 
+  processLogin: (req, res) => {
+    let errors = validationResult(req);
+    if (errors.isEmpty()) {
+      let usersDataBase = fs.readFileSync("usersDataBase.json", {
+        encoding: "utf-8",
+      });
+      let users;
+      if (usersDataBase == "") {
+        users = [];
+      } else {
+        users = JSON.parse(usersDataBase);
+      }
+      for (let i = 0; i < users.length; i++) {
+        if (users[i].email == req.body.email) {
+          if (bcrypt.compareSync(req.body.password, users[i].password)) {
+            let usuarioALoguearse = users[i];
+            break;
+          }
+        }
+      }
+      if (usuarioALoguearse == undefined) {
+        return res.render("login", { errors: errors.errors });
+      }
+      req.session.usuarioLogueado = usuarioALoguearse;
+      res.render("loginExitoso");
+    } else {
+      return res.render("login", { errors: errors.errors });
+    }
+  },
+
   userProfile: (req, res) => {
     return res.render("userProfile");
   },
