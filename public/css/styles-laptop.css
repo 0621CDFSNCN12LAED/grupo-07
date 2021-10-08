@@ -59,6 +59,11 @@ a:hover {
   margin: auto;
 }
 
+footer {
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
 /* Detalle de producto */
 
 .detalle-producto {
