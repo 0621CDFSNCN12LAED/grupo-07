@@ -38,8 +38,16 @@ header {
   color: white;
 }
 
+.login-hover:hover > ul {
+  display: block;
+}
+
+.pos-relative {
+  position: relative;
+  float: left;
+}
+
 a:hover {
-  background-color: #3d5f2b;
   opacity: 0.3;
 }
 
@@ -112,6 +120,10 @@ a:hover {
 
 .selec-wrapper {
   width: 30%;
+}
+
+.selec-wrapper-25 {
+  width: 25%;
 }
 
 /* Forms */

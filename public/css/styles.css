@@ -44,6 +44,15 @@ header {
   display: none;
 }
 
+.login {
+  display: none;
+  position: absolute;
+}
+
+.float-none {
+  float: none;
+}
+
 .secciones {
   display: flex;
   flex-wrap: wrap;
@@ -89,6 +98,12 @@ header {
 
 article {
   margin-bottom: 16px;
+}
+
+.img-dest {
+  width: 100%;
+  height: 173px;
+  object-fit: cover;
 }
 
 .boton-filo {
