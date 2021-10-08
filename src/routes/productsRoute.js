@@ -6,14 +6,14 @@ const multer = require("multer");
 const path = require("path");
 
 const storage = multer.diskStorage({
-  destination: path.join(__dirname, "../../public/product-images"),
+  destination: path.join(__dirname, "../../public/img/product-images"),
   filename: (req, file, cb) => {
     cb(null, Date.now() + path.extname(file.originalname));
   },
 });
 
 const uploader = multer({
-    storage,
+  storage,
 });
 
 const productsControllers = require("../controllers/productsControllers");
@@ -23,7 +23,7 @@ router.get("/", productsControllers.products);
 
 /*** CREATE ONE PRODUCT ***/
 router.get("/create", productsControllers.productCreate);
-router.post("/", uploader.single("image"), productsControllers.store);
+router.post("/", uploader.single("product-image"), productsControllers.store);
 
 /*** GET ONE PRODUCT ***/
 router.get("/:id", productsControllers.productDetail);
