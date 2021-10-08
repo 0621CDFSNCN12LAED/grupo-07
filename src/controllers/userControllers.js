@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const productService = require("../services/productService");
+const userService = require("../services/userService");
 const bcrypt = require("bcryptjs");
 
 const { validationResult } = require("express-validator");
@@ -40,7 +40,8 @@ const controller = {
   login: (req, res) => {
     return res.render("login");
   },
-  profile: (req, res) => {
+
+  userProfile: (req, res) => {
     return res.render("userProfile");
   },
 };

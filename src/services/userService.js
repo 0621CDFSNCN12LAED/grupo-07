@@ -4,7 +4,7 @@ const fs = require("fs");
 const usersFilePath = path.join(__dirname, "../dataBase/usersDataBase.json");
 const products = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
-const productService = {
+const userService = {
   findOneById(id) {
     const user = users.find((user) => {
       return user.id == id;
