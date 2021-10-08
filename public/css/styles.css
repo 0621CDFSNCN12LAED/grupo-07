@@ -119,8 +119,9 @@ article {
 }
 
 footer {
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 24px 24px 24px 24px;
 }
 
 .fa-instagram {
