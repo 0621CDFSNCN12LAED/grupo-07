@@ -24,8 +24,7 @@ const controller = {
         email: req.body.email,
         birthdate: req.body.birthdate,
         password: bcrypt.hashSync(req.body.password, 10),
-
-        //image: image ? image.filename : "default-image.png",
+        userImage: req.file ? req.file.filename : "default-image.png",
         delete: false,
       };
       users.push(user);

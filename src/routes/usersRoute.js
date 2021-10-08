@@ -1,6 +1,19 @@
 const express = require("express");
 const router = express.Router();
 const { body } = require("express-validator");
+const multer = require("multer");
+const path = require("path");
+
+const storage = multer.diskStorage({
+  destination: path.join(__dirname, "../../public/img/user-images"),
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + path.extname(file.originalname));
+  },
+});
+
+const uploader = multer({
+  storage,
+});
 
 const userController = require("../controllers/userControllers");
 
@@ -11,7 +24,12 @@ const userFormValidation = require("../validations/userFormValidation");
 //form de registro
 router.get("/register", userController.register);
 //procesar el registro
-router.post("/register", userFormValidation, userController.processRegister);
+router.post(
+  "/register",
+  uploader.single("userImage"),
+  userFormValidation,
+  userController.processRegister
+);
 
 //form de login
 router.get("/login", userController.login);

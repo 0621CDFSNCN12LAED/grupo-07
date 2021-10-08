@@ -8,5 +8,5 @@ module.exports = [
   body("password")
     .notEmpty()
     .isLength({ min: 6 })
-    .withMessage("Debe insertar una contraseña para el registro"),
+    .withMessage("La contraseña debe contener como mínimo 6 caracteres"),
 ];
