@@ -72,5 +72,32 @@
         "password": "$2a$10$lcLc.6D1kvcE22vjen4DPujsU6Mwipb5kd57SFL.28hOgVG3VSk8u",
         "userImage": "default-image.png",
         "delete": false
+    },
+    {
+        "id": 10,
+        "name": "juan",
+        "email": "juansv2k2@hotmail.com",
+        "birthdate": "2021-10-13",
+        "password": "$2a$10$yLuCfyKCjJc0ufAKKV9ANua5vlwaVQzAODjk3/OEjxtF/Yhyoi7mK",
+        "userImage": "default-image.png",
+        "delete": false
+    },
+    {
+        "id": 11,
+        "name": "Juan Perez",
+        "email": "juansv2k2@hotmail.com",
+        "birthdate": "2021-10-05",
+        "password": "$2a$10$GbzoSInC.VQHSEFql6Qtf.zf/aZSI6VzZkM5K5Vt59bdzwAQwmXYK",
+        "userImage": "1633777578548.jpg",
+        "delete": false
+    },
+    {
+        "id": 12,
+        "name": "Juan Perez 2",
+        "email": "juansv2k2@hotmail.com",
+        "birthdate": "2021-10-29",
+        "password": "$2a$10$VCavFmjqnJTG0DV0gv3mWu.JXLKzs/T0BsG0q4vjqfDqBvSFKwItS",
+        "userImage": "1633777884837.jpg",
+        "delete": false
     }
 ]

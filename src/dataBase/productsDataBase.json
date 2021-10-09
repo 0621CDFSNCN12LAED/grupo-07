@@ -111,5 +111,14 @@
         "id": 13,
         "image": "1633683682692.jpg",
         "delete": false
+    },
+    {
+        "name": "123",
+        "price": 500,
+        "description": "Un producto de prueba",
+        "category": "cat1",
+        "id": 14,
+        "image": "1633777231416.jpg",
+        "delete": false
     }
 ]
