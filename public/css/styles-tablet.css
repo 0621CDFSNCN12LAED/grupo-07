@@ -1,6 +1,11 @@
 /****media=min-width:480px - max-width: 768px" *****/
 
 /* Detalle de producto */
+
+.flex-prod {
+  display: flex;
+  flex-wrap: wrap;
+}
 .contenedor-scroll {
   padding-bottom: 70px;
 }
@@ -50,6 +55,11 @@
   font-size: 16px;
 }
 
+footer {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
 /* Barbi */
 .valores-flex {
   display: flex;
@@ -57,16 +67,15 @@
   justify-content: space-around;
 }
 
-.valores-wrapper {
-  position: relative;
+.selec-wrapper-30 {
+  width: 30%;
+}
+.selec-wrapper-50 {
+  width: 50%;
 }
 
 .valores p {
   text-align: center;
-}
-
-.valores i {
-  position: absolute;
 }
 
 /* Filosofia Hampi */
