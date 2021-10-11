@@ -50,5 +50,66 @@
         "id": 6,
         "image": "1633964132488.jpg",
         "delete": false
+    },
+    {
+        "name": "miguel ayup",
+        "birthdate": "2021-10-12",
+        "email": "migue@gmail.com",
+        "password": "$2a$10$8Mz0xDdVZ2IkYes2CuQKce.8XOSat.WEDP4TAiW1XZ7uXL/8m/xBS",
+        "confirm-pasword": "123456",
+        "avatar": "1633973837772.jpg",
+        "id": 7,
+        "image": "default-image.png",
+        "delete": false
+    },
+    {
+        "name": "Micaela",
+        "birthdate": "2021-10-14",
+        "email": "mica@gmail.com",
+        "password": "$2a$10$TGadks63oqd8w356u8cmT.5kTXj0bdrbO64CMDw0dhd5cLZpQ00o2",
+        "confirm-pasword": "123456",
+        "avatar": "1633974718363.jpg",
+        "id": 8,
+        "image": "default-image.png",
+        "delete": false
+    },
+    {
+        "name": " sofia",
+        "birthdate": "2021-10-14",
+        "email": "sofi@gmail.com",
+        "password": "$2a$10$ukKkglRgNSVmCSIYVXHuYutk/goAXYvDyo81QU85UOUxiT.rSVdhC",
+        "confirm-pasword": "123456",
+        "id": 9,
+        "image": "default-image.png",
+        "delete": false
+    },
+    {
+        "name": " maria",
+        "birthdate": "2021-10-20",
+        "email": "mar@gmail.com",
+        "confirm-pasword": "123456",
+        "id": 10,
+        "image": "default-image.png",
+        "delete": false
+    },
+    {
+        "name": " cecilia lopez",
+        "birthdate": "2021-10-28",
+        "email": "ceci@gmail.com",
+        "password": "$2a$10$pfnOHejx51LxR6Tb536K9u6TSveAx4unCu72LdCVhdSA6500y.khe",
+        "confirm-pasword": "123456",
+        "id": 11,
+        "image": "default-image.png",
+        "delete": false
+    },
+    {
+        "name": " manuel",
+        "birthdate": "2021-10-14",
+        "email": "manu@gmail.com",
+        "password": "$2a$10$cySI4PRmlXBpXbCtrbDuTOxWtUN1vQrP.G4jFoa2.xFyteazsE9CG",
+        "confirm-pasword": "123456",
+        "id": 12,
+        "image": "default-image.png",
+        "delete": false
     }
 ]

@@ -17,6 +17,12 @@ const userService = {
     });
     return user;
   },
+  
+  findByField: function (field, text) {
+		let allUsers = this.findAll();
+		let userFound = allUsers.find(oneUser => oneUser[field] === text);
+		return userFound;
+	},
 
   createOne(payload, image) {
     const lastUser = users[users.length - 1];

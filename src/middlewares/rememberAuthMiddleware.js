@@ -1,4 +1,10 @@
-function rememberMiddleware(req, res, next){
+const path = require("path");
+const fs = require("fs");
+
+const usersFilePath = path.join(__dirname, "../dataBase/usersDataBase.json");
+const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+
+function rememberAuthMiddleware(req, res, next){
     next();
     if(req.cookies.remember_user != undefined && 
         req.session.usuarioLogueado == undefined){
@@ -15,4 +21,4 @@ function rememberMiddleware(req, res, next){
       }
     }
 
-module.exports = rememberMiddleware;
+module.exports = rememberAuthMiddleware;
