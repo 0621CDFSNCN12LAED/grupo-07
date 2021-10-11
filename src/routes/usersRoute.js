@@ -4,6 +4,9 @@ const { body } = require("express-validator");
 const multer = require("multer");
 const path = require("path");
 
+let guestMiddleware = require("../middlewares/guestMiddleware");
+let authMiddleware = require("../middlewares/authMiddleware");
+
 const storage = multer.diskStorage({
   destination: path.join(__dirname, "../../public/img/user-images"),
   filename: (req, file, cb) => {
@@ -22,7 +25,7 @@ const checkValidation = require("../middlewares/checkValidation");
 const userFormValidation = require("../validations/userFormValidation");
 
 //form de registro
-router.get("/register", userController.register);
+router.get("/register", guestMiddleware, userController.register);
 //procesar el registro
 router.post(
   "/register",
