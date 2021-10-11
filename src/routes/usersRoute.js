@@ -4,20 +4,12 @@ const { body } = require("express-validator");
 const multer = require("multer");
 const path = require("path");
 
+// Middlewares
 let guestMiddleware = require("../middlewares/guestMiddleware");
 let authMiddleware = require("../middlewares/authMiddleware");
+const uploader = require('../middlewares/multerMiddleware');
 
-const storage = multer.diskStorage({
-  destination: path.join(__dirname, "../../public/img/user-images"),
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + path.extname(file.originalname));
-  },
-});
-
-const uploader = multer({
-  storage,
-});
-
+// Controller
 const userController = require("../controllers/userControllers");
 
 //validaciones

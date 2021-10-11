@@ -40,5 +40,15 @@
         "id": 5,
         "image": "1633950918854.jpeg",
         "delete": false
+    },
+    {
+        "name": " Romina Apablaza",
+        "birthdate": "2021-10-28",
+        "email": "rominaapablaza210@gmail.com",
+        "password": "$2a$10$KRKZph72OP7ocNg5YMkheuHoVxjt.dDuFuRIECeQPtsqE7hrJ6aPq",
+        "confirm-pasword": "Romi0203",
+        "id": 6,
+        "image": "1633964132488.jpg",
+        "delete": false
     }
 ]

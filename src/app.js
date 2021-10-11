@@ -5,6 +5,7 @@ const path = require("path");
 const methodOverride = require("method-override");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
+const rememberAuthMiddleware=require("./middlewares/rememberAuthMiddleware")
 
 //Express
 const app = express();
@@ -16,6 +17,7 @@ app.use(logger("dev"));
 app.use(methodOverride("_method"));
 app.use(session({ secret: "Sh! Esto es un secreto" }));
 app.use(cookieParser());
+app.use(rememberAuthMiddleware);
 
 //uso de metodo para capturar info de forms
 app.use(express.urlencoded({ extended: false }));
@@ -29,6 +31,7 @@ app.set("views", path.join(__dirname, "/views"));
 const rutasMain = require("./routes/mainRoute");
 const rutasProducts = require("./routes/productsRoute");
 const rutasUsers = require("./routes/usersRoute");
+const rememberMiddleware = require("./middlewares/rememberAuthMiddleware");
 
 app.use("/", rutasMain);
 app.use("/products", rutasProducts);
