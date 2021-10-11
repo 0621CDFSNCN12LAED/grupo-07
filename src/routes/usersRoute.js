@@ -27,7 +27,7 @@ router.post(
 );
 
 //form de login
-router.get("/login", userController.login);
+router.get("/login", guestMiddleware, userController.login);
 router.post(
   "/login",
   [

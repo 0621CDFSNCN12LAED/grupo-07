@@ -67,7 +67,7 @@ const controller = {
         if (req.body.remember_user != undefined) {
         res.cookie("remember_user", usuarioALoguearse.email, {maxAge: 60000})
       }
-      return res.send('estas log!');
+      return res.render('userProfile');
     }
     return res.render('login', {
 				errors: {

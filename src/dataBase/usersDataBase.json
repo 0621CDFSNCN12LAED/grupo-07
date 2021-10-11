@@ -111,5 +111,24 @@
         "id": 12,
         "image": "default-image.png",
         "delete": false
+    },
+    {
+        "name": " mariela",
+        "birthdate": "2021-10-28",
+        "email": "mariela@gmail.com",
+        "confirm-pasword": "123456",
+        "id": 13,
+        "image": "default-image.png",
+        "delete": false
+    },
+    {
+        "name": " lola",
+        "birthdate": "2021-10-19",
+        "email": "lola@gmail.com",
+        "password": "$2a$10$9GVEXKKTfijmqlKDEM4MeO6F04lrzaDjJmR4pMXrNOcogG82l.sAK",
+        "confirm-pasword": "123456",
+        "id": 14,
+        "image": "default-image.png",
+        "delete": false
     }
 ]
