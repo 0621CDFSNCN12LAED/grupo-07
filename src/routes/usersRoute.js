@@ -46,6 +46,14 @@ router.post(
   userController.processLogin
 );
 
+router.get("/check", function (req, res) {
+  if (req.session.usuarioLogueado == undefined) {
+    res.send("No estás logueado");
+  } else {
+    res.send("Bienvenido " + req.session.usuarioLogueado.email);
+  }
+});
+
 //Perfil del usuario
 //router.get("/profile/:userId", userController.profile);
 router.get("/userProfile", userController.userProfile);

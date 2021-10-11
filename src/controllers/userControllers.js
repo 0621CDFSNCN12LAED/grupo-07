@@ -34,27 +34,24 @@ const controller = {
   processLogin: (req, res) => {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-      let usersDataBase = fs.readFileSync("usersDataBase.json", {
-        encoding: "utf-8",
-      });
-      let users;
-      if (usersDataBase == "") {
-        users = [];
-      } else {
-        users = JSON.parse(usersDataBase);
-      }
-      for (let i = 0; i < users.length; i++) {
-        if (users[i].email == req.body.email) {
-          if (bcrypt.compareSync(req.body.password, users[i].password)) {
-            let usuarioALoguearse = users[i];
+      let allUsers = users;
+      let usuarioALoguearse;
+
+      for (let i = 0; i < allUsers.length; i++) {
+        if (allUsers[i].email == req.body.email) {
+          if (bcrypt.compareSync(req.body.password, allUsers[i].password)) {
+            usuarioALoguearse = allUsers[i];
             break;
           }
         }
       }
       if (usuarioALoguearse == undefined) {
-        return res.render("login", { errors: errors.errors });
+        return res.render("login", {
+          errors: [{ msg: "Lo sentimos, tus credenciales no son válidas!" }],
+        });
       }
       req.session.usuarioLogueado = usuarioALoguearse;
+
       res.render("loginExitoso");
     } else {
       return res.render("login", { errors: errors.errors });

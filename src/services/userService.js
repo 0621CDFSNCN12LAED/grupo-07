@@ -6,6 +6,11 @@ const usersFilePath = path.join(__dirname, "../dataBase/usersDataBase.json");
 const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
 const userService = {
+  findAll() {
+    const allUsers = users;
+    return allUsers;
+  },
+
   findOneById(id) {
     const user = users.find((user) => {
       return user.id == id;
