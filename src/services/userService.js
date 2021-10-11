@@ -1,8 +1,9 @@
 const path = require("path");
 const fs = require("fs");
+const bcrypt = require("bcryptjs");
 
 const usersFilePath = path.join(__dirname, "../dataBase/usersDataBase.json");
-const products = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
 const userService = {
   findOneById(id) {
@@ -18,10 +19,10 @@ const userService = {
     const user = {
       ...payload,
       id: biggestUserId + 1,
-      name: req.body.name,
-      email: req.body.email,
-      birthdate: req.body.birthdate,
-      password: bcrypt.hashSync(req.body.password, 10),
+      name: payload.name,
+      email: payload.email,
+      birthdate: payload.birthdate,
+      password: bcrypt.hashSync(payload.password, 10),
       image: image ? image.filename : "default-image.png",
       delete: false,
     };

@@ -32,72 +32,13 @@
         "delete": false
     },
     {
+        "name": "Barbara Rivas",
+        "birthdate": "1989-10-19",
+        "email": "bar.rivas@gmail.com",
+        "password": "$2a$10$f/x7mg35pJwblIGm755FDeT75VV0M5P8UXDggLpiPTI5bc4lCJS6y",
+        "confirm-pasword": "asdasd",
         "id": 5,
-        "name": "Barbara Rivas",
-        "email": "bar@gmail.com",
-        "birthdate": "2021-10-14",
-        "password": "$2a$10$5eZJMBt0Qad4MN4l2jjmf.thrpsEiZoS5tlktuhLvaPxPljQk5WFy",
-        "delete": false
-    },
-    {
-        "id": 6,
-        "name": "Barbara Rivas",
-        "email": "bar.rivas10@gmail.com",
-        "birthdate": "2021-10-27",
-        "password": "$2a$10$mtEoKlzR/2TlMG5pALd0oO63ZmeEUBTacyA4jfnoeyWh0RC.LzHkK",
-        "delete": false
-    },
-    {
-        "id": 7,
-        "name": "Barbara Rivas",
-        "email": "bar.rivas@gmail.com",
-        "birthdate": "2021-10-29",
-        "password": "$2a$10$0hVd85takOsd6WHU25hdpeZAFiYAeDWAN3Wi9q1Z9vdlhDn.kVO8a",
-        "delete": false
-    },
-    {
-        "id": 8,
-        "name": " Mia",
-        "email": "mia@yahoo.com",
-        "birthdate": "2021-10-27",
-        "password": "$2a$10$yCIENp.6XvvUmYBru8Nme.81LyH4ZtH6gRY52DuVtCh934jqhCLaa",
-        "userImage": "default-image.png",
-        "delete": false
-    },
-    {
-        "id": 9,
-        "name": "Barbara Rivas",
-        "email": "bar.rivas@gmail.com",
-        "birthdate": "2021-10-27",
-        "password": "$2a$10$lcLc.6D1kvcE22vjen4DPujsU6Mwipb5kd57SFL.28hOgVG3VSk8u",
-        "userImage": "default-image.png",
-        "delete": false
-    },
-    {
-        "id": 10,
-        "name": "juan",
-        "email": "juansv2k2@hotmail.com",
-        "birthdate": "2021-10-13",
-        "password": "$2a$10$yLuCfyKCjJc0ufAKKV9ANua5vlwaVQzAODjk3/OEjxtF/Yhyoi7mK",
-        "userImage": "default-image.png",
-        "delete": false
-    },
-    {
-        "id": 11,
-        "name": "Juan Perez",
-        "email": "juansv2k2@hotmail.com",
-        "birthdate": "2021-10-05",
-        "password": "$2a$10$GbzoSInC.VQHSEFql6Qtf.zf/aZSI6VzZkM5K5Vt59bdzwAQwmXYK",
-        "userImage": "1633777578548.jpg",
-        "delete": false
-    },
-    {
-        "id": 12,
-        "name": "Juan Perez 2",
-        "email": "juansv2k2@hotmail.com",
-        "birthdate": "2021-10-29",
-        "password": "$2a$10$VCavFmjqnJTG0DV0gv3mWu.JXLKzs/T0BsG0q4vjqfDqBvSFKwItS",
-        "userImage": "1633777884837.jpg",
+        "image": "1633950918854.jpeg",
         "delete": false
     }
 ]
