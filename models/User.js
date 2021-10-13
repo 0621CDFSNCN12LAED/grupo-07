@@ -19,6 +19,7 @@ const User = {
 		return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
 	},
 
+	//-->  toma a todos los usuarios, y como me interesa obtener el ultimo "id" utilizo "pop()"
 	generateId: function () {
 		let allUsers = this.findAll();
 		let lastUser = allUsers.pop();
@@ -42,13 +43,16 @@ const User = {
 		return userFound;
 	},
 
+	//--> me permite buscar por un determinado nombre de campo, el primero que encuentra, matchea.
+	//--> luego en controllers, busca por el campo "email", req.body.email.
 	findByField: function (field, text) {
 		let allUsers = this.findAll();
 		let userFound = allUsers.find(oneUser => oneUser[field] === text);
 		return userFound;
 	},
 
-	//--> creamos un user, y guardamos esa info en nuestro .json
+	//--> creamos un user, y guardamos esa info en nuestro .json con push
+	//--> sobreescribimos el json tansformandolo en string
 	create: function (userData) {
 		let allUsers = this.findAll();
 		let newUser = {
@@ -60,6 +64,8 @@ const User = {
 		return newUser;
 	},
 
+	//--> traigo todos los usuarios, recorro los users con filter
+	//--> y me devuelve los users cuyo id es distinto al que se paso por parametro
 	delete: function (id) {
 		let allUsers = this.findAll();
 		let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
