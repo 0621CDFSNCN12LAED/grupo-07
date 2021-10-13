@@ -1,4 +1,12 @@
-// 4. Editar la información de un usuario
+// 1. Guardar al usuario
+// 2. Buscar al user que se quiera loguear por su email
+// 3. Buscar aun user por su id
+// 4. Editar info user
+// 5. Eliminar user de db
+
+// CRUD
+
+//--> Creo un obj lit con los métodos
 
 const fs = require('fs');
 
