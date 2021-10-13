@@ -14,7 +14,7 @@ const User = {
 	//--> hacemos referencia al nombre del archivo que queremos utilizar. 
 	fileName: './database/users.json',
 
-	//--> traemos los users, leemos el archivo .json
+	//--> traemos los users, leemos el archivo .json en formato de array (method parse)
 	getData: function () {
 		return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
 	},
