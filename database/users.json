@@ -7,5 +7,14 @@
   "password": "$2a$10$sPG1Hpzent0DOygDHEuu9u5G3FoCft6OXvR8684V4SFgQSIP3aREq",
   "confirmPassword": "123456",
   "avatar": "1634148107982_img.png"
+ },
+ {
+  "id": 2,
+  "fullName": "Barbara Rivas",
+  "birthdate": "2021-10-21",
+  "email": "bar.rivas@gmail.com",
+  "password": "$2a$10$En2d2NyfhxGg3ufaDlguc.H9h5yGaS9OtFlNAUzXoE/RlgFr5cGvO",
+  "confirmPassword": "123456",
+  "avatar": "1634159910738_img.png"
  }
 ]

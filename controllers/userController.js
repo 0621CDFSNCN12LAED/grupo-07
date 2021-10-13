@@ -32,6 +32,10 @@ const controller = {
 			});
 		}
 
+		//--> si no tengo errors, creo un usuario (sigo el proceso)
+		//--> por un lado, traigo todo lo que trajo el request del body
+		//--> incluyendo la propiedad "avatar" con el nombre del archivo, que me trae el request
+		//--> y la propiedad password hasheada usando libreria bycript, usando lo que viene en body.
 		let userToCreate = {
 			...req.body,
 			password: bcryptjs.hashSync(req.body.password, 10),
@@ -58,7 +62,7 @@ const controller = {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 
-				return res.redirect('/user/profile');
+				return res.redirect('/user/userProfile');
 			} 
 			return res.render('userLoginForm', {
 				errors: {
