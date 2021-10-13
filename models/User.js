@@ -28,10 +28,14 @@ const User = {
 		return 1;
 	},
 
+	//--> method para obtener todos los users (parecido a getData, mismo resultado)
 	findAll: function () {
 		return this.getData();
 	},
 
+	//--> buscamo un user por su ID, fc que recibe un id. 
+	//--> 1ro obtengo todos los usuarios, y dsp encuentro el relacionado con el id que me pasan
+	//--> method find donde itera el array y me retorna el user que matcheo con el id que me pasaron
 	findByPk: function (id) {
 		let allUsers = this.findAll();
 		let userFound = allUsers.find(oneUser => oneUser.id === id);
