@@ -21,3 +21,9 @@ Sprint 3:
 Consideramos que como equipo continuamos colaborando y llegando a un acuerdo entre todos respecto a dias, horarios, y consignas a realizar a pesar que estamos en distintas partes del mundo.
 
 Sabemos que estamos un poco atrasados en cuando a los estilos, o el diseño visual del proyecto pero estuvimos dandole mayor prioridad a la funcionalidad del sitio; y cuando ya quede totalmente funcional ir acomodando el html, los estilos de css, imagenes, etc.
+
+Sprint 4:
+
+Seguimos dejando para mas adelante la parte visual del sitio, y priorizamos la funcionalidad del mismo
+con todos los requerimientos.
+Por asuntos personales de cada integrantes, nos estuvo costando coincidir en comparación con los sprints anteriores pero logramos cumplir con el sprint en tiempo y forma.
