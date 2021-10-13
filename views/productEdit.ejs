@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--Acá va el head-->
+  <%- include ("partials/head.ejs") %>
+
+  <body class="body">
+    <!--Acá va el header-->
+    <%- include ("partials/header.ejs") %>
+    <main id="main-content">
+      <section class="padding-24">
+        <div>
+          <form
+            class="register-form"
+            action="/products/<%= product.id %>?_method=PUT"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <div>
+              <h2 class="tx-blanco">
+                Editar producto: <i><%=product.name %></i>
+              </h2>
+            </div>
+
+            <div class="form-input">
+              <label class="main-label" for="name"></label>
+              <input
+                class="border-5"
+                type="text"
+                name="name"
+                placeholder="Nombre del producto"
+                value="<%=product.name%>"
+              />
+            </div>
+            <div class="form-input">
+              <label class="main-label" for="price"></label>
+              <input
+                class="border-5"
+                type="text"
+                name="price"
+                placeholder="Precio del producto: $12.99"
+                value="<%=product.price%>"
+                required
+              />
+            </div>
+            <div class="form-input">
+              <label class="main-label" for="desc"></label>
+              <input
+                class="border-5"
+                type="text"
+                name="desc"
+                placeholder="Descripcion"
+                value="<%=product.description%>"
+                required
+              />
+            </div>
+            <div class="form-input">
+              <label class="main-label" for="foto"></label>
+              <img src="/img/<%= product.image %>" alt="" />
+              <input
+                class="border-5"
+                type="file"
+                name="foto"
+                placeholder="Foto del producto"
+              />
+            </div>
+            <div class="form-input">
+              <label class="main-label" for="cat"></label>
+              <select
+                class="border-5"
+                type="text"
+                name="cat"
+                placeholder="Categoria"
+                required
+              >
+                <option>cat1</option>
+                <option>cat2</option>
+                <option>cat3</option>
+              </select>
+            </div>
+            <!-- <div class="form-input">
+                <label class="main-label" for="name"></label>
+                <select class="border-5" type="text" name="name" placeholder="Tamaños" required >
+                  <option>tam1</option>
+                  <option>tam2</option>
+                </select>
+              </div> -->
+            <div class="register-buttons">
+              <button class="boton-form" type="reset">Borrar</button>
+              <button class="boton-form" type="submit">Cargar datos</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--Acá va el footer-->
+    <%- include ("partials/footer.ejs") %>
+  </body>
+</html>

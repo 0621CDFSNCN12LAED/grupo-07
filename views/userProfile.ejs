@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head'); %>
+<body>
+	<%- include('partials/header'); %>
+	
+	<!-- Container -->
+	<div>
+		<div>
+			<div>
+				<h2>Hi <%= user.fullName %> </h2>
+				<img src="/images/avatars/<%= user.avatar %> ">
+				<br>
+				<br>
+				<div><%= user.email %> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //Container -->
+	
+	<%- include('partials/footer'); %>
+</body>
+</html>

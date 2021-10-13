@@ -1,0 +1,54 @@
+<header class="bg-higiene-oscuro flex">
+  <div class="flex justify-between align-center w-100">
+    <a href="#" class="icon-burger">
+      <i class="fas fa-bars"></i>
+    </a>
+    <a href="/" class="ms-auto-margin">
+      <img class="logo-hy" src="/images/logo1.png" alt="Logo Hampi Yura" />
+    </a>
+    <a href="../register" class="ms-hide">
+      <i class="far fa-smile"></i>
+    </a>
+  </div>
+
+  <nav id="main-nav" class="w-100 flex">
+    <ul class="flex w-70">
+      <li class="margin-auto">
+        <a href="../products">PRODUCTOS</a>
+      </li>
+      <li class="margin-auto">
+        <a href="../fitoterapia">FITOTERAPIA</a>
+      </li>
+      <li class="margin-auto">
+        <a href="../filosofia">FILOSOFÍA HAMPI</a>
+      </li>
+      <li class="margin-auto">
+        <a href="../contacto">CONTACTO</a>
+      </li>
+    </ul>
+    <ul>
+    <% if (locals.isLogged) { %>
+      <li class="margin-0">
+        <a href="#" id="dropUser">
+          <img src="/images/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;">
+          Hi <%= locals.userLogged.fullName %>
+        </a>
+        <ul class="flex w-30 justify-end">
+          <a  href="/user/profile">My profile</a>
+          <br>
+          <a href="/user/logout">Logout</a>
+        </ul>
+      </li>
+    <ul class="flex w-30 justify-end">
+      <% } else { %>
+      <li class="margin-0">
+        <a href="/user/register">Register</a>
+      </li>
+      <li class="margin-0">
+        <a href="/user/login">Login</a>
+      </li>
+      <% } %>
+    </ul>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,11 @@
+[
+ {
+  "id": 1,
+  "fullName": "Yasmin",
+  "birthdate": "2021-10-12",
+  "email": "jasayup342@gmail.com",
+  "password": "$2a$10$sPG1Hpzent0DOygDHEuu9u5G3FoCft6OXvR8684V4SFgQSIP3aREq",
+  "confirmPassword": "123456",
+  "avatar": "1634148107982_img.png"
+ }
+]

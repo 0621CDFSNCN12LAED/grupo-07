@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Acá va el head-->
+<%- include ("partials/head.ejs") %>
+
+	<body class="body">
+		<!--Acá va el header-->
+		<%- include ("partials/header.ejs") %>
+			<main id="main-content">
+				<section class="padding-24">
+					<div>
+						<form class="register-form" action="/user/register" method="POST" enctype="multipart/form-data">
+							<div>
+								<h2 class="tx-blanco">Creá tu cuenta</h2>
+							</div>
+
+							<div class="form-input">
+								<label class="main-label" for="name"></label>
+								<input class="border-5" id="name" type="text" name="fullName"
+									placeholder="Nombre y apellido"
+									value="<%= locals.oldData ? oldData.name : null%>" />
+								<% if (locals.errors && errors.fullName) { %>
+									<div>
+										<%= errors.fullName.msg %>
+									</div>
+									<% } %>
+							</div>
+							<div class="form-input">
+								<label class="main-label" for="birthdate"></label>
+								<input class="border-5 bg-blanco" id="birthdate" type="date" name="birthdate"
+									placeholder="Fecha de nacimiento"
+									value="<%= locals.oldData ? oldData.birthdate : null%>" />
+								<% if (locals.errors && errors.birthdate) { %>
+									<div>
+										<%= errors.birthdate.msg %>
+									</div>
+									<% } %>
+							</div>
+							<div class="form-input">
+								<label class="main-label" for="email"></label>
+								<input class="border-5" id="email" type="email" name="email"
+									placeholder="Dirección de email: persona@mail.com"
+									value="<%= locals.oldData ? oldData.email : null%>" />
+								<% if (locals.errors && errors.email) { %>
+									<div>
+										<%= errors.email.msg %>
+									</div>
+									<% } %>
+							</div>
+							<div class="form-input">
+								<label class="main-label" for="avatar">Imagen de perfil:</label>
+								<input class="border-5" type="file" name="avatar" placeholder="Foto de perfil"
+									value="<%= locals.oldData ? oldData.avatar : null%>" />
+								<% if (locals.errors && errors.avatar) { %>
+									<div>
+										<%= errors.avatar.msg %>
+									</div>
+									<% } %>
+							</div>
+							<div class="form-input">
+								<label class="main-label" for="password"></label>
+								<input class="border-5" id="password" type="password" name="password"
+									placeholder="Contraseña" />
+								<% if (locals.errors && errors.password) { %>
+									<div>
+										<%= errors.password.msg %>
+									</div>
+									<% } %>
+							</div>
+							<div class="form-input">
+								<label class="main-label" for="confirmPassword"></label>
+								<input class="border-radius" id="confirm-password" type="password"
+									name="confirmPassword" placeholder="Confirmar contraseña" />
+								<% if (locals.errors && errors.confirmPassword) { %>
+									<div>
+										<%= errors.confirmPassword.msg %>
+									</div>
+									<% } %>
+							</div>
+							<div>
+								<p class="register-he_leido tx-blanco">
+									<input type="checkbox" value="1" required />
+									He leido y acepto el tratamiento de mis datos explicado en la
+									politica de privacidad y en los terminos y condiciones
+								</p>
+							</div>
+							<div class="register-buttons">
+								<button class="boton-form" type="reset">Borrar</button>
+								<button class="boton-form" type="submit">Crear cuenta</button>
+							</div>
+						</form>
+					</div>
+				</section>
+			</main>
+
+			<!--Acá va el footer-->
+			<%- include ("partials/footer.ejs") %>
+	</body>
+
+</html>
