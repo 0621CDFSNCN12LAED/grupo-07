@@ -19,33 +19,37 @@ const controller = {
   processRegister: (req, res) => {
     const resultValidation = validationResult(req);
 
-		if (resultValidation.errors.length > 0) {
-			return res.render('register', {
-				errors: resultValidation.mapped(),
-				oldData: req.body
-			});
-		}
-    let userInDB = userService.findByField('email', req.body.email);
+    if (resultValidation.errors.length > 0) {
+      return res.render("register", {
+        errors: resultValidation.mapped(), //mapped convierte el array de errors de resultValidation en objetos literales
+        oldData: req.body,
+      });
+    }
+    let userInDB = userService.findByField("email", req.body.email);
 
     if (userInDB) {
-			return res.render('register', {
-				errors: {
-					email: {
-						msg: 'Este email ya está registrado'
-					}
-				},
-				oldData: req.body
-			});
-		}
+      return res.render("register", {
+        errors: {
+          email: {
+            msg: "Este email ya está registrado",
+          },
+        },
+        oldData: req.body,
+      });
+    }
 
-		const userToCreate = {
-			...req.body,
-			// password: bcrypt.hashSync(req.body.password, 10)
-		}
+    const userToCreate = {
+      ...req.body,
+      // password: bcrypt.hashSync(req.body.password, 10)
+    };
 
-		const userCreated = userService.createOne(userToCreate);
+    const userCreated = userService.createOne(userToCreate);
 
-		return res.redirect('/user/login');
+    return res.redirect("/user/userProfile");
+    /*
+    userService.createOne(req.body);
+    return res.send("ok,se guardó");
+    */
   },
 
   //Login- Form to login
@@ -54,41 +58,48 @@ const controller = {
   },
 
   processLogin: (req, res) => {
-    let usuarioALoguearse = userService.findByField('email', req.body.email);
+    let usuarioALoguearse = userService.findByField("email", req.body.email);
 
-    if(usuarioALoguearse) {
-			let isOkThePassword = bcrypt.compareSync(req.body.password, usuarioALoguearse.password);
-			if (isOkThePassword) {
+    if (usuarioALoguearse) {
+      let isOkThePassword = bcrypt.compareSync(
+        req.body.password,
+        usuarioALoguearse.password
+      );
+      if (isOkThePassword) {
         //borramos la pass por seguridad(video)
-				delete usuarioALoguearse.password;
-				req.session.usuarioLogueado = usuarioALoguearse;
+        delete usuarioALoguearse.password;
+        req.session.usuarioLogueado = usuarioALoguearse;
 
         //cookie remember
         if (req.body.remember_user != undefined) {
-        res.cookie("remember_user", usuarioALoguearse.email, {maxAge: 60000})
+          res.cookie("remember_user", usuarioALoguearse.email, {
+            maxAge: 60000,
+          });
+        }
+        return res.render("userProfile");
       }
-      return res.render('userProfile');
+      return res.render("login", {
+        errors: {
+          email: {
+            msg: "Las credenciales son inválidas",
+          },
+        },
+      });
     }
-    return res.render('login', {
-				errors: {
-					email: {
-						msg: 'Las credenciales son inválidas'
-					}
-				}
-			});
-		}
 
-    return res.render('login', {
-			errors: {
-				email: {
-					msg: 'No se encuentra este email en nuestra base de datos'
-				}
-			}
-		});
-	},
+    return res.render("login", {
+      errors: {
+        email: {
+          msg: "No se encuentra este email en nuestra base de datos",
+        },
+      },
+    });
+  },
 
   userProfile: (req, res) => {
-    return res.render("userProfile");
+    return res.render("userProfile", {
+      user: req.session.usuarioLogueado,
+    });
   },
 };
 

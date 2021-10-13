@@ -5,14 +5,15 @@ const path = require("path");
 const methodOverride = require("method-override");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
-const rememberAuthMiddleware = require("./middlewares/rememberAuthMiddleware")
+const rememberAuthMiddleware = require("./middlewares/rememberAuthMiddleware");
 
-//Express
+//Ejecución de Express
 const app = express();
 
 //Middlewares a nivel de aplicación
 const publicPath = path.resolve(__dirname, "../public");
 app.use(express.static(publicPath));
+
 app.use(logger("dev"));
 app.use(methodOverride("_method"));
 app.use(session({ secret: "Sh! Esto es un secreto" }));

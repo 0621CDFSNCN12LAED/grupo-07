@@ -1,13 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const { body } = require("express-validator");
-const multer = require("multer");
+
+//const multer = require("multer");
 const path = require("path");
+
+const { body } = require("express-validator");
 
 // Middlewares
 let guestMiddleware = require("../middlewares/guestMiddleware");
 let authMiddleware = require("../middlewares/authMiddleware");
-const uploader = require('../middlewares/multerMiddleware');
+const uploader = require("../middlewares/multerMiddleware");
 
 // Controller
 const userController = require("../controllers/userControllers");
@@ -16,20 +18,21 @@ const userController = require("../controllers/userControllers");
 const checkValidation = require("../middlewares/checkValidation");
 const userFormValidation = require("../validations/userFormValidation");
 
-//form de registro
+//Registro - Form de registro
 router.get("/register", guestMiddleware, userController.register);
-//procesar el registro
+
+//Procesar el registro
 router.post(
   "/register",
-  uploader.single("userImage"),
+  uploader.single("avatar"),
   userFormValidation,
   userController.processRegister
 );
 
-//form de login
+//Login - Form de login
 router.get("/login", guestMiddleware, userController.login);
 router.post(
-  "/login",
+  "/userProfile",
   [
     body("email")
       .isEmail()
@@ -50,7 +53,7 @@ router.get("/check", function (req, res) {
 });
 
 //Perfil del usuario
-//router.get("/profile/:userId", userController.profile);
+//router.get("/profile/:Id", userController.profile);
 router.get("/userProfile", userController.userProfile);
 
 module.exports = router;

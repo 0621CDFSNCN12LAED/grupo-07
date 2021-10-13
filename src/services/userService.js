@@ -17,12 +17,12 @@ const userService = {
     });
     return user;
   },
-  
+
   findByField: function (field, text) {
-		let allUsers = this.findAll();
-		let userFound = allUsers.find(oneUser => oneUser[field] === text);
-		return userFound;
-	},
+    let allUsers = this.findAll();
+    let userFound = allUsers.find((oneUser) => oneUser[field] === text);
+    return userFound;
+  },
 
   createOne(payload, image) {
     const lastUser = users[users.length - 1];
@@ -34,7 +34,7 @@ const userService = {
       email: payload.email,
       birthdate: payload.birthdate,
       password: bcrypt.hashSync(payload.password, 10),
-      image: image ? image.filename : "default-image.png",
+      avatar: payload.avatar ? avatar.filename : "default-image.png",
       delete: false,
     };
     users.push(user);
