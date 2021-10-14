@@ -27,28 +27,32 @@
       </li>
     </ul>
     <ul>
-    <% if (locals.isLogged) { %>
+      <% if (locals.isLogged) { %>
       <li class="margin-0">
-        <a href="#" id="dropUser">
-          <img src="/images/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;">
+        <a href="/user/userProfile" id="dropUser">
+          <img
+            src="/images/avatars/<%= locals.userLogged.avatar %>"
+            width="40"
+            style="border-radius: 100%"
+          />
           Hi <%= locals.userLogged.fullName %>
         </a>
-        <ul class="flex w-30 justify-end">
-          <a  href="/user/profile">My profile</a>
-          <br>
+        <!--<ul class="flex w-30 justify-end">
+          <a href="/user/userProfile">Mi perfil</a>-->
+          <br />
           <a href="/user/logout">Logout</a>
         </ul>
       </li>
-    <ul class="flex w-30 justify-end">
-      <% } else { %>
-      <li class="margin-0">
-        <a href="/user/register">Register</a>
-      </li>
-      <li class="margin-0">
-        <a href="/user/login">Login</a>
-      </li>
-      <% } %>
-    </ul>
+      <ul class="flex w-30 justify-end">
+        <% } else { %>
+        <li class="margin-0">
+          <a href="/user/register">Register</a>
+        </li>
+        <li class="margin-0">
+          <a href="/user/login">Login</a>
+        </li>
+        <% } %>
+      </ul>
     </ul>
   </nav>
 </header>

@@ -16,5 +16,14 @@
   "password": "$2a$10$En2d2NyfhxGg3ufaDlguc.H9h5yGaS9OtFlNAUzXoE/RlgFr5cGvO",
   "confirmPassword": "123456",
   "avatar": "1634159910738_img.png"
+ },
+ {
+  "id": 3,
+  "fullName": "14 de octubre",
+  "birthdate": "2021-10-15",
+  "email": "14deoctubre@fecha.com",
+  "password": "$2a$10$qnOw/7qaZIy.0XPMXX1Ns.jEUbTqaoicP0e9mg06NsX7cr4Q98/yy",
+  "confirmPassword": "123456",
+  "avatar": "1634201739379_img.jpeg"
  }
 ]
