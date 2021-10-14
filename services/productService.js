@@ -50,7 +50,7 @@ const productService = {
     product.discount = Number(payload.discount);
     product.category = payload.category;
     product.description = payload.description;
-    product.image = image ? image.filename : product.image;
+    product.image = payload.image ? payload.image.filename : product.image;
     this.save();
   },
   destroyOne(id) {

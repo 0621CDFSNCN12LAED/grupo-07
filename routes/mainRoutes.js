@@ -1,8 +1,11 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-const mainController = require('../controllers/mainController');
+const mainController = require("../controllers/mainController");
 
-router.get('/', mainController.index);
+router.get("/", mainController.index);
+router.get("/fitoterapia", mainController.fitoterapia);
+router.get("/infoplantas", mainController.infoplantas);
+router.get("/filosofia", mainController.filosofia);
 
 module.exports = router;
