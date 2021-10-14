@@ -40,7 +40,7 @@ const controller = {
   // Update - Method to update
   update: (req, res) => {
     productService.editOne(req.params.id, req.body, req.file);
-    res.redirect("/products/:id");
+    res.redirect("/products");
   },
 
   // Delete - Delete one product from DB
