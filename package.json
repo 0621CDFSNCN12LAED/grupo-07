@@ -1,33 +1,25 @@
 {
-  "name": "grupo-07",
+  "name": "register-login",
   "version": "1.0.0",
-  "description": "HAMPI YURA",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "nodemon -e js src/app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/0621CDFSNCN12LAED/grupo-07.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/0621CDFSNCN12LAED/grupo-07/issues"
-  },
-  "homepage": "https://github.com/0621CDFSNCN12LAED/grupo-07#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.5",
-    "ejs": "^3.1.6",
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "express-session": "^1.17.2",
-    "express-validator": "^6.12.2",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.8.1",
     "method-override": "^3.0.0",
-    "morgan": "^1.10.0",
-    "multer": "^1.4.3"
+    "multer": "^1.4.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.13"
   }
 }
