@@ -1,13 +1,12 @@
 [
     {
         "id": 1,
-        "name": "Shampoo sólido - cabello graso",
-        "price": 600,
+        "name": "EDIT - Shampoo sólido - cabello graso",
+        "price": 1200,
         "description": "Sahmpoo sólido para cabello graso",
-        "category": "Higiene",
-        "image": "shampoo-graso.jpg",
-        "delete": true,
-        "deleted": true
+        "image": "1634401153810.jpg",
+        "deleted": false,
+        "discount": null
     },
     {
         "id": 2,
@@ -16,7 +15,6 @@
         "description": "Sahmpoo sólido para cabello seco",
         "category": "Higiene",
         "image": "shampoo-seco.jpg",
-        "delete": false,
         "deleted": true
     },
     {
@@ -24,10 +22,9 @@
         "name": "Shampoo sólido - cabello con rulos",
         "price": 600,
         "description": "Sahmpoo sólido para cabello con rulos",
-        "category": "Higiene",
-        "image": "shampoo-rulos.jpg",
-        "delete": false,
-        "deleted": true
+        "image": "1634399488832.jpg",
+        "deleted": true,
+        "discount": null
     },
     {
         "id": 4,
@@ -36,7 +33,6 @@
         "description": "Pasta dental para que tengas lo mejores dientes",
         "category": "Higiene",
         "image": "pasta-dental.png",
-        "delete": false,
         "deleted": true
     },
     {
@@ -45,7 +41,6 @@
         "price": 120,
         "description": "Crema post solar",
         "image": "pasta-dental.png",
-        "delete": false,
         "discount": null,
         "deleted": true
     },
@@ -56,7 +51,7 @@
         "description": "Cuidá tu cara con este increíble protector",
         "category": "Belleza",
         "image": "pasta-dental.png",
-        "delete": false
+        "deleted": false
     },
     {
         "id": 8,
@@ -65,7 +60,7 @@
         "description": "Crema humectante para el día",
         "category": "Belleza",
         "image": "crema-humectante-dia.png",
-        "delete": false
+        "deleted": false
     },
     {
         "id": 9,
@@ -74,7 +69,7 @@
         "description": "Crema humectante para la noche",
         "category": "Belleza",
         "image": "pasta-dental.png",
-        "delete": false
+        "deleted": false
     },
     {
         "id": 10,
@@ -83,7 +78,7 @@
         "description": "Tintura madre",
         "category": "Medicina",
         "image": "cannabis.png",
-        "delete": false
+        "deleted": false
     },
     {
         "name": "123",
@@ -92,7 +87,7 @@
         "category": "cat1",
         "id": 14,
         "image": "1633777231416.jpg",
-        "delete": false
+        "deleted": false
     },
     {
         "name": "Salero",
@@ -100,7 +95,34 @@
         "description": "salero de mi vida",
         "id": 15,
         "image": "1634172275718.jpg",
-        "delete": false,
+        "deleted": false,
         "discount": null
+    },
+    {
+        "name": "Un producto nuevo ",
+        "price": 123456,
+        "description": "Un producto de prueba",
+        "category": "cat2",
+        "id": 16,
+        "image": "1634400675613.jpg",
+        "deleted": false
+    },
+    {
+        "name": "Otro producto nuevo mas ",
+        "price": 654321,
+        "description": "otro producto de prueba",
+        "category": "cat1",
+        "id": 17,
+        "image": "1634400925262.jpg",
+        "deleted": false
+    },
+    {
+        "name": "ultimo producto nuevo ",
+        "price": 12345,
+        "description": "el ultimo producto de prueba",
+        "category": "cat1",
+        "id": 18,
+        "image": "1634401194798.jpg",
+        "deleted": false
     }
 ]
