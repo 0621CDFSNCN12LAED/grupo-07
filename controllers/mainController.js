@@ -12,5 +12,8 @@ const controller = {
   filosofia: (req, res) => {
     res.render("filosofia");
   },
+  contacto: (req, res) => {
+    res.render("contacto");
+  },
 };
 module.exports = controller;
