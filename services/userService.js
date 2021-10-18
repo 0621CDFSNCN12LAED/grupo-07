@@ -9,6 +9,7 @@
 //--> Creo un obj lit con los métodos
 
 const fs = require("fs");
+const bcryptjs = require("bcryptjs");
 
 const User = {
   //--> hacemos referencia al nombre del archivo que queremos utilizar.
@@ -53,12 +54,14 @@ const User = {
 
   //--> creamos un user, y guardamos esa info en nuestro .json con push
   //--> sobreescribimos el json tansformandolo en string
-  create: function (payload) {
+  create: function (payload, avatar) {
     let allUsers = this.findAll();
     let newUser = {
+      ...payload,
       id: this.generateId(),
       admin: 0,
-      ...payload,
+      password: bcryptjs.hashSync(payload.password, 10),
+      avatar: avatar.filename,
     };
     allUsers.push(newUser);
     fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, " "));

@@ -31,7 +31,6 @@ router.get("/productCart", productsControllers.productCart);
 router.get(
   "/:id/edit",
   assertAdmin,
-  assertAdmin,
   uploader.single("image"),
   productsControllers.edit
 );

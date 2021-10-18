@@ -1,7 +1,8 @@
 const userLogged = require("../middlewares/userLoggedMiddleware");
 
 module.exports = (req, res, next) => {
-  if (userLogged.admin == 1) {
+  let user = req.session.userLogged;
+  if (user.admin == 1) {
     next();
   } else {
     res.send(

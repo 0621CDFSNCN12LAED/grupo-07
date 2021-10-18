@@ -22,7 +22,7 @@
         "name": "Shampoo sólido - cabello con rulos",
         "price": 600,
         "description": "Sahmpoo sólido para cabello con rulos",
-        "image": "1634399488832.jpg",
+        "image": "shampoo-rulos.jpg",
         "deleted": true,
         "discount": null
     },
@@ -87,6 +87,6 @@
         "category": "cat1",
         "id": 11,
         "image": "1634554715439_img.jpg",
-        "deleted": false
+        "deleted": true
     }
 ]
