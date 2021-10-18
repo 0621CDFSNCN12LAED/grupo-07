@@ -1,10 +1,10 @@
 [
     {
         "id": 1,
-        "name": "EDIT - Shampoo sólido - cabello graso",
+        "name": "Shampoo sólido - cabello graso",
         "price": 1200,
         "description": "Sahmpoo sólido para cabello graso",
-        "image": "1634401153810.jpg",
+        "image": "shampoo-graso.jpg",
         "deleted": false,
         "discount": null
     },
@@ -81,48 +81,12 @@
         "deleted": false
     },
     {
-        "name": "123",
-        "price": 500,
-        "description": "Un producto de prueba",
+        "name": "Prueba",
+        "price": 13,
+        "description": "una prueba agregando productMulterMiddleware",
         "category": "cat1",
-        "id": 14,
-        "image": "1633777231416.jpg",
-        "deleted": false
-    },
-    {
-        "name": "Salero",
-        "price": 5,
-        "description": "salero de mi vida",
-        "id": 15,
-        "image": "1634172275718.jpg",
-        "deleted": false,
-        "discount": null
-    },
-    {
-        "name": "Un producto nuevo ",
-        "price": 123456,
-        "description": "Un producto de prueba",
-        "category": "cat2",
-        "id": 16,
-        "image": "1634400675613.jpg",
-        "deleted": false
-    },
-    {
-        "name": "Otro producto nuevo mas ",
-        "price": 654321,
-        "description": "otro producto de prueba",
-        "category": "cat1",
-        "id": 17,
-        "image": "1634400925262.jpg",
-        "deleted": false
-    },
-    {
-        "name": "ultimo producto nuevo ",
-        "price": 12345,
-        "description": "el ultimo producto de prueba",
-        "category": "cat1",
-        "id": 18,
-        "image": "1634401194798.jpg",
+        "id": 11,
+        "image": "1634554715439_img.jpg",
         "deleted": false
     }
 ]

@@ -1,29 +1,32 @@
 [
- {
-  "id": 1,
-  "fullName": "Yasmin",
-  "birthdate": "2021-10-12",
-  "email": "jasayup342@gmail.com",
-  "password": "$2a$10$sPG1Hpzent0DOygDHEuu9u5G3FoCft6OXvR8684V4SFgQSIP3aREq",
-  "confirmPassword": "123456",
-  "avatar": "1634148107982_img.png"
- },
- {
-  "id": 2,
-  "fullName": "Barbara Rivas",
-  "birthdate": "2021-10-21",
-  "email": "bar.rivas@gmail.com",
-  "password": "$2a$10$En2d2NyfhxGg3ufaDlguc.H9h5yGaS9OtFlNAUzXoE/RlgFr5cGvO",
-  "confirmPassword": "123456",
-  "avatar": "1634159910738_img.png"
- },
- {
-  "id": 3,
-  "fullName": "14 de octubre",
-  "birthdate": "2021-10-15",
-  "email": "14deoctubre@fecha.com",
-  "password": "$2a$10$qnOw/7qaZIy.0XPMXX1Ns.jEUbTqaoicP0e9mg06NsX7cr4Q98/yy",
-  "confirmPassword": "123456",
-  "avatar": "1634201739379_img.jpeg"
- }
+  {
+    "id": 1,
+    "fullName": "Admin",
+    "birthdate": "2021-10-12",
+    "email": "admin@hampiyura.com",
+    "password": "$2a$10$sPG1Hpzent0DOygDHEuu9u5G3FoCft6OXvR8684V4SFgQSIP3aREq",
+    "confirmPassword": "123456",
+    "avatar": "1634148107982_img.png",
+    "admin": 1
+  },
+  {
+    "id": 2,
+    "fullName": "Yasmin",
+    "birthdate": "2021-10-12",
+    "email": "jasayup342@gmail.com",
+    "password": "$2a$10$sPG1Hpzent0DOygDHEuu9u5G3FoCft6OXvR8684V4SFgQSIP3aREq",
+    "confirmPassword": "123456",
+    "avatar": "1634148107982_img.png",
+    "admin": 0
+  },
+  {
+    "id": 3,
+    "admin": 0,
+    "fullName": "Probando",
+    "birthdate": "2021-10-06",
+    "email": "prueba1000@gmail.com",
+    "password": "$2a$10$vmK0u4FOSKXbJUDsfYDmgOq9yX7KWsNZ5eoqZUgJSe4kncfdpfqju",
+    "confirmPassword": "123456",
+    "avatar": "1634560905431_img.jpeg"
+  }
 ]

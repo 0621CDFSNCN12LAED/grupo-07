@@ -44,17 +44,19 @@ const controller = {
 
     return res.redirect("/user/login");
   },
+
   login: (req, res) => {
     return res.render("userLoginForm");
   },
   loginProcess: (req, res) => {
     let userToLogin = User.findByField("email", req.body.email);
-
+    //Si hay coincidencia con el email:
     if (userToLogin) {
       let isOkThePassword = bcryptjs.compareSync(
         req.body.password,
         userToLogin.password
       );
+      //Verificamos que también esté ok la password:
       if (isOkThePassword) {
         delete userToLogin.password;
         req.session.userLogged = userToLogin;
@@ -62,9 +64,10 @@ const controller = {
         if (req.body.remember_user) {
           res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 60 });
         }
-
+        //Si todo está ok, redirecciona al perfil del usuario:
         return res.redirect("/user/userProfile");
       }
+      // Si la clave está mal, envía error de credenciales inválidas
       return res.render("userLoginForm", {
         errors: {
           email: {
@@ -73,7 +76,7 @@ const controller = {
         },
       });
     }
-
+    //Si el mail está mal, envía este error:
     return res.render("userLoginForm", {
       errors: {
         email: {
@@ -82,6 +85,7 @@ const controller = {
       },
     });
   },
+
   profile: (req, res) => {
     return res.render("userProfile", {
       user: req.session.userLogged,
