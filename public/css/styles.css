@@ -95,6 +95,7 @@ article {
   margin-bottom: 16px;
 }
 
+
 .img-dest {
   width: 100%;
   height: 173px;
@@ -198,4 +199,11 @@ footer {
 
 .border-8 {
   border-radius: 8px;
+}
+
+/* filosofia */
+
+.filohampi{
+  font-weight: bold;
+  color: #0a4c4c;
 }

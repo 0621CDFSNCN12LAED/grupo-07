@@ -55,6 +55,8 @@ const controller = {
         delete userToLogin.password;
         req.session.userLogged = userToLogin;
 
+        // si en el request vino "remember_user", seteo una cookie en el response.
+        // se va llamar "userEmail", y lo que guarda es la propiedad email con la duración x.
         if (req.body.remember_user) {
           res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 60 });
         }
@@ -86,6 +88,7 @@ const controller = {
     });
   },
 
+  // si cierro session/me deslogueo, la cookie debe destruirse, ya que si cierro el navegador me sigue logueando
   logout: (req, res) => {
     res.clearCookie("userEmail");
     req.session.destroy();
