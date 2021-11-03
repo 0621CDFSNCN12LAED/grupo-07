@@ -21,11 +21,13 @@ router.post(
   productsControllers.store
 );
 
+/*** BUY PRODUCT ***/
+router.get("/productCart", productsControllers.productCart);
+
 /*** GET ONE PRODUCT ***/
 router.get("/:id", productsControllers.productDetail);
 
-/*** BUY PRODUCT ***/
-router.get("/productCart", productsControllers.productCart);
+
 
 /*** EDIT ONE PRODUCT***/
 router.get(

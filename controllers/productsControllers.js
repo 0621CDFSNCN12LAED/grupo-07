@@ -17,7 +17,7 @@ const controller = {
       res.render("productDetail", { product });
     } else {
       //error
-      res.send("Qué rompimo'?");
+      res.redirect("/products");
     }
   },
 
@@ -51,7 +51,7 @@ const controller = {
   },
 
   productCart: (req, res) => {
-    res.render("products/productCart");
+    res.render("productCart");
   },
 };
 
