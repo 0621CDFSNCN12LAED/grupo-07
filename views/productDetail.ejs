@@ -31,9 +31,15 @@
                     </div>
                 </article>
 
-                <button class="boton-cantidad-product">- 1 +</button>
-                <button class="boton-añadir"><a href= "#" >Añadir al carrito</a></button>
 
+                 
+                <button class="boton-cantidad-product">- 1 +</button>
+                <button class="boton-añadir">
+                <% if (locals.userLogged) { %>
+                <a href= "/products/productCart" >Añadir al carrito</a></button>
+                <% } else { %> 
+                    <a href= "/user/login" >Añadir al carrito</a></button>
+                    <% } %> 
 
                 <% if (locals.userLogged && userLogged.admin) { %> 
                 <button class="boton-añadir"><a href="/products/<%= product.id %>/edit">Editar</a></button>
