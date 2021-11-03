@@ -27,3 +27,9 @@ Sprint 4:
 Seguimos dejando para mas adelante la parte visual del sitio, y priorizamos la funcionalidad del mismo
 con todos los requerimientos.
 Por asuntos personales de cada integrantes, nos estuvo costando coincidir en comparación con los sprints anteriores pero logramos cumplir con el sprint en tiempo y forma.
+
+Sprint 5:
+
+Entendemos que estamos relegando la experiencia del usuario por lo funcional y que en los próximos sprint tendremos que comenzar a revertir esta situación. 
+Como en el sprint anterior, por diferencias horarias y responsabilidades individuales/personales, las reuniones nos fueron tan frecuentes como en los primeros sprint, pero creemos haber aprovechado el tiempo de las que sí sucedieron para resolver las consignas dadas. 
+A medida que avanzan los sprints vamos entendiendo cosas que tenemos que corregir de nuestro proyecto (sobre sprints anteriores) para que sea un todo que funcione correctamente.
