@@ -9,7 +9,7 @@
 }
 
 header {
-  padding: 24px 24px 0px 24px;
+  /*padding: 24px 24px 0px 24px;*/
   position: static;
 }
 
@@ -53,6 +53,10 @@ a:hover {
 
 .ms-hide {
   display: none;
+}
+
+.show{
+  display: block;
 }
 
 .ms-auto-margin {

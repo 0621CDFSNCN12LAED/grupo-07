@@ -19,9 +19,12 @@ header {
   position: fixed;
   top: 0px;
   width: 100%;
-  padding: 24px 24px 24px 24px;
+  /*padding: 24px 24px 24px 24px;*/
 }
 
+#frase-tienda{
+  height: 30px;
+}
 .logo-hy {
   width: 150px;
 }
@@ -40,10 +43,10 @@ header {
   margin-top: 160px;
 }
 
-#main-nav {
+/*#main-nav {
   display: none;
 }
-
+*/
 .login {
   display: none;
   position: absolute;
@@ -162,11 +165,32 @@ footer {
   padding: 48px;
 }
 
+.padding-8-48{
+  padding: 8px 48px;
+}
+
+#frase-tienda {
+
+}
+#frase-tienda p {
+  padding-top: 8px;
+}
+
+.w-20 {
+  width: 20%;
+}
+
 .w-30 {
   width: 30%;
 }
+.w-50 {
+  width: 50%;
+}
 .w-70 {
   width: 70%;
+}
+.w-80 {
+  width: 80%;
 }
 .w-100 {
   width: 100%;
@@ -207,3 +231,45 @@ footer {
   font-weight: bold;
   color: #0a4c4c;
 }
+
+
+
+/* hedear nuevo */
+div #nav-bar {
+  display: block;
+}
+
+#nav-bar {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 18px;
+}
+
+.header-flexItem {
+  display: flex;
+  flex: 1 0 0;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0px;
+    align-items: center;
+}
+
+.header-icon {
+  display: inline-block;
+  line-height: 1;
+}
+
+.icon-wrapper--clickable {
+    position: relative;
+    background: 0 0;
+}
+
+
