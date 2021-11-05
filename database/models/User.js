@@ -5,15 +5,15 @@ module.exports = (sequelize) => {
     "User",
     {
       id: DataTypes.INTEGER,
-      name: DataTypes.STRING,
-      price: DataTypes.DECIMAL,
-      description: DataTypes.STRING,
-      image: DataTypes.STRING,
-      delete: DataTypes.INTEGER,
-      category: DataTypes.STRING,
+      fullName: DataTypes.STRING,
+      birthdate: DataTypes.DATE,
+      email: DataTypes.STRING,
+      password: DataTypes.STRING,
+      avatar: DataTypes.STRING,
+      admin: DataTypes.TINYINT,
     },
     {
-      tableName: "products",
+      tableName: "users",
       timestamps: false,
     }
   );
