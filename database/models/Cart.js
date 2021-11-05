@@ -9,7 +9,7 @@ module.exports = (sequelize) => {
             user_id: DataTypes.INTEGER,
         },
         {
-            tableName: "",
+            tableName: "carts",
             timestamps: false,
         }
     );
