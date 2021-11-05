@@ -6,8 +6,10 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  background-color: #0a4c4cb6;
-  border-radius: 8px;
+  max-width: 400px;
+  margin:auto;
+  /*background-color: #0a4c4cb6;
+  border-radius: 8px;*/
 }
 
 .register-input {
@@ -18,6 +20,8 @@
   padding: 10px 0;
   text-align: center;
 }
+
+
 
 .form-input {
   width: 70%;
@@ -30,10 +34,14 @@
   font-weight: bold;
 }
 
+/*.form-input input {
+  width: 70%;
+  border: solid rgb(77, 68, 68) 1px;
+*/
 .form-input input {
   width: 100%;
   padding: 10px;
-  border: none;
+  border: solid rgb(77, 68, 68) 1px;
 }
 
 .form-input input[type="checkbox"],
@@ -50,24 +58,26 @@
 }
 
 .register-he_leido {
-  text-align: center;
-  width: 70%;
+  text-align: justify;
+  width: 100%;
   margin: auto;
   padding: 10px 0;
+  line-height: 1.8;
 }
+
 .register-buttons {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  
+  width: 70%;
 }
 
 .boton-form {
+  width: 100%;
   font-size: 14px;
   color: white;
   background-color: #84c3c3;
   display: block;
   padding: 10px;
-  border-radius: 5px;
+  
   text-align: center;
   margin: 16px auto;
   border: #84c3c3;

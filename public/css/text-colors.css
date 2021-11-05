@@ -38,10 +38,16 @@
   background-color: #0a4c4c;
 }
 
+
+
 /* colores de texto */
 
 .tx-blanco {
   color: whitesmoke;
+}
+
+.tx-negro {
+  color: black;
 }
 
 .tx-todo-oscuro {
@@ -83,6 +89,21 @@ h2 {
   color: #0a4c4c;
 }
 
+
+
+
 .text-center {
   text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-into-block{
+  display: block;
 }

@@ -71,15 +71,18 @@
 }
 
 .titulo-otros {
-  margin-left: 10%;
+  /*margin-left: 10%;*/
+  padding: 8px 24px;
 }
+
 
 .contenedor-scroll {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
-  padding-bottom: 20%;
+  /*padding-bottom: 20%;
   padding-right: 10px;
+  */
 }
 
 .contenedor-scroll .card {
@@ -89,7 +92,7 @@
 .card {
   width: 50%;
   height: 250px;
-  padding-left: 10px;
+  /*padding-left: 10px;*/
 }
 
 .contenedor {

@@ -11,12 +11,12 @@
 					<div>
 						<form class="register-form" action="/user/register" method="POST" enctype="multipart/form-data">
 							<div>
-								<h2 class="tx-blanco">Creá tu cuenta</h2>
+								<h2>Registrate</h2>
 							</div>
 
 							<div class="form-input">
 								<label class="main-label" for="name"></label>
-								<input class="border-5" id="name" type="text" name="fullName"
+								<input class="border-radius" id="name" type="text" name="fullName"
 									placeholder="Nombre y apellido"
 									value="<%= locals.oldData ? oldData.name : null%>" />
 								<% if (locals.errors && errors.fullName) { %>
@@ -27,7 +27,7 @@
 							</div>
 							<div class="form-input">
 								<label class="main-label" for="birthdate"></label>
-								<input class="border-5 bg-blanco" id="birthdate" type="date" name="birthdate"
+								<input class="border-radius bg-blanco" id="birthdate" type="date" name="birthdate"
 									placeholder="Fecha de nacimiento"
 									value="<%= locals.oldData ? oldData.birthdate : null%>" />
 								<% if (locals.errors && errors.birthdate) { %>
@@ -38,7 +38,7 @@
 							</div>
 							<div class="form-input">
 								<label class="main-label" for="email"></label>
-								<input class="border-5" id="email" type="email" name="email"
+								<input class="border-radius" id="email" type="email" name="email"
 									placeholder="Dirección de email: persona@mail.com"
 									value="<%= locals.oldData ? oldData.email : null%>" />
 								<% if (locals.errors && errors.email) { %>
@@ -48,8 +48,8 @@
 									<% } %>
 							</div>
 							<div class="form-input">
-								<label class="main-label" for="avatar">Imagen de perfil:</label>
-								<input class="border-5" type="file" name="avatar" placeholder="Foto de perfil"
+								<label class="main-label" for="avatar"></label>
+								<input class="border-radius" type="file" name="avatar" 
 									value="<%= locals.oldData ? oldData.avatar : null%>" />
 								<% if (locals.errors && errors.avatar) { %>
 									<div>
@@ -59,7 +59,7 @@
 							</div>
 							<div class="form-input">
 								<label class="main-label" for="password"></label>
-								<input class="border-5" id="password" type="password" name="password"
+								<input class="border-radius" id="password" type="password" name="password"
 									placeholder="Contraseña" />
 								<% if (locals.errors && errors.password) { %>
 									<div>
@@ -77,16 +77,15 @@
 									</div>
 									<% } %>
 							</div>
-							<div>
-								<p class="register-he_leido tx-blanco">
+							<div class="form-input">
+								<p class="register-he_leido tx-negro text-justify">
 									<input type="checkbox" value="1" required />
 									He leido y acepto el tratamiento de mis datos explicado en la
 									politica de privacidad y en los terminos y condiciones
 								</p>
 							</div>
 							<div class="register-buttons">
-								<button class="boton-form" type="reset">Borrar</button>
-								<button class="boton-form" type="submit">Crear cuenta</button>
+								<button class="boton-form" type="submit">CREAR MI CUENTA</button>
 							</div>
 						</form>
 					</div>

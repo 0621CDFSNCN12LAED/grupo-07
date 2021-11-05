@@ -94,9 +94,11 @@ header {
   */
 }
 
+/*
 article {
   margin-bottom: 16px;
 }
+*/
 
 
 .img-dest {
@@ -120,7 +122,12 @@ article {
 footer {
   justify-content: space-between;
   align-items: center;
-  padding: 24px 24px 24px 24px;
+  padding: 34px 0;
+}
+
+#footer_container{
+      padding: 0 80px;
+      margin: 0px auto;
 }
 
 .fa-instagram {
@@ -230,9 +237,15 @@ footer {
   color: #0a4c4c;
 }
 
+/*Detalle producto*/
+.detalle-producto{
+  width: 100%;
+}
 
 
-/* hedear nuevo */
+
+
+/* hedear nuevo 
 div #nav-bar {
   display: block;
 }
@@ -269,5 +282,8 @@ div #nav-bar {
     position: relative;
     background: 0 0;
 }
+*/
+
+
 
 

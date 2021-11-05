@@ -13,16 +13,19 @@
                 <article class="detalle-producto">
                     <div class="flex-prod">
                         <div class="img-pd">
-                            <img src="/images/product-images/<%= product.image %>" width="100%" />
+                            <img src="/images/product-images/<%= product.image %>" class="w-100"/>
                         </div>
 
-                        <div class="texto-pd">
-                            <p>
+                        <div class="texto-pd ">
+                            
+                            <h3 class="text-into-block text-left">
+                             
                                 <%= product.name %>
+                            </h3>
+                            <p class="text-left">
+                                $ <%= product.price %>
                             </p>
-                            <p>$ <%= product.price %>
-                            </p>
-                            <p>
+                            <p class="text-left">
                                 <%= product.description %>
                             </p>
 
@@ -33,7 +36,9 @@
 
 
                  
-                <button class="boton-cantidad-product">- 1 +</button>
+                    <button class="boton-cantidad-product">- 1 +</button>
+                    
+                
                 <button class="boton-añadir">
                 <% if (locals.userLogged) { %>
                 <a href= "/products/productCart" >Añadir al carrito</a></button>
