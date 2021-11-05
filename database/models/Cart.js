@@ -20,8 +20,8 @@ module.exports = (sequelize) => {
         model.belongsToMany(models.Product, {
             as: "products",
             through: "compra_producto",
-            foreignKey: "ID_cart",
-            otherKey: "ID_product_id",
+            foreignKey: "id_cart",
+            otherKey: "id_product_id",
             timestamps: false,
         });
     };
