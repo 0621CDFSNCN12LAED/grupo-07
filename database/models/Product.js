@@ -1,32 +1,33 @@
-// const { DataTypes } = require("Sequelize");
+const { DataTypes } = require("Sequelize");
 
-// module.exports = (sequelize) => {
-//   const model = sequelize.define(
-//     "Product",
-//     {
-//       title: DataTypes.STRING,
-//       rating: DataTypes.DECIMAL,
-//       release_date: DataTypes.DATE,
-//       length: DataTypes.INTEGER,
-//       awards: DataTypes.INTEGER,
-//     },
-//     {
-//       tableName: "products",
-//       timestamps: false,
-//     }
-//   );
+module.exports = (sequelize) => {
+  const model = sequelize.define(
+    "Product",
+    {
+      id: DataTypes.INTEGER,
+      name: DataTypes.STRING,
+      price: DataTypes.DECIMAL,
+      description: DataTypes.STRING,
+      image: DataTypes.STRING,
+      delete: DataTypes.INTEGER,
+      category: DataTypes.STRING,
+    },
+    {
+      tableName: "products",
+      timestamps: false,
+    }
+  );
 
-//   //Asociaciones
-//   model.associate = (models) => {
-//     model.belongsTo(models.Genre, { as: "genre", foreignKey: "genre_id" });
-//     model.belongsToMany(models.Actor, {
-//       as: "actors",
-//       through: "actor_movie",
-//       foreignKey: "movie_id",
-//       otherKey: "actor_id",
-//       timestamps: false,
-//     });
-//   };
+  //Asociaciones
+  model.associate = (models) => {
+    model.belongsToMany(models.Cart, {
+      as: "cart",
+      through: "compra_producto",
+      foreignKey: "id_product",
+      otherKey: "id_cart",
+      timestamps: false,
+    });
+  };
 
-//   return model;
-// };
+  return model;
+};
