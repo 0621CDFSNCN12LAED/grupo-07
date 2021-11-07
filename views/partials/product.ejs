@@ -1,17 +1,15 @@
-<article class="detalle-producto">
-  <div class="flex-prod">
-    <a href="/products/<%= prod.id %>">
-      <div class="img-pd">
-        <img src="images/product-images/<%= prod.image %>" width="100%" />
-      </div>
 
-      <div class="texto-pd">
+
+ <div class="padding-16 selec-wrapper-50 selec-wrapper">
+   <a href="/products/<%= prod.id %>">
+   <article class="box-shadow">
+     <img src="images/product-images/<%= prod.image %>" class="img-prod">
+     <div class="text-center tx-negro">
         <p><%= prod.name %></p>
         <p>$ <%= prod.price %></p>
-        <p><%= prod.description %></p>
-        </a>
         
-      </div>
-    
-  </div>
-</article>
+     </div>
+   </article>
+   </a>
+ </div>
+

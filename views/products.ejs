@@ -9,13 +9,15 @@
 
         <main id="main-content">
             <!--Acá va el header-->
-            <div class="container products-wrapper">
-                <div class="">
-                    <div class="">
-                        <h2 class="">Todos los productos</h2>
+            <!--<div class="container products-wrapper">-->
+                
+                    <div class="padding-24" >
+                        <h2 >Todos los productos</h2>
                     </div>
+                    <div class="flex justify-between">
                     <% for(let prod of products){ %> <%-
                     include("partials/product.ejs", {prod:prod}) %> <% } %>
+                    </div>
                 </div>
             </div>
         </main>

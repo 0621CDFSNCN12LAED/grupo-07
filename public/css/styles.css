@@ -87,13 +87,30 @@ header {
   padding: 16px;
 }
 
-.filo-wrapper {
-  padding: 16px;
-  /*
-  position: relative;
-  */
+.selec-wrapper-50 {
+  width: 50%;
 }
 
+.img-prod {
+  width: -webkit-fill-available;
+}
+
+.zoom:hover {
+  transform: scale(1.2);
+}
+
+.filo-wrapper {
+  padding: 16px;
+  
+}
+
+.index-filo{
+  margin-top: 24px;
+  margin-bottom: 24px;
+  background-image: url(/images/filosofia.png);
+  
+  
+}
 /*
 article {
   margin-bottom: 16px;
@@ -142,6 +159,7 @@ footer {
   color: white;
   text-decoration: none;
 }
+
 
 .fa-instagram {
   font-size: 24px;
@@ -226,8 +244,15 @@ footer {
   margin: auto;
 }
 
-.margin-top {
+.margin-top-16 {
   margin-top: 16px;
+}
+
+.margin-top-48{
+  margin-top: 48px;
+}
+.margin-bottom-48{
+  margin-bottom: 48px;
 }
 
 .border-top-8 {
@@ -256,7 +281,7 @@ a{
 
 /*Detalle producto*/
 .detalle-producto{
-  width: 100%;
+  width: 45%;
 }
 
 

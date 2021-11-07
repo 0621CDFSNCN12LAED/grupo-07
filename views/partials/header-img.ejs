@@ -1,0 +1,80 @@
+<header class="flex">
+
+  <div id="frase-tienda" class="bg-cuidadopiel-claro text-center tx-medicina-oscuro w-100 ">
+    <p class="margin-0">🌱 Tienda online de productos artesanales y naturales.🌱</p>
+  </div>
+
+
+  <nav id="main-nav" class="w-100 flex">
+  <div class="flex justify-between align-center w-100 padding-8-48">
+    <a href="#" class="icon-burger">
+      <i class="fas fa-bars"></i>
+    </a>
+    <a href="/" class="ms-auto-margin">
+      <img class="logo-hy" src="/images/logo1.png" alt="Logo Hampi Yura" />
+    </a>
+    <a href="/user/login" class="ms-hide">
+      <i class="far fa-smile"></i>
+    </a>
+  </div>
+
+  <div class="flex w-70 hide show padding-24">
+    <ul class="flex">
+      <li class="margin-auto">
+        <a href="../products">PRODUCTOS</a>
+      </li>
+      <li class="margin-auto">
+        <a href="../fitoterapia">FITOTERAPIA</a>
+      </li>
+      <li class="margin-auto">
+        <a href="../filosofia">FILOSOFÍA HAMPI</a>
+      </li>
+      <li class="margin-auto">
+        <a href="../contacto">CONTACTO</a>
+      </li>
+    </ul>
+</div>
+
+<div class="flex w-30 hide show padding-24">
+    <ul class="flex">
+      <!-- si tengo locals.isLogged = false (porque asi esta en el MD), quiero mostrar la parte del "else" -->
+      <!-- porque esta seteado en "false" -->
+      <% if (locals.isLogged) { %>
+      <li class="margin-auto">
+        <a href="/user/userProfile" id="dropUser">
+          <!--<img
+            src="/images/avatars/<%= locals.userLogged.avatar %>"
+            width="40"
+            style="border-radius: 100%"
+          />-->
+          ¡Hola, <%= locals.userLogged.fullName %>!
+        </a>
+        <!--<ul class="flex w-30 justify-end">
+          <a href="/user/userProfile">Mi perfil</a>-->
+          <br />
+          <a href="/user/logout">Logout</a>
+        </ul>
+      </li>
+
+      <ul class="flex w-30 justify-end">
+        <% } else { %>
+        <!--<li class="margin-auto w-50">
+          <a href="/user/register">Register</a>
+        </li>
+        <li class="margin-auto w-50">
+          <a href="/user/login">Login</a>
+        </li>-->
+        <li class="margin-auto">
+        <a href="/user/login">
+          <i class="far fa-smile"></i>
+        </a>
+        </li>
+
+        <% } %>
+      </ul>
+
+    </ul>
+    </div>
+    </div>
+  </nav>
+</header>

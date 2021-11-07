@@ -38,6 +38,13 @@
   background-color: #0a4c4c;
 }
 
+.bg-opacity{
+  opacity: 50%;
+}
+
+.bg-img-filo{
+  background-image: url(/images/filo1.jpg);
+}
 
 
 /* colores de texto */
@@ -106,4 +113,8 @@ h2 {
 
 .text-into-block{
   display: block;
+}
+
+.interlineado-18{
+  line-height: 1.8
 }
