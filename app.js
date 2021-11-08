@@ -39,6 +39,7 @@ app.use("/", mainRoutes);
 app.use("/products", productsRoutes);
 app.use("/user", userRoutes);
 
+
 app.use((req, res, next) => {
   res.status(404).render("not-found");
 });

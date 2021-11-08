@@ -30,7 +30,7 @@ CREATE TABLE products (
 );
 
 -- compra cart
-CREATE TABLE cart (
+CREATE TABLE carts (
   id INT PRIMARY KEY AUTO_INCREMENT,
   date DATE NOT NULL,
   total_price DECIMAL NOT NULL,
@@ -39,13 +39,43 @@ CREATE TABLE cart (
   );
 
 -- compra_producto table
-CREATE TABLE compra_producto (
+CREATE TABLE carts_products (
   id INT PRIMARY KEY AUTO_INCREMENT,
   id_product INT NOT NULL,
   FOREIGN KEY (id_product) REFERENCES products(id),
   id_cart INT NOT NULL,
-  FOREIGN KEY (id_cart) REFERENCES cart(id)
+  FOREIGN KEY (id_cart) REFERENCES carts(id)
 );
+
+
+INSERT INTO users (id, fullName, birthdate, email, password, avatar, admin)
+VALUES 
+
+(default, 
+"Admin",
+"2021-10-12", 
+"admin@hampiyura.com", 
+"$2a$10$sPG1Hpzent0DOygDHEuu9u5G3FoCft6OXvR8684V4SFgQSIP3aREq",
+"logo2.png",
+1), 
+(default,
+"Bárbara Rivas Eizmendi",
+"1989-10-19",
+"bar.rivas@gmail.com",
+"$2a$10$pIpNnyopectu.mHVrogtve5pllHP0/GSkTUoeTcaahmrqtK5ZnFPS",
+"1635977443621_img.jpeg",
+0);
+
+
+
+
+
+
+
+
+
+
+
 
 
 

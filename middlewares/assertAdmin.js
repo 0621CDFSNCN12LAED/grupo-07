@@ -1,4 +1,4 @@
-const userLogged = require("../middlewares/userLoggedMiddleware");
+const userLogged = require("./userLoggedMiddleware");
 
 module.exports = (req, res, next) => {
   let user = req.session.userLogged;

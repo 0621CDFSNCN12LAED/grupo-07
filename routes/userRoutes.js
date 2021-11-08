@@ -3,6 +3,7 @@ const router = express.Router();
 
 // Controller
 const usersController = require("../controllers/userController");
+const cartController = require ("../controllers/cartController");
 
 // Middlewares
 const uploadFile = require("../middlewares/userMulterMiddleware");
@@ -33,4 +34,10 @@ router.get("/userProfile/", authMiddleware, usersController.profile);
 // Logout
 router.get("/logout/", usersController.logout);
 
+/*Carritos
+router.get ("/:id/cart", cartController.list)
+
+//Detalle de un carrito
+router.get ("/:id/cart/:id", cartController.detail)
+*/
 module.exports = router;

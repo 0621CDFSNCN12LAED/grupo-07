@@ -27,8 +27,6 @@ router.get("/productCart", productsControllers.productCart);
 /*** GET ONE PRODUCT ***/
 router.get("/:id", productsControllers.productDetail);
 
-
-
 /*** EDIT ONE PRODUCT***/
 router.get(
   "/:id/edit",

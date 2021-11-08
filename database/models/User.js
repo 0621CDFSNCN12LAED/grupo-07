@@ -1,10 +1,14 @@
 const { DataTypes } = require("Sequelize");
 
 module.exports = (sequelize) => {
-  const model = sequelize.define(
+  const User = sequelize.define(
     "User",
     {
-      id: DataTypes.INTEGER,
+      id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+      },
       fullName: DataTypes.STRING,
       birthdate: DataTypes.DATE,
       email: DataTypes.STRING,
@@ -19,7 +23,7 @@ module.exports = (sequelize) => {
   );
 
   //Asociaciones
-  model.associate = (models) => {
+  /*model.associate = (models) => {
     model.belongsToMany(models.Cart, {
       as: "cart",
       through: "compra_producto",
@@ -30,4 +34,12 @@ module.exports = (sequelize) => {
   };
 
   return model;
+};
+*/
+
+  User.associate = (models) => {
+    User.hasMany(models.Cart, { as: "carts", foreignKey: "id_user" });
+    
+  };
+  return User;
 };

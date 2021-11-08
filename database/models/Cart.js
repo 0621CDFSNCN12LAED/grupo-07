@@ -1,7 +1,7 @@
 const { DataTypes } = require("Sequelize");
 
 module.exports = (sequelize) => {
-    const model = sequelize.define(
+    const Cart = sequelize.define(
         "Cart",
         {
             total_price: DataTypes.DECIMAL,
@@ -15,7 +15,7 @@ module.exports = (sequelize) => {
     );
 
     //Asociaciones
-    model.associate = (models) => {
+    /*model.associate = (models) => {
         model.belongsTo(models.User, { as: "user", foreignKey: "id_user" });
         model.belongsToMany(models.Product, {
             as: "products",
@@ -28,3 +28,12 @@ module.exports = (sequelize) => {
 
     return model;
 };
+*/
+Cart.associate = (models)=> {
+    Cart.hasMany (models.Product, 
+    {as: "products", foreignKey:"id_cart"});
+    Cart.belongsTo (models.User, 
+        {as: "users", foreignKey: "id_user"});      
+};
+return Cart;
+}
