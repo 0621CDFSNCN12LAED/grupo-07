@@ -1,20 +1,14 @@
-const {Product, Cart} = require("../database/models");
+const fs = require("fs");
+const path = require("path");
+
 const productService = require("../services/productService");
-
-
-//ASYNC - AWAIT
 
 const controller = {
   // Root - Show all products
-  products: async (req, res) => {
-    const filteredProducts = await Product.findAll({
-      include: [{ association: "carts" }],
-    });
-      res.render("products", { products: filteredProducts });
-    },
-  
-
-    
+  products: (req, res) => {
+    const filteredProducts = productService.findAll();
+    res.render("products", { products: filteredProducts });
+  },
 
   // Detail - Detail from one product
   productDetail: (req, res) => {

@@ -14,26 +14,20 @@ module.exports = (sequelize) => {
         }
     );
 
-    //Asociaciones
-    /*model.associate = (models) => {
-        model.belongsTo(models.User, { as: "user", foreignKey: "id_user" });
-        model.belongsToMany(models.Product, {
+ 
+    Cart.associate = (models) => {
+        Cart.belongsTo (models.User, { as: "users", foreignKey: "id_user"});
+        Cart.belongsToMany(models.Product, {
             as: "products",
-            through: "compra_producto",
+            through: "carts_products",
             foreignKey: "id_cart",
-            otherKey: "id_product_id",
+            otherKey: "id_product",
             timestamps: false,
         });
+    
     };
 
-    return model;
+    return Cart;
 };
-*/
-Cart.associate = (models)=> {
-    Cart.hasMany (models.Product, 
-    {as: "products", foreignKey:"id_cart"});
-    Cart.belongsTo (models.User, 
-        {as: "users", foreignKey: "id_user"});      
-};
-return Cart;
-}
+
+

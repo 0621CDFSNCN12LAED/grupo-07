@@ -22,25 +22,14 @@ module.exports = (sequelize) => {
         }
     );
 
-    //Asociaciones
-   /* model.associate = (models) => {
-        model.belongsToMany(models.Cart, {
-            as: "cart",
-            through: "compra_producto",
-            foreignKey: "id_product",
-            otherKey: "id_cart",
-            timestamps: false,
-        });
-    };
-
-    return model;
-};
-*/
-
-
 Product.associate = (models) => {
-  Product.belongsTo (models.Cart, 
-    { as: "cart", foreignKey: "id_cart" });
+  Product.belongsToMany (models.Cart, 
+    { as: "carts", 
+    through: "carts_products",
+    foreignKey: "id_product",
+    otherKey: "id_cart",
+    timestamps: false,
+});
 };
 return Product;
 }
