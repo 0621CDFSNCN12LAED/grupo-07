@@ -63,7 +63,7 @@
 /* Detalle de producto */
 .texto-pd {
   text-align: center;
-  padding: 5%;
+  /*padding: 5%;*/
 }
 /*
 .detalle-producto {
@@ -93,7 +93,7 @@
 
 .card {
   width: 50%;
-  height: 250px;
+  /*height: 250px;*/
   /*padding-left: 10px;*/
 }
 
@@ -147,8 +147,8 @@
 }
 
 .boton-añadir {
-  width: 50%;
-  margin-left: 25%;
+  /*width: 50%;*/
+  /*margin-left: 25%;*/
   font-size: 14px;
   color: rgb(77, 68, 68);
   background-color: #daa4a1;

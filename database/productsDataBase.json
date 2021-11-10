@@ -19,12 +19,13 @@
     },
     {
         "id": 7,
-        "name": "Protectos solar facial",
+        "name": "Protector solar facial",
         "price": 1000,
         "description": "Cuidá tu cara con este increíble protector",
         "image": "pasta-dental.png",
         "deleted": false,
-        "discount": null
+        "discount": null,
+        "category": "Belleza"
     },
     {
         "id": 8,

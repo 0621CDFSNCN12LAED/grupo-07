@@ -1,5 +1,5 @@
-/****media=min-width:480px - max-width: 768px" *****/
 
+/**** media => min-width:641px ****/
 /*nav-bar*/
 .fa-smile:hover{
     opacity: 1;
@@ -222,8 +222,8 @@ contenedor-scroll {
 */
 
 .contenedor-scroll {
-  display: flex;
-  flex-wrap: wrap;
+  /*display: flex;
+  flex-wrap: wrap;*/
   justify-content: space-between;
   padding-bottom: 24px;
   /*padding-left: 30px;*/
@@ -238,11 +238,13 @@ contenedor-scroll {
 */
 
 .card {
-  width: 25%;
+  width: 30%;
   height: auto;
   /*padding-left: 10px;*/
 }
-
+.img-dest{
+  height: 350px;
+}
 
 /*
 .prod {

@@ -10,56 +10,57 @@
             <main id="main-content">
                 <!--Acá va el partial de producto-->
                 
-                <article class="detalle-producto">
-                    <div class="flex-prod">
+                <article class="detalle-producto br-bottom">
+                    <div class="w-100 flex-prod">
                         <div class="img-pd">
                             <img src="/images/product-images/<%= product.image %>" class="w-100"/>
                         </div>
+                    </div>
 
                         <div class="texto-pd ">
-                            
-                            <h3 class="text-into-block text-left">
-                             
-                                <%= product.name %>
-                            </h3>
-                            <p class="text-left">
-                                $ <%= product.price %>
-                            </p>
-                            <p class="text-left">
-                                <%= product.description %>
-                            </p>
+                            <div class="flex justify-between padding-8-48 ">
+                                <h2 class="text-into-block text-left tx-negro">
+                                     <%= product.name %>
+                                </h2>
+                                <h2 class="tx-negro">
+                                    $ <%= product.price %>
+                                </h2>
+                            </div> 
+                        </div> 
 
-
-                        </div>
-                    </div>
-                </article>
-
-
-                 
-                    <button class="boton-cantidad-product">- 1 +</button>
-                    
-                
-                <button class="boton-añadir">
-                <% if (locals.userLogged) { %>
-                <a href= "/products/productCart" >Añadir al carrito</a></button>
-                <% } else { %> 
+                    <div class="w-100 padding-8-48">     
+                    <button class="boton-añadir w-100 ">
+                    <% if (locals.userLogged) { %>
+                    <a href= "/products/productCart" >Añadir al carrito</a></button>
+                    <% } else { %> 
                     <a href= "/user/login" >Añadir al carrito</a></button>
                     <% } %> 
 
-                <% if (locals.userLogged && userLogged.admin) { %> 
-                <button class="boton-añadir"><a href="/products/<%= product.id %>/edit">Editar</a></button>
-                <form action="/products/<%= product.id %>?_method=DELETE" method="POST" >
-                <button type="submit" class="boton-añadir">ELIMINAR</button></form>
-                <% } %> 
-
+                    <% if (locals.userLogged && userLogged.admin) { %> 
+                    <button class="boton-añadir w-100 "><a href="/products/<%= product.id %>/edit">Editar</a></button>
+                    <form action="/products/<%= product.id %>?_method=DELETE" method="POST" >
+                    <button type="submit" class="boton-añadir w-100">ELIMINAR</button></form>
+                    <% } %> 
+                    </div>   
+                    
+                    <div class="padding-8-48">
+                        <h3>
+                             <%= product.name %>
+                        </h3>
+                            <p class="">
+                                <%= product.description %>
+                            </p>
+                    </div>
+                </article>                 
+                    <!--<button class="boton-cantidad-product">- 1 +</button>-->
 
                 <section>
-                    <h3 class="titulo-otros">Podés combinarlo con...</h3>
+                    <h3 class="titulo-otros">Otros productos que también te pueden gustar ♡</h3>
 
                     <div class="contenedor-scroll">
-                        <div class="card">
+                        <div class="card padding-8">
                             <article>
-                                <img src="/images/product-images/prod6.jpg" width="100%" />
+                                <img src="/images/product-images/prod6.jpg" class="img-dest" />
 
                                 <div class="contenedor">
                                     <p class="prod">Producto 1</p>
@@ -71,9 +72,9 @@
                             </article>
                         </div>
 
-                        <div class="card">
+                        <div class="card padding-8">
                             <article>
-                                <img src="/images/product-images/prod7.jpg" width="100%" />
+                                <img src="/images/product-images/prod7.jpg" class="img-dest" />
                                 <div class="contenedor">
                                     <p class="prod">Producto 1</p>
                                     <p class="price">$12.99</p>
@@ -83,9 +84,9 @@
                             </article>
                         </div>
 
-                        <div class="card">
+                        <div class="card padding-8">
                             <article>
-                                <img src="/images/product-images/prod8.jpg" width="100%" />
+                                <img src="/images/product-images/prod8.jpg" class="img-dest" />
                                 <div class="contenedor">
                                     <p class="prod">Producto 1</p>
                                     <p class="price">$12.99</p>
@@ -95,9 +96,9 @@
                             </article>
                         </div>
 
-                        <div class="card">
+                        <div class="card padding-8">
                             <article>
-                                <img src="/images/product-images/prod9.jpg" width="100%" />
+                                <img src="/images/product-images/prod9.jpg" class="img-dest" />
                                 <div class="contenedor">
                                     <p class="prod">Producto 1</p>
                                     <p class="price">$12.99</p>

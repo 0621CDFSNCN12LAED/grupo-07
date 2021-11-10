@@ -91,6 +91,14 @@
   color: #0a4c4c;
 }
 
+.border-button {
+  border: #84c3c3;
+}
+
+.br-bottom {
+  border-bottom: 1px solid lightgray;
+}
+
 h2 {
   font-size: 22px;
   color: #0a4c4c;

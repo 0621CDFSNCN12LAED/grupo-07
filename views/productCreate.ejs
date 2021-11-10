@@ -16,13 +16,13 @@
             enctype="multipart/form-data"
           >
             <div>
-              <h2 class="tx-blanco">Crear producto</h2>
+              <h2 >Crear producto</h2>
             </div>
 
             <div class="form-input">
               <label class="main-label" for="name"></label>
               <input
-                class="border-5"
+                class=""
                 type="text"
                 name="name"
                 placeholder="Nombre del producto"
@@ -32,7 +32,7 @@
             <div class="form-input">
               <label class="main-label" for="price"></label>
               <input
-                class="border-5"
+                class=""
                 type="text"
                 name="price"
                 placeholder="Precio: $12.99"
@@ -42,7 +42,7 @@
             <div class="form-input">
               <label class="main-label" for="description"></label>
               <input
-                class="border-5"
+                class=""
                 type="text"
                 name="description"
                 placeholder="Descripción"
@@ -52,7 +52,7 @@
             <div class="form-input">
               <label class="main-label" for="image"></label>
               <input
-                class="border-5"
+                class=""
                 type="file"
                 name="image"
                 placeholder="Foto del producto"
@@ -61,15 +61,37 @@
               />
             </div>
             <div class="form-input">
+              <label class="main-label" for="stock"></label>
+              <select
+                class="w-100"
+                type="text"
+                name="stock"
+                placeholder="Stock"
+                required
+              >
+                <option value="" disabled selected>Stock</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+            <div class="form-input">
               <label class="main-label" for="category"></label>
               <select
-                class="border-5"
+                class="w-100"
                 type="text"
                 name="category"
                 placeholder="Categoria"
                 required
               >
-                <option value="" disabled selected>Elegí</option>
+                <option value="" disabled selected>Categoría</option>
                 <option value="Belleza">Belleza</option>
                 <option value="Higiene">Higiene</option>
                 <option value="Fitoterapia">Fitoterapia</option>
@@ -83,8 +105,9 @@
                 </select>
               </div> -->
             <div class="register-buttons">
-              <button class="boton-form" type="reset">Borrar</button>
-              <button class="boton-form" type="submit">Cargar datos</button>
+              <button class="w-100 boton-filo tx-blanco bg-higiene-claro border-button" type="submit">Aceptar</button>
+              <button class="w-100 boton-filo tx-higiene-claro background-color border-button" type="reset">Cancelar</button>
+              
             </div>
           </form>
         </div>
