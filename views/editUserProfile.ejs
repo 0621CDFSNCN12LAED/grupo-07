@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Acá va el head-->
+<%- include ("partials/head.ejs") %>
+
+	<body class="body">
+		<!--Acá va el header-->
+		<%- include ("partials/header.ejs") %>
+			<main id="main-content">
+				<section class="padding-24">
+					<div>
+						<form class="register-form" action="/user/register" method="POST" enctype="multipart/form-data">
+							<div>
+								<h2>Editá tus datos</h2>
+							</div>
+
+							<div class="form-input">
+								<label class="main-label" for="name"></label>
+								<input class="border-radius" id="name" type="text" name="fullName"
+									placeholder="Nombre y apellido"
+									value="<%=user.fullName%>"
+                />
+							</div>
+
+							<div class="form-input">
+								<label class="main-label" for="birthdate"></label>
+								<input class="border-radius bg-blanco" id="birthdate" type="date" name="birthdate"
+									placeholder="Fecha de nacimiento"
+									value="<%= user.birthdate%>" />
+							</div>
+              
+							<div class="form-input">
+								<label class="main-label" for="email"></label>
+								<input class="border-radius" id="email" type="email" name="email"
+									placeholder="Dirección de email: persona@mail.com"
+									value="<%= user.email %>" />
+								
+							</div>
+							<div class="form-input">
+								<label class="main-label" for="avatar"></label>
+								<input class="border-radius" type="file" name="avatar" 
+									value="<%= user.avatar %>" />
+								
+							</div>
+							
+							
+							<div class="register-buttons">
+								<button class="boton-form" type="submit">ACEPTAR</button>
+							</div>
+						</form>
+					</div>
+				</section>
+			</main>
+
+			<!--Acá va el footer-->
+			<%- include ("partials/footer.ejs") %>
+	</body>
+
+</html>

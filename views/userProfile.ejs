@@ -8,12 +8,15 @@
     <div>
       <div>
         <div>
-          <h2>Hi, <%= user.fullName %></h2>
+          <h2>Hola, <%= user.fullName %></h2>
           <img src="/images/avatars/<%= user.avatar %> " width="100%" />
           <br />
           <br />
           <div>Email: <%= user.email %></div>
           <div>Fecha de cumpleaños: <%= user.birthdate %></div>
+        </div>
+        <div>
+          <button class="boton-añadir w-100 "><a href="/user/<%= user.id %>/edit">Editar</a></button>
         </div>
       </div>
     </div>

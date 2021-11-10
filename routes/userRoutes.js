@@ -31,6 +31,10 @@ router.post("/login", usersController.loginProcess);
 // Perfil de Usuario
 router.get("/userProfile/", authMiddleware, usersController.profile);
 
+// Edit - Perfil de Usuario
+router.get("/:id/edit", uploadFile.single("avatar"), usersController.edit);
+router.put("/:id", uploadFile.single("avatar"), usersController.update);
+
 // Logout
 router.get("/logout/", usersController.logout);
 

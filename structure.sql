@@ -12,10 +12,10 @@ USE hampi_db;
   id INT PRIMARY KEY AUTO_INCREMENT,
   fullName VARCHAR(100) NOT NULL,
   birthdate date NULL NULL,
-  email VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE,
   password VARCHAR(100) NOT NULL,
   avatar VARCHAR(100) NOT NULL,
-  admin TINYINT NOT NULL
+  admin TINYINT NOT NULL DEFAULT 0
 );
 
 -- products table
@@ -25,7 +25,7 @@ CREATE TABLE products (
   price DECIMAL NOT NULL,
   description TEXT NOT NULL,
   image VARCHAR(100) NOT NULL,
-  deleted TINYINT NOT NULL,
+  deleted TINYINT NOT NULL DEFAULT 0,
   category VARCHAR(100) NOT NULL,
   stock INT NOT NULL
 );
@@ -68,7 +68,72 @@ VALUES
 "1635977443621_img.jpeg",
 0);
 
+INSERT INTO products (id, name, price, description, image, deleted, category, stock)
+VALUES
 
+        (1,
+        "Shampoo sólido - cabello seco",
+        600,
+        "Sahmpoo sólido para cabello seco",
+        "shampoo-seco.jpg",
+        false,
+        "Higiene",
+        5),
+
+        (default,
+         "Pasta dental",
+         300,
+         "Pasta dental para que tengas lo mejores dientes",
+         "pasta-dental.png",
+         false,
+         "Higiene",
+         5
+        ),
+    
+        (default,
+         "Protector solar facial",
+         1000,
+         "Cuidá tu cara con este increíble protector",
+        "pasta-dental.png",
+        false,
+         "Belleza",
+         10),
+    
+    
+        (default,
+         "Crema humectante - día",
+         900,
+         "Crema humectante para el día",
+         "crema-humectante-dia.png",
+         false,
+         "Belleza",
+        5),
+    
+        (default,
+         "Crema humectante - noche",
+         900,
+         "Crema humectante para la noche",
+         "pasta-dental.png",
+         false,
+         "Belleza",
+        10),
+    
+        (default,
+         "Cannabis microdosis",
+         1500,
+         "Tintura madre",
+         "cannabis.png",
+         false,
+         "Higiene",
+          10);
+
+
+
+
+
+
+    
+  
 
 
 

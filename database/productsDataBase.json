@@ -63,5 +63,15 @@
         "id": 11,
         "image": "1634554715439_img.jpg",
         "deleted": true
+    },
+    {
+        "name": "Una prueba mas",
+        "price": 2,
+        "description": "blablabla",
+        "stock": "1",
+        "category": "Belleza",
+        "id": 12,
+        "image": "1636558326804_img.jpg",
+        "deleted": false
     }
 ]

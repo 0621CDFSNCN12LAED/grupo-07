@@ -1,13 +1,15 @@
 const bcryptjs = require("bcryptjs");
 const { validationResult } = require("express-validator");
 
-const User = require("../services/userService");
+const Users = require("../services/userService");
+const { User, Cart } = require("../database/models");
+
 
 const controller = {
   register: (req, res) => {
     return res.render("userRegisterForm");
   },
-  processRegister: (req, res) => {
+  processRegister: async (req, res) => {
     const resultValidation = validationResult(req);
 
     if (resultValidation.errors.length > 0) {
@@ -17,7 +19,7 @@ const controller = {
       });
     }
 
-    let userInDB = User.findByField("email", req.body.email);
+    let userInDB = Users.findByField("email", req.body.email);
 
     if (userInDB) {
       return res.render("userRegisterForm", {
@@ -35,7 +37,10 @@ const controller = {
     //--> incluyendo la propiedad "avatar" con el nombre del archivo, que me trae el request
     //--> y la propiedad password hasheada usando libreria bycript, usando lo que viene en body.
 
-    User.create(req.body, req.file);
+    await User.create({
+      ...req.body,
+      avatar: req.file.filename,
+    });
     return res.redirect("/user/login");
   },
 
@@ -43,7 +48,7 @@ const controller = {
     return res.render("userLoginForm");
   },
   loginProcess: (req, res) => {
-    let userToLogin = User.findByField("email", req.body.email);
+    let userToLogin = Users.findByField("email", req.body.email);
     //Si hay coincidencia con el email:
     if (userToLogin) {
       let isOkThePassword = bcryptjs.compareSync(
@@ -86,6 +91,27 @@ const controller = {
     return res.render("userProfile", {
       user: req.session.userLogged,
     });
+  },
+
+  edit: async (req, res) => {
+    const user = await User.findByPk(req.params.id);
+    res.render("editUserProfile", { user });
+  },
+  // Update - Method to update
+  update: async (req, res) => {
+    await User.update(
+      {
+        ...req.body,
+        avatar: req.file.filename,
+        
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+    res.redirect("/user/userProfile");
   },
 
   // si cierro session/me deslogueo, la cookie debe destruirse, ya que si cierro el navegador me sigue logueando

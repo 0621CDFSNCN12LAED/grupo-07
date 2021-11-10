@@ -1,18 +1,19 @@
-const fs = require("fs");
-const path = require("path");
+/*const fs = require("fs");
+const path = require("path");*/
 
+const { Product, Cart } = require("../database/models");
 const productService = require("../services/productService");
 
 const controller = {
   // Root - Show all products
-  products: (req, res) => {
-    const filteredProducts = productService.findAll();
+  products: async (req, res) => {
+    const filteredProducts = await Product.findAll();
     res.render("products", { products: filteredProducts });
   },
 
   // Detail - Detail from one product
-  productDetail: (req, res) => {
-    const product = productService.findOneById(req.params.id);
+  productDetail: async (req, res) => {
+    const product = await Product.findByPk(req.params.id);
     if (product) {
       res.render("productDetail", { product });
     } else {
@@ -27,26 +28,51 @@ const controller = {
   },
 
   // Create -  Method to store
-  store: (req, res) => {
-    productService.createOne(req.body, req.file);
+  /****NOS FALTA SOLUCIONAR LA SUBIDA DE IMAGEN****/
+  store: async (req, res) => {
+    await Product.create ({
+      name: req.body.name,
+      price: req.body.price,
+      description: req.body.description,
+      image: req.file.filename,
+      stock: req.body.stock,
+      category: req.body.category
+    });
     res.redirect("/products");
   },
 
   // Update - Form to edit
-  edit: (req, res) => {
-    const product = productService.findOneById(req.params.id);
+  edit: async (req, res) => {
+    const product = await Product.findByPk(req.params.id);
     res.render("productEdit", { product });
   },
   // Update - Method to update
-  update: (req, res) => {
-    productService.editOne(req.params.id, req.body, req.file);
+  update: async (req, res) => {
+    await Product.update(
+      {
+        name: req.body.name,
+        price: req.body.price,
+        description: req.body.description,
+        image: req.file.filename,
+        stock: req.body.stock,
+        category: req.body.category,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
     res.redirect("/products");
   },
 
   // Delete - Delete one product from DB
-  destroy: (req, res) => {
-    productService.destroyOne(req.params.id);
-
+  destroy: async (req, res) => {
+    await Product.destroy({
+        where: {
+          id: req.params.id,
+        }
+      });
     res.redirect("/products");
   },
 
