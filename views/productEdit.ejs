@@ -92,11 +92,16 @@
                 type="text"
                 name="category"
                 placeholder="Categoria"
+                
                 required
               >
-                <option>Belleza</option>
-                <option>Higiene</option>
-                <option>Fitoterapia</option>
+                <option value="Belleza" <%= product.category == "Belleza" ? "selected" : "" %>>Belleza
+                </option>
+                <option value="Higiene" <%= product.category == "Higiene" ? "selected" : "" %>>Higiene
+                </option>
+                <option value="Fitoterapia" <%= product.category == "Fitoterapia" ? "selected" : "" %>>Fitoterapia
+                </option>
+                
               </select>
             </div>
             <!-- <div class="form-input">

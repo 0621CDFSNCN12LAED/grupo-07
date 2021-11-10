@@ -50,9 +50,10 @@
         "name": "Cannabis microdosis",
         "price": 1500,
         "description": "Tintura madre",
-        "category": "Fitoterapia",
+        "category": "Higiene",
         "image": "cannabis.png",
-        "deleted": false
+        "deleted": false,
+        "discount": null
     },
     {
         "name": "Prueba",

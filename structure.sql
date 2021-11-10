@@ -26,21 +26,23 @@ CREATE TABLE products (
   description TEXT NOT NULL,
   image VARCHAR(100) NOT NULL,
   deleted TINYINT NOT NULL,
-  category VARCHAR(100) NOT NULL
+  category VARCHAR(100) NOT NULL,
+  stock INT NOT NULL
 );
 
 -- compra cart
 CREATE TABLE carts (
   id INT PRIMARY KEY AUTO_INCREMENT,
   date DATE NOT NULL,
-  total_price DECIMAL NOT NULL,
   id_user INT NOT NULL,
   FOREIGN KEY (id_user) REFERENCES users(id)
   );
 
--- compra_producto table
+-- carts_products table
 CREATE TABLE carts_products (
   id INT PRIMARY KEY AUTO_INCREMENT,
+  precio_unidad DECIMAL NOT NULL,
+  cantidad INT NOT NULL,
   id_product INT NOT NULL,
   FOREIGN KEY (id_product) REFERENCES products(id),
   id_cart INT NOT NULL,
@@ -65,6 +67,8 @@ VALUES
 "$2a$10$pIpNnyopectu.mHVrogtve5pllHP0/GSkTUoeTcaahmrqtK5ZnFPS",
 "1635977443621_img.jpeg",
 0);
+
+
 
 
 

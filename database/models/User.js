@@ -2,7 +2,10 @@ const { DataTypes } = require("Sequelize");
 
 module.exports = (sequelize) => {
   const User = sequelize.define(
+    //Alias
     "User",
+
+    //Cols
     {
       id: {
         type: DataTypes.INTEGER,
@@ -16,6 +19,8 @@ module.exports = (sequelize) => {
       avatar: DataTypes.STRING,
       admin: DataTypes.TINYINT,
     },
+
+    //Config
     {
       tableName: "users",
       timestamps: false,
@@ -23,23 +28,9 @@ module.exports = (sequelize) => {
   );
 
   //Asociaciones
-  /*model.associate = (models) => {
-    model.belongsToMany(models.Cart, {
-      as: "cart",
-      through: "compra_producto",
-      foreignKey: "id_product",
-      otherKey: "id_cart",
-      timestamps: false,
-    });
-  };
-
-  return model;
-};
-*/
-
   User.associate = (models) => {
-    User.hasMany(models.Cart, { as: "carts", foreignKey: "id_user" });
-    
+    User.hasMany(models.Cart, 
+      { as: "carts", foreignKey: "id_user" });
   };
   return User;
 };
