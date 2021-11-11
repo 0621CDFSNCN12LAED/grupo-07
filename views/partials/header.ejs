@@ -1,5 +1,5 @@
 
-<header class="bg-higiene-oscuro flex">
+<header id="header" class="bg-higiene-oscuro flex">
 
   <div id="frase-tienda" class="bg-cuidadopiel-claro text-center tx-medicina-oscuro w-100 ">
     <p class="margin-0">🌱 Tienda online de productos artesanales y naturales.🌱</p>
@@ -8,9 +8,32 @@
 
   <nav id="main-nav" class="w-100 flex">
   <div class="flex justify-between align-center w-100 padding-8-48">
-    <a href="#" class="icon-burger">
+    <!--<a href="#" class="icon-burger">
       <i class="fas fa-bars"></i>
-    </a>
+    </a>-->
+
+<div id="cruz" class="container myFunction" onclick="myFunction(this), openNav(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+</div>
+
+<div id="mySidenav" class="sidenav">
+  
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav(this), myFunction(this)">&times;</a>
+    <a href="../products">Productos</a>
+    <a href="../fitoterapia">Fitoterapia</a>
+    <a href="../filosofia">Filosofía Hampi</a>
+    <a href="../contacto">Contacto</a>
+  
+
+    <% if (locals.isLogged) { %>
+      <a  href="/user/userProfile">Mi perfil</a>
+      <a  href="/user/logout">Logout</a>
+    <% } %>
+  
+</div>
+
     <a href="/" class="ms-auto-margin">
       <img class="logo-hy" src="/images/logo1.png" alt="Logo Hampi Yura" />
     </a>

@@ -32,7 +32,7 @@ router.post("/login", usersController.loginProcess);
 router.get("/userProfile/", authMiddleware, usersController.profile);
 
 // Edit - Perfil de Usuario
-router.get("/:id/edit", uploadFile.single("avatar"), usersController.edit);
+router.get("/:id/edit", usersController.edit);
 router.put("/:id", uploadFile.single("avatar"), usersController.update);
 
 // Logout

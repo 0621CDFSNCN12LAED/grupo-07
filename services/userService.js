@@ -10,8 +10,9 @@
 
 const fs = require("fs");
 const bcryptjs = require("bcryptjs");
+const { User, Cart } = require("../database/models");
 
-const User = {
+const userService = {
   //--> hacemos referencia al nombre del archivo que queremos utilizar.
   fileName: "./database/users.json",
 
@@ -46,10 +47,14 @@ const User = {
 
   //--> me permite buscar por un determinado nombre de campo, el primero que encuentra, matchea.
   //--> luego en controllers, busca por el campo "email", req.body.email.
-  findByField: function (field, text) {
-    let allUsers = this.findAll();
-    let userFound = allUsers.find((oneUser) => oneUser[field] === text);
-    return userFound;
+  findByField: async function (field, text) {
+
+    const user = await User.findOne({
+      where:{
+        [field]: text,
+      }
+    })
+    return user;
   },
 
   //--> creamos un user, y guardamos esa info en nuestro .json con push
@@ -78,4 +83,4 @@ const User = {
   },
 };
 
-module.exports = User;
+module.exports = userService;

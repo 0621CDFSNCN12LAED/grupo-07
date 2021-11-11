@@ -1,6 +1,11 @@
 
 /**** media => min-width:641px ****/
 /*nav-bar*/
+
+.bar1, .bar2, .bar3{
+  display: none;
+}
+
 .fa-smile:hover{
     opacity: 1;
     transform: rotate(360deg);
@@ -242,8 +247,9 @@ contenedor-scroll {
   height: auto;
   /*padding-left: 10px;*/
 }
+
 .img-dest{
-  height: 350px;
+  max-height: 291px ;
 }
 
 /*

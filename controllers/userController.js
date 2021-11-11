@@ -47,8 +47,8 @@ const controller = {
   login: (req, res) => {
     return res.render("userLoginForm");
   },
-  loginProcess: (req, res) => {
-    let userToLogin = Users.findByField("email", req.body.email);
+  loginProcess: async (req, res) => {
+    let userToLogin = await Users.findByField("email", req.body.email);
     //Si hay coincidencia con el email:
     if (userToLogin) {
       let isOkThePassword = bcryptjs.compareSync(
