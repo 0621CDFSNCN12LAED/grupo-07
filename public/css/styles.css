@@ -8,8 +8,16 @@
 }
 
 body {
-  font-family: "Optima", sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #454545;
+  background: #fff;
+  line-height: 1.65;
+  /*font-family:  sans-serif;
   font-size: 14px;
+  background-color: whitesmoke;
+  */
 }
 
 header {
@@ -23,7 +31,7 @@ header {
 }
 
 #frase-tienda{
-  height: 30px;
+  height: 48pxpx;
 }
 .logo-hy {
   width: 150px;

@@ -1,47 +1,57 @@
 
-<header id="header" class="bg-higiene-oscuro flex">
+<header id="header" class="bg-crema flex">
 
-  <div id="frase-tienda" class="bg-cuidadopiel-claro text-center tx-medicina-oscuro w-100 ">
+  <div id="frase-tienda" class="bg-crema text-center tx-verde-musgo w-100 tx-12 ">
     <p class="margin-0">🌱 Tienda online de productos artesanales y naturales.🌱</p>
   </div>
 
 
-  <nav id="main-nav" class="w-100 flex">
-  <div class="flex justify-between align-center w-100 padding-8-48">
-    <!--<a href="#" class="icon-burger">
-      <i class="fas fa-bars"></i>
-    </a>-->
+  <nav id="main-nav" >
+    <div class="w-100 flex bg-blanco">
 
-<div id="cruz" class="container myFunction" onclick="myFunction(this), openNav(this)">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-</div>
+      <!--PRIMERA FILA NAVBAR-->
+      <div class="flex justify-between align-center w-100 padding-8-48">
+    
+    
+        <!--ICON BURGER
+          <a href="#" class="icon-burger">
+              <i class="fas fa-bars"></i>
+            </a>
+        -->
 
-<div id="mySidenav" class="sidenav">
+        <div id="cruz" class="container myFunction" onclick="myFunction(this), openNav(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+
+        <div id="mySidenav" class="sidenav">
   
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav(this), myFunction(this)">&times;</a>
-    <a href="../products">Productos</a>
-    <a href="../fitoterapia">Fitoterapia</a>
-    <a href="../filosofia">Filosofía Hampi</a>
-    <a href="../contacto">Contacto</a>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav(this), myFunction(this)">&times;</a>
+          <a href="../products">Productos</a>
+          <a href="../fitoterapia">Fitoterapia</a>
+          <a href="../filosofia">Filosofía Hampi</a>
+          <a href="../contacto">Contacto</a>
   
-
-    <% if (locals.isLogged) { %>
-      <a  href="/user/userProfile">Mi perfil</a>
-      <a  href="/user/logout">Logout</a>
-    <% } %>
+          <% if (locals.isLogged) { %>
+            <a  href="/user/userProfile">Mi perfil</a>
+            <a  href="/user/logout">Logout</a>
+          <% } %>
   
-</div>
+        </div>
 
+    <!--LOGO HAMPI-->
     <a href="/" class="ms-auto-margin">
       <img class="logo-hy" src="/images/logo1.png" alt="Logo Hampi Yura" />
     </a>
+
+    <!--LOGIN ICON-->
     <a href="/user/login" class="ms-hide">
       <i class="far fa-smile"></i>
     </a>
   </div>
 
+  <!--SEGUNDA FILA NAVBAR, +TABLET MEDIA QUERY-->
   <div class="flex w-70 hide show padding-24">
     <ul class="flex">
       <li class="margin-auto">
@@ -98,6 +108,7 @@
       </ul>
 
     </ul>
+    </div>
     </div>
     </div>
   </nav>

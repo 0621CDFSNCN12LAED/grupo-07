@@ -1,9 +1,16 @@
 /* colores de background */
-
-.bg-blanco {
-  background-color: whitesmoke;
+.bg-transparent{
+ background-color: transparent; 
 }
 
+
+.bg-blanco {
+  background-color: #f1e4d8;
+}
+
+.bg-crema{
+  background-color: #d0b094;;
+}
 .bg-todo-oscuro {
   background-color: #422613;
 }
@@ -57,6 +64,9 @@
   color: black;
 }
 
+.tx-verde-musgo{
+  color: #404c38;;
+}
 .tx-todo-oscuro {
   color: #422613;
 }
@@ -125,4 +135,25 @@ h2 {
 
 .interlineado-18{
   line-height: 1.8
+}
+
+/*Font size*/
+.tx-12{
+  font-size: 12px;
+}
+
+.tx-14{
+  font-size: 14px;
+}
+
+.tx-20{
+  font-size: 20px;
+}
+
+.tx-28{
+  font-size: 28px;
+}
+
+.tx-34{
+  font-size: 34px;
 }
