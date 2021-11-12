@@ -3,13 +3,15 @@
  background-color: transparent; 
 }
 
-
 .bg-blanco {
   background-color: #f1e4d8;
 }
 
 .bg-crema{
-  background-color: #d0b094;;
+  background-color: #b3977f;;
+}
+.bg-crema-b{
+background-color: #f1e4d8
 }
 .bg-todo-oscuro {
   background-color: #422613;
@@ -51,8 +53,8 @@
 
 .bg-img-filo{
   background-image: url(/images/filo1.jpg);
+  background-size: cover
 }
-
 
 /* colores de texto */
 
