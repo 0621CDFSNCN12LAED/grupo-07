@@ -227,10 +227,11 @@ contenedor-scroll {
 */
 
 .contenedor-scroll {
-  /*display: flex;
-  flex-wrap: wrap;*/
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding-bottom: 24px;
+  /* width: 500px; */
   /*padding-left: 30px;*/
 }
 
