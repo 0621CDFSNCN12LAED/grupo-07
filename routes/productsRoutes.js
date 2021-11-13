@@ -31,7 +31,6 @@ router.get("/:id", productsControllers.productDetail);
 router.get(
   "/:id/edit",
   assertAdmin,
-  uploader.single("image"),
   productsControllers.edit
 );
 router.put(

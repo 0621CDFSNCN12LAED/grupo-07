@@ -39,7 +39,7 @@
                 name="price"
                 placeholder="Precio del producto: $12.99"
                 value="<%=product.price%>"
-                required
+                
               />
             </div>
             <div class="form-input">
@@ -50,7 +50,7 @@
                 name="description"
                 placeholder="Descripcion"
                 value="<%=product.description%>"
-                required
+                
               />
             </div>
             <div class="form-input">
@@ -70,7 +70,7 @@
                 type="text"
                 name="stock"
                 placeholder="Stock"
-                required
+                
               >
                 
                 <option value="1">1</option>
@@ -93,7 +93,7 @@
                 name="category"
                 placeholder="Categoria"
                 
-                required
+                
               >
                 <option value="Belleza" <%= product.category == "Belleza" ? "selected" : "" %>>Belleza
                 </option>

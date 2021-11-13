@@ -73,5 +73,15 @@
         "id": 12,
         "image": "1636558326804_img.jpg",
         "deleted": false
+    },
+    {
+        "name": "prueba",
+        "price": 23,
+        "description": "una prueba con cambio en servicios",
+        "stock": "3",
+        "category": "Fitoterapia",
+        "id": 13,
+        "image": "1636758149850_img.jpg",
+        "deleted": false
     }
 ]

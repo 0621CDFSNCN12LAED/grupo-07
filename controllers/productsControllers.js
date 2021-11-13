@@ -1,11 +1,9 @@
-/*const fs = require("fs");
-const path = require("path");*/
 
 const { Product, Cart } = require("../database/models");
 const productService = require("../services/productService");
 
 const controller = {
-  // Root - Show all products
+  // Reed - Show all products
   products: async (req, res) => {
     const filteredProducts = await Product.findAll();
     res.render("products", { products: filteredProducts });
@@ -53,7 +51,7 @@ const controller = {
         name: req.body.name,
         price: req.body.price,
         description: req.body.description,
-        image: req.file.filename,
+        image: req.file ? req.file.filename : req.file,
         stock: req.body.stock,
         category: req.body.category,
       },

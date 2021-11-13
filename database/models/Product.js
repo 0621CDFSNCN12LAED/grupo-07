@@ -24,7 +24,8 @@ module.exports = (sequelize) => {
     //config
     {
       tableName: "products",
-      timestamps: false,
+      //hay que usar timestamps para hacer el borrado inteligente: tiene que estar en true!
+      timestamps: true,
     }
   );
 
