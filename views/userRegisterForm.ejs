@@ -18,7 +18,7 @@
 								<label class="main-label" for="name"></label>
 								<input class="border-radius" id="name" type="text" name="fullName"
 									placeholder="Nombre y apellido"
-									value="<%= locals.oldData ? oldData.name : null%>" />
+									value="<%= locals.oldData ? oldData.fullName : null%>" />
 								<% if (locals.errors && errors.fullName) { %>
 									<div>
 										<%= errors.fullName.msg %>

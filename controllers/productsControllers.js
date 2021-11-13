@@ -1,6 +1,6 @@
 
 const { Product, Cart } = require("../database/models");
-const productService = require("../services/productService");
+/*const productService = require("../services/productService");*/
 
 const controller = {
   // Reed - Show all products
@@ -34,7 +34,8 @@ const controller = {
       description: req.body.description,
       image: req.file.filename,
       stock: req.body.stock,
-      category: req.body.category
+      category: req.body.category,
+      destacado: req.body.destacado
     });
     res.redirect("/products");
   },
@@ -54,6 +55,7 @@ const controller = {
         image: req.file ? req.file.filename : req.file,
         stock: req.body.stock,
         category: req.body.category,
+        destacado: req.body.destacado
       },
       {
         where: {

@@ -16,9 +16,10 @@ module.exports = (sequelize) => {
       price: DataTypes.DECIMAL,
       description: DataTypes.STRING,
       image: DataTypes.STRING,
-      deleted: DataTypes.INTEGER,
+      deletedAt: DataTypes.DATE,
       category: DataTypes.STRING,
       stock: DataTypes.INTEGER,
+      destacado: DataTypes.INTEGER,
     },
 
     //config
@@ -27,7 +28,7 @@ module.exports = (sequelize) => {
       //hay que usar timestamps para hacer el borrado inteligente: tiene que estar en true!
       timestamps: true,
       //también tenemos que definir esta propiedad para el borrado inteligente
-      paranoid: true
+      paranoid: true,
     }
   );
 

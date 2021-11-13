@@ -25,9 +25,12 @@ CREATE TABLE products (
   price DECIMAL NOT NULL,
   description TEXT NOT NULL,
   image VARCHAR(100) NOT NULL,
-  deleted TINYINT NOT NULL DEFAULT 0,
+  createdAt DATETIME,
+  updatedAt DATETIME,
+  deletedAt DATETIME DEFAULT NULL,
   category VARCHAR(100) NOT NULL,
-  stock INT NOT NULL
+  stock INT NOT NULL,
+  destacado TINYINT NOT NULL DEFAULT 0
 );
 
 -- compra cart
@@ -68,7 +71,7 @@ VALUES
 "1635977443621_img.jpeg",
 0);
 
-INSERT INTO products (id, name, price, description, image, deleted, category, stock)
+INSERT INTO products (id, name, price, description, image, deletedAt, category, stock, destacado)
 VALUES
 
         (1,
@@ -76,28 +79,30 @@ VALUES
         600,
         "Sahmpoo sólido para cabello seco",
         "shampoo-seco.jpg",
-        false,
+        null,
         "Higiene",
-        5),
+        5,
+        1),
 
         (default,
          "Pasta dental",
          300,
          "Pasta dental para que tengas lo mejores dientes",
          "pasta-dental.png",
-         false,
+         null,
          "Higiene",
-         5
-        ),
+         5,
+        1),
     
         (default,
          "Protector solar facial",
          1000,
          "Cuidá tu cara con este increíble protector",
         "pasta-dental.png",
-        false,
+        null,
          "Belleza",
-         10),
+         10,
+         1),
     
     
         (default,
@@ -105,28 +110,33 @@ VALUES
          900,
          "Crema humectante para el día",
          "crema-humectante-dia.png",
-         false,
+         null,
          "Belleza",
-        5),
+        5,
+        1),
     
         (default,
          "Crema humectante - noche",
          900,
          "Crema humectante para la noche",
          "pasta-dental.png",
-         false,
+         null,
          "Belleza",
-        10),
+        10,
+        0),
     
         (default,
          "Cannabis microdosis",
          1500,
          "Tintura madre",
          "cannabis.png",
-         false,
+         null,
          "Higiene",
-          10);
+          10,
+          0);
 
+
+drop database hampi_db
 -- BORRAR LA COLUMNA DELETED DE PRODUCTOS Y AGREGAR COLUMNA deletedAt VALOR TIMESTAMP
 -- AGREGAR COLUMNAS: createdAt, updateAt
 -- EL DELETEDAT TIENE QUE TENER UN VALOR POR DEFECTO NULL EN LA DEFINICION DE LA TABLA (DEFAULT NULL)

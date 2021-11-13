@@ -104,6 +104,21 @@
                 
               </select>
             </div>
+
+            <div class="form-input">
+              <label class="main-label" for="destacado"></label>
+              <select
+                class="w-100"
+                type="text"
+                name="destacado"
+                placeholder="Destacado"
+                required
+              >
+                <option value="" disabled selected>¿Destacado?</option>
+                <option value=1 <%= product.destacado == "si" ? "selected" : "" %>>Sí</option>
+                <option value=0 <%= product.destacado == "no" ? "selected" : "" %>>No</option>
+              </select>
+            </div>
             <!-- <div class="form-input">
                 <label class="main-label" for="name"></label>
                 <select class="border-5" type="text" name="name" placeholder="Tamaños" required >

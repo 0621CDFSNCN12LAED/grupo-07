@@ -1,11 +1,13 @@
 const bcryptjs = require("bcryptjs");
-const { validationResult } = require("express-validator");
+const { validationResult, body } = require("express-validator");
 
 const Users = require("../services/userService");
 const { User, Cart } = require("../database/models");
 
 
 const controller = {
+
+  //Registro de usuario
   register: (req, res) => {
     return res.render("userRegisterForm");
   },
@@ -19,9 +21,12 @@ const controller = {
       });
     }
 
-    let userInDB = Users.findByField("email", req.body.email);
+    let userInDB = await User.findAll({
+      where: 
+        {email: req.body.email}
+    });
 
-    if (userInDB) {
+    if (userInDB.length > 0) {
       return res.render("userRegisterForm", {
         errors: {
           email: {
@@ -37,18 +42,34 @@ const controller = {
     //--> incluyendo la propiedad "avatar" con el nombre del archivo, que me trae el request
     //--> y la propiedad password hasheada usando libreria bycript, usando lo que viene en body.
 
+    
+    const usuario = {
+      ...req.body,
+      fullName: req.body.fullName,
+      birthdate: req.body.birthdate,
+      password: bcryptjs.hashSync(req.body.password, 10),
+      avatar: req.file.filename,
+    };
+
+    const createdUser = await User.create(usuario);
+
+    return res.redirect("/user/login");
+    /*
     await User.create({
       ...req.body,
+      password: bcryptjs.hashSync(req.body.password, 10),
       avatar: req.file.filename,
     });
-    return res.redirect("/user/login");
+    return res.redirect("/user/login");*/
   },
 
+
+  //Login de usuarios
   login: (req, res) => {
     return res.render("userLoginForm");
   },
   loginProcess: async (req, res) => {
-    let userToLogin = await Users.findByField("email", req.body.email);
+    let userToLogin = await User.findOne({where: {email: req.body.email}});
     //Si hay coincidencia con el email:
     if (userToLogin) {
       let isOkThePassword = bcryptjs.compareSync(
@@ -101,9 +122,10 @@ const controller = {
   update: async (req, res) => {
     await User.update(
       {
-        ...req.body,
-        avatar: req.file.filename,
-        
+        fullName: req.body.fullName,
+        birthdate: req.body.birthdate,
+        email: req.body.email,
+        avatar: req.file ? req.file.filename : req.file,
       },
       {
         where: {
@@ -111,7 +133,7 @@ const controller = {
         },
       }
     );
-    res.redirect("/user/userProfile");
+    res.redirect("/products");
   },
 
   // si cierro session/me deslogueo, la cookie debe destruirse, ya que si cierro el navegador me sigue logueando

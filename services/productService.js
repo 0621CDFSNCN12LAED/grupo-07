@@ -51,6 +51,7 @@ const productService = {
     product.category = payload.category;
     product.description = payload.description;
     product.image = image ? image.filename : product.image;
+    product.image = payload.destacado;
     this.save();
   },
   destroyOne(id) {
