@@ -267,6 +267,7 @@ footer {
   padding: 24px;
 }
 
+
 .padding-48 {
   padding: 48px;
 }
@@ -304,6 +305,10 @@ footer {
 .w-100 {
   width: 100%;
 }
+.w-300 {
+  width: 350px;
+}
+
 
 .hide {
   display: none;
