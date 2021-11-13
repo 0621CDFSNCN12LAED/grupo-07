@@ -26,6 +26,8 @@ module.exports = (sequelize) => {
       tableName: "products",
       //hay que usar timestamps para hacer el borrado inteligente: tiene que estar en true!
       timestamps: true,
+      //también tenemos que definir esta propiedad para el borrado inteligente
+      paranoid: true
     }
   );
 
