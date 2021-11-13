@@ -56,6 +56,11 @@ background-color: #f1e4d8
   background-size: cover
 }
 
+.bg-img-natural{
+  background-image: url(/images/background/bg-natural.png);
+  background-size: cover
+}
+
 /* colores de texto */
 
 .tx-blanco {
@@ -67,7 +72,7 @@ background-color: #f1e4d8
 }
 
 .tx-verde-musgo{
-  color: #404c38;;
+  color: #404c38;
 }
 .tx-todo-oscuro {
   color: #422613;
