@@ -1,7 +1,7 @@
 const bcryptjs = require("bcryptjs");
 const { validationResult, body } = require("express-validator");
 
-const Users = require("../services/userService");
+/*const Users = require("../services/userService");*/
 const { User, Cart } = require("../database/models");
 
 
@@ -129,11 +129,11 @@ const controller = {
       },
       {
         where: {
-          id: req.params.id,
+          id: req.session.userLogged.id,
         },
       }
     );
-    res.redirect("/products");
+    res.redirect("/user/userProfile");
   },
 
   // si cierro session/me deslogueo, la cookie debe destruirse, ya que si cierro el navegador me sigue logueando
