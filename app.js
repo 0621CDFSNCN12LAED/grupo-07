@@ -11,11 +11,11 @@ const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 app.use(methodOverride("_method"));
 
 app.use(
-  session({
-    secret: "Shhh, It's a secret",
-    resave: false,
-    saveUninitialized: false,
-  })
+    session({
+        secret: "Shhh, It's a secret",
+        resave: false,
+        saveUninitialized: true,
+    })
 );
 
 app.use(cookies());
@@ -39,7 +39,6 @@ app.use("/", mainRoutes);
 app.use("/products", productsRoutes);
 app.use("/user", userRoutes);
 
-
 app.use((req, res, next) => {
-  res.status(404).render("not-found");
+    res.status(404).render("not-found");
 });
