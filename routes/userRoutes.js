@@ -36,7 +36,7 @@ router.get("/:id/edit", usersController.edit);
 router.put("/:id", uploadFile.single("avatar"), usersController.update);
 
 // Logout
-router.get("/logout/", usersController.logout);
+router.get("/logout", usersController.logout);
 
 /*Carritos
 router.get ("/:id/cart", cartController.list)
