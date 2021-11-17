@@ -3,7 +3,7 @@ const router = express.Router();
 
 // Controller
 const usersController = require("../controllers/userController");
-const cartController = require ("../controllers/cartController");
+const cartController = require("../controllers/cartController");
 
 // Middlewares
 const uploadFile = require("../middlewares/userMulterMiddleware");
@@ -16,10 +16,10 @@ router.get("/register", guestMiddleware, usersController.register);
 
 // Procesar el registro
 router.post(
-  "/register",
-  uploadFile.single("avatar"),
-  validations,
-  usersController.processRegister
+    "/register",
+    uploadFile.single("avatar"),
+    validations,
+    usersController.processRegister
 );
 
 // Formulario de login
@@ -38,7 +38,12 @@ router.get("/:id", authMiddleware, usersController.profile);
 router.get("/:id/edit", usersController.edit);
 router.put("/:id", uploadFile.single("avatar"), usersController.update);
 
+<<<<<<< HEAD
 
+=======
+// Logout
+router.get("/logout", usersController.logout);
+>>>>>>> 23d6061f731eab644493f343db100f54e8bb9c40
 
 /*Carritos
 router.get ("/:id/cart", cartController.list)
