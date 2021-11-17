@@ -28,6 +28,9 @@ router.get("/login", guestMiddleware, usersController.login);
 // Procesar el login
 router.post("/login", usersController.loginProcess);
 
+// Logout
+router.get("/logout", usersController.logout);
+
 // Perfil de Usuario
 router.get("/:id", authMiddleware, usersController.profile);
 
@@ -35,8 +38,7 @@ router.get("/:id", authMiddleware, usersController.profile);
 router.get("/:id/edit", usersController.edit);
 router.put("/:id", uploadFile.single("avatar"), usersController.update);
 
-// Logout
-router.get("/logout/", usersController.logout);
+
 
 /*Carritos
 router.get ("/:id/cart", cartController.list)
