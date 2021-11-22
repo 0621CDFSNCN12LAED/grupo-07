@@ -48,7 +48,7 @@ background-color: #f1e4d8
 }
 
 .bg-opacity{
-  opacity: 50%;
+  opacity: 30%;
 }
 
 .bg-img-filo{
@@ -72,7 +72,7 @@ background-color: #f1e4d8
 }
 
 .tx-verde-musgo{
-  color: #404c38;
+  color: #848d7e;
 }
 .tx-todo-oscuro {
   color: #422613;
@@ -117,7 +117,7 @@ background-color: #f1e4d8
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 28px;
   color: #0a4c4c;
 }
 

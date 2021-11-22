@@ -227,8 +227,8 @@ contenedor-scroll {
 */
 
 .contenedor-scroll {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
   justify-content: space-between;
   padding-bottom: 24px;
   /* width: 500px; */
@@ -301,9 +301,10 @@ contenedor-scroll {
   width: 30%;
 }
 
-.selec-wrapper-25 {
-  width: 25%;
-}
+
+/* .selec-wrapper-25 {
+  width: 30%;
+} */
 
 /* Forms */
 
@@ -318,5 +319,3 @@ contenedor-scroll {
   box-shadow: 0px 0px 10px rgb(100, 100, 100);
   border-radius: 8px;
 }
-
-

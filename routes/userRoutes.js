@@ -38,12 +38,9 @@ router.get("/:id", authMiddleware, usersController.profile);
 router.get("/:id/edit", usersController.edit);
 router.put("/:id", uploadFile.single("avatar"), usersController.update);
 
-<<<<<<< HEAD
 
-=======
 // Logout
 router.get("/logout", usersController.logout);
->>>>>>> 23d6061f731eab644493f343db100f54e8bb9c40
 
 /*Carritos
 router.get ("/:id/cart", cartController.list)
