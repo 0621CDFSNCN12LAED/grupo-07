@@ -56,9 +56,14 @@ background-color: #f1e4d8
   background-size: cover
 }
 
+.bg-img-medicina{
+  background-image: url(/images/background/plantmedicine.jpg);
+  background-size: cover;
+  width: 100%;
+}
+
 .bg-img-natural{
   background-image: url(/images/background/bg-natural.png);
-  background-size: cover
 }
 
 /* colores de texto */

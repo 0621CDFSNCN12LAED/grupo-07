@@ -1,2 +1,30 @@
 /****media=min-width:768px - max-width: 1280px" *****/
 
+.img-medicina{
+  width: 50%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.boton-contact {
+  width: 20%;
+}
+
+.content-medicine{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  margin-left: 24px;
+}
+
+.content-gift{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  margin-right: 24px;
+  flex-direction: row-reverse;
+}
+
+.tx-medicine{
+  width: 50%;
+}

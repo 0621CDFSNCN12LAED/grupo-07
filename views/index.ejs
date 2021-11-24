@@ -63,11 +63,11 @@
           <p class="tx-higiene-oscuro tx-14">Estamos comprometidos con reducir nuestro impacto medio ambiental.
           Cada compra contribuye a proteger la naturaleza.</p>
         </div>
-        <div class="valores-flex bg-crema-b">
+        <div class="valores-flex bg-crema-b padding-top">
           <div class="text-center selec-wrapper-30">
             <div class="valores">
               <i class="fab fa-pagelines"></i>
-              <p>Tinturas madre</p>
+              <p>Tinturas madre y microdosis</p>
               <p class="tx-14">Traemos la naturaleza a tu vida. 
               En Selvaviva queremos ayudarte a reconectar con ella y que disfrutes transformando
               cualquier espacio en algo mágico.En Selvaviva queremos ayudarte a reconectar con ella y que disfrutes transformando
@@ -112,7 +112,7 @@
                 <p class="tx-12">Producto 1</p>
                 <p class="tx-12">$12.99</p>
                 <div>
-                  <button class="border-5 boton-agregar tx-blanco bg-todo-oscuro border-button w-100">Agregar</button>
+                  <button class="border-5 boton-agregar tx-blanco bg-cuidadopiel-oscuro border-button w-100">Agregar</button>
                 </div>
               </div>
             </article>
@@ -128,7 +128,7 @@
                 <p class="tx-12">Producto 2</p>
                 <p class="tx-12">$9.99</p>
                 <div>
-                  <button class="border-5 boton-agregar tx-blanco bg-todo-oscuro border-button w-100">Agregar</button>
+                  <button class="border-5 boton-agregar tx-blanco bg-cuidadopiel-oscuro border-button w-100">Agregar</button>
                 </div>
               </div>
             </article>
@@ -144,7 +144,7 @@
                 <p class="tx-12">Producto 3</p>
                 <p class="tx-12">$17.99</p>
                 <div>
-                  <button class="border-5 boton-filo tx-blanco bg-todo-oscuro border-button w-100">Agregar</button>
+                  <button class="border-5 boton-filo tx-blanco bg-cuidadopiel-oscuro border-button w-100">Agregar</button>
                 </div>
               </div>
             </article>
@@ -160,7 +160,7 @@
                 <p class="tx-12">Producto 4</p>
                 <p class="tx-12">$15.99</p>
                 <div>
-                  <button class="border-5 boton-agregar tx-blanco bg-todo-oscuro border-button w-100">Agregar</button>
+                  <button class="border-5 boton-agregar tx-blanco bg-cuidadopiel-oscuro border-button w-100">Agregar</button>
                 </div>
               </div>
             </article>
@@ -174,7 +174,7 @@
       </section>
             <section>
               <div class="index-filo">
-                <div class="filo-wrapper">
+                <div class="filo-wrapper padding-48">
                   <h2 class="text-center tx-blanco">Filosofía Hampi</h2>
                   <p class="tx-blanco text-center interlineado-18">
                     Este proyecto nace con la idea de poder devolverle a este mundo una forma sana de reencontrarnos con nuestras
@@ -188,27 +188,43 @@
               </div>
             </section>
       <section>
-        <div>
+        <div class="content-medicine">
         <img src="/images/background/hampihome.jpg" class="img-medicina">
-        <div class="padding-16 tx-14">
+        <div class="padding-48 tx-14 tx-medicine text-center">
           <h3 class="tx-20">Las plantas y sus propiedades</h3>
           <p>La fitoterapia consiste en el tratamiento médico de algunas enfermedades basado en el empleo de plantas y sustancias
-          vegetales, y se practica desde hace más de 7.000 años. Para curar una gripe, para aliviar el estrés, para adelgazar o
+          vegetales, y se practica desde hace más de 7.000 años. Para curar una gripe, para aliviar el estrés,
           descasar mejor por la noche, "a veces sólo tenemos que dejar cuidarnos por la naturaleza".</p>
+          <a href="../fitoterapia">
+          <button class="border-5 boton-filo tx-blanco bg-cuidadopiel-oscuro border-button w-50">Leer más sobre sus propiedades</button>
+           </a>
         </div>
+        </div>
+      </section>
+      <section>
+        <div class="content-gift">
+          <img src="/images/background/regala.jpg" class="img-medicina">
+          <div class="padding-48 tx-14 tx-medicine text-center">
+            <h3 class="tx-20">Regalá Hampi y sumate al cambio</h3>
+            <p>Las plantas de interior son una apuesta segura para sacar sonrisas y celebrar cualquier ocasión. 
+            Sorprende a esa persona especial con un regalo que durará toda la vida</p>
+            <a href="../products">
+              <button class="border-5 boton-filo tx-blanco bg-cuidadopiel-oscuro border-button w-50">Ver productos</button>
+            </a>
+          </div>
         </div>
       </section>
 
 
             <section>
-              <div>
-                <img src="/images/background/plantmedicine.jpg" class="img-medicina">
-                <div class="padding-16 tx-14">
+              <div class="flex bg-img-medicina">
+                <div class="padding-48 tx-20 tx-blanco text-center">
                   <p>Bienvenidx a nuestra familia!</p>
                   <p>Sé la/el primerx en enterarte de todas nuestras novedades, ofertas y los mejores consejos para el cuidado de tu salud</p>
-                  <a href="../contacto">
-                  <button class="border-5 boton-filo tx-blanco bg-higiene-claro border-button w-100">Contacto</button>
-                  </a>
+                  <form action="/" method="POST">
+                    <textarea name="newsletter" id="newsletter" type="email"></textarea>
+                  </form>
+                  <button class="border-5 boton-contact tx-blanco bg-medicina-oscuro border-button w-50">Suscríbete</button>
                 </div>
               </div>
             </section>
