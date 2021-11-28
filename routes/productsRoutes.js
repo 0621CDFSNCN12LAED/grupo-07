@@ -5,6 +5,7 @@ const router = express.Router();
 //Middlewares
 const uploader = require("../middlewares/productMulterMiddleware");
 const assertAdmin = require("../middlewares/assertAdmin");
+const validations = require("../validations/validateProduct");
 
 //Controllers
 const productsControllers = require("../controllers/productsControllers");
@@ -18,6 +19,7 @@ router.post(
   "/",
   assertAdmin,
   uploader.single("image"),
+  validations,
   productsControllers.store
 );
 
@@ -37,6 +39,7 @@ router.put(
   "/:id",
   assertAdmin,
   uploader.single("image"),
+  validations,
   productsControllers.update
 );
 

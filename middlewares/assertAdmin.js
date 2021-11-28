@@ -10,19 +10,3 @@ module.exports = (req, res, next) => {
     );
   }
 };
-
-/*
-const User = require("../services/userService");
-
-module.exports = (req, res, next) => {
-  if (req.session.userLogged) {
-    const admin = User.findByField("admin", true);
-    if (admin) {
-      next();
-    } else {
-      res.send("lo siento, no tienes permiso para esto");
-    }
-  } else {
-    res.redirect("/user/login");
-  }
-};*/

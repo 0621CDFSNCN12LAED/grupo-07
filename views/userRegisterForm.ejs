@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script defer src="/js/userValidator.js" type="text/javascript"></script>
 <!--Acá va el head-->
 <%- include ("partials/head.ejs") %>
 
@@ -9,21 +10,25 @@
 			<main id="main-content">
 				<section class="padding-24">
 					<div>
-						<form class="register-form" action="/user/register" method="POST" enctype="multipart/form-data">
+						<form id="userRegisterForm" class="register-form" action="/user/register" method="POST" enctype="multipart/form-data">
 							<div>
 								<h2>Registrate</h2>
 							</div>
-
+							<ul class="errors">
+    						</ul>				
 							<div class="form-input">
 								<label class="main-label" for="name"></label>
-								<input class="border-radius" id="name" type="text" name="fullName"
+								<input class="border-radius" id="userName" type="text" name="fullName"
 									placeholder="Nombre y apellido"
 									value="<%= locals.oldData ? oldData.fullName : null%>" />
-								<% if (locals.errors && errors.fullName) { %>
+									<small class="text-danger erName"></small>
+									<% if (locals.errors && errors.fullName) { %>
 									<div>
 										<%= errors.fullName.msg %>
 									</div>
+									<small class="text-danger"> <%= errors.fullName.msg%> </small>
 									<% } %>
+									
 							</div>
 							<div class="form-input">
 								<label class="main-label" for="birthdate"></label>
@@ -49,7 +54,7 @@
 							</div>
 							<div class="form-input">
 								<label class="main-label" for="avatar"></label>
-								<input class="border-radius" type="file" name="avatar" 
+								<input class="border-radius" type="file" name="avatar" id="avatar" 
 									value="<%= locals.oldData ? oldData.avatar : null%>" />
 								<% if (locals.errors && errors.avatar) { %>
 									<div>
@@ -67,16 +72,7 @@
 									</div>
 									<% } %>
 							</div>
-							<div class="form-input">
-								<label class="main-label" for="confirmPassword"></label>
-								<input class="border-radius" id="confirm-password" type="password"
-									name="confirmPassword" placeholder="Confirmar contraseña" />
-								<% if (locals.errors && errors.confirmPassword) { %>
-									<div>
-										<%= errors.confirmPassword.msg %>
-									</div>
-									<% } %>
-							</div>
+							
 							<div class="form-input">
 								<p class="register-he_leido tx-negro text-justify">
 									<input type="checkbox" value="1" required />
@@ -85,7 +81,7 @@
 								</p>
 							</div>
 							<div class="register-buttons">
-								<button class="boton-form boton-filo" type="submit">CREAR MI CUENTA</button>
+								<button class="boton-form boton-filo" type="submit" id="btnSubmit">CREAR MI CUENTA</button>
 							</div>
 						</form>
 					</div>

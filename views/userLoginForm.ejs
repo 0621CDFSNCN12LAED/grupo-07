@@ -15,20 +15,26 @@
 							<div>
 								<h2>Login</h2>
 							</div>
-							<% if (locals.errors) { %>
-								<% for (let error in errors) { %>
-									<p>
-										<%= errors[error].msg %>
-									</p>
-									<% } %>
-										<% } %>
 											<div class="form-input">
 												<label class="main-label" for="email"></label>
 												<input class="border-radius" id="email" type="email" name="email" placeholder="Dirección de correo electrónico"/>
+
+												<% if (locals.errors && errors.email) { %>
+												<div>
+												<%= errors.email.msg %>
+												</div>
+												<% } %>
 											</div>
+
 											<div class="form-input">
 												<label class="main-label" for="password"></label>
 												<input class="border-radius" id="password" type="password" name="password" placeholder="Contraseña"/>
+
+												<% if (locals.errors && errors.password) { %>
+												<div>
+												<%= errors.password.msg %>
+												</div>
+												<% } %>
 											</div>
 											<div class="form-input">
 												<p class="register-he_leido tx-negro text-justify">

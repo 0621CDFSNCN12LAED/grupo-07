@@ -1,4 +1,5 @@
 
+const { validationResult, body } = require("express-validator");
 const { Product, Cart } = require("../database/models");
 /*const productService = require("../services/productService");*/
 
@@ -28,6 +29,15 @@ const controller = {
   // Create -  Method to store
   /****NOS FALTA SOLUCIONAR LA SUBIDA DE IMAGEN****/
   store: async (req, res) => {
+    const resultValidation = validationResult(req);
+
+    if (resultValidation.errors.length > 0) {
+      return res.render("productCreate", {
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
+    }
+
     await Product.create ({
       name: req.body.name,
       price: req.body.price,
@@ -47,6 +57,7 @@ const controller = {
   },
   // Update - Method to update
   update: async (req, res) => {
+
     await Product.update(
       {
         name: req.body.name,

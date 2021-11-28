@@ -70,10 +70,12 @@ const controller = {
         console.log(userToLogin);
         //Si hay coincidencia con el email:
         if (userToLogin) {
+            
             let isOkThePassword = bcryptjs.compareSync(
                 req.body.password,
                 userToLogin.password
             );
+
             //Verificamos que también esté ok la password:
             if (isOkThePassword) {
                 delete userToLogin.password;
@@ -92,7 +94,7 @@ const controller = {
             // Si la clave está mal, envía error de credenciales inválidas
             return res.render("userLoginForm", {
                 errors: {
-                    email: {
+                    password: {
                         msg: "Las credenciales son inválidas",
                     },
                 },

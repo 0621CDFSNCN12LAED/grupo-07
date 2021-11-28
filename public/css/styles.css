@@ -416,51 +416,25 @@ a{
 #newsletter{
   border-radius: 10px;
 }
-/*Detalle producto*/
 
 
+/*Validaciones*/
 
-
-
-/* hedear nuevo 
-div #nav-bar {
-  display: block;
+.erName {
+  color: red
 }
 
-#nav-bar {
-  position: relative;
-  width: 100%;
-  top: 0;
-  left: 0;
+.hidden {
+  display: none;
 }
 
-.header-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 18px;
+.is-valid {
+  background-color: #198754;
 }
 
-.header-flexItem {
-  display: flex;
-  flex: 1 0 0;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 0px;
-    align-items: center;
+.is-invalid { 
+  background-color: red;
 }
-
-.header-icon {
-  display: inline-block;
-  line-height: 1;
-}
-
-.icon-wrapper--clickable {
-    position: relative;
-    background: 0 0;
-}
-*/
-
 
 
 
