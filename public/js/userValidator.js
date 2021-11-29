@@ -1,30 +1,18 @@
-const e = require("express");
-
 //Capturamos elementos
+const form = document.querySelector("#userRegisterForm");
 const fullName = document.getElementById ("userName");
+const birthdate = document.getElementById ("birthdate")
 const email = document.getElementById ("email");
 const password = document.getElementById ("password");
 const avatar = document.getElementById ("avatar");
 const btnSubmit = document.getElementById ("btnSubmit");
 const erName = document.querySelector('.erName');
-const errorList = document.querySelector("#errors");
-const form = document.querySelector("#userRegisterForm");
+const errorList = document.querySelector("#errores");
+
 
 //Hacemos cosas con esos elementos
 fullName.focus();
 
-let errors = [];
-if (fullName.value== ""){
-  errors.push("El campo de nombre no puede estar vacío")
-}
-
-if (errors.length>0){
-  e.preventDefault();
-  let ulErrors=document.querySelector(".errors ul");
-  errors.forEach(error=>{
-    ulErrors.innerHTML+= `<li>${error}</li>`
-  });
-}
 
 /*
 btnSubmit.addEventListener("click", function (e) {
@@ -63,26 +51,26 @@ console.log("es verdadero");
 
 */
 
-/*
+
 const requiredInputs = [
   fullName,
+  birthdate,
   email,
   password,
   avatar
 ];
 
-const form = document.querySelector("#userRegisterForm");
 
 form.addEventListener("submit", (event) => {
-  const errors = formIsInvalid();
-  if (errors.length > 0) {
+  const errores = formIsInvalid();
+  if (errores.length > 0) {
     console.log("Formulario es invalido!");
     event.preventDefault();
 
     errorList.classList.remove("hidden");
 
     errorList.innerHTML = "";
-    for (const error of errors) {
+    for (const error of errores) {
       errorList.innerHTML += `<li>${error}</li>`;
     }
   } else {
@@ -92,92 +80,88 @@ form.addEventListener("submit", (event) => {
 });
 
 function formIsInvalid() {
-  let errors = [];
+  let errores = [];
 
-  errors.push(validateInput(fullName, isEmpty, "Decinos tu nombre"));
-  errors.push(
-    validateInput(email, isEmpty, "Sin un mail no podemos registrarte")
-  );
-  errors.push(
-    validateInput(password, isEmpty, "Es necesaria una contraseña para más seguridad")
-  );
-  errors.push(
-    validateInput(avatar, isEmpty, "Nos gustaría conocerte, subí una foto")
-  );
+  //Validación de nombre
+  if (fullName.value.trim() == "") {
+    fullName.style.borderColor = "red";
+    errores.push("Nos gustaría saber cómo te llamás");
+  } else {
+    if (fullName.value.trim().length < 3 ) {
+      fullName.style.borderColor = "red";
+      errores.push("Tu nombre tiene que ser más largo");
+    } else {
+      fullName.style.borderColor = "green";
+    }
+  }
+
+
+  //Validación de birthdate
+  if (birthdate.value == "") {
+    birthdate.style.borderColor = "red";
+    errores.push("Te faltó poner la fecha de tu cumple!");
+  } else {
+    birthdate.style.borderColor = "green";
+  }
+
+
+  //Validación de email
+  if (email.value == "") {
+    email.style.borderColor = "red";
+    errores.push("Para registrarte es necesario un email");
+  } else {
+    const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (email.value.match(mailformat)) {
+      email.style.borderColor = "green";
+    } else {
+      email.style.borderColor = "red";
+      errores.push("Debes ingresar un mail válido");
+    }
+  }
+
   
+  //Validación de avatar
+  if (avatar.value == "") {
+    avatar.style.borderColor = "red";
+    errores.push("Porfa subí una foto para completar el registro");
+  } else {
+    const allowedExtensions =  /(.*?)\.(jpg|gif|jpeg|png)$/;
 
-  if (!isLength(fullName, 2)) {
-    fullName.classList.add("is-invalid");
-    errors.push("Tu nombre tiene que ser más largo");
-  } else {
-    fullName.classList.remove("is-invalid");
-    fullName.classList.add("is-valid");
-  }
-  if (!isEmail(email)) {
-    email.classList.add("is-invalid");
-    errors.push("Debes ingresar un mail válido");
-  } else {
-    email.classList.remove("is-invalid");
-    email.classList.add("is-valid");
-  }
-
-  if (!isLength(password, 8)) {
-    password.classList.add("is-invalid");
-    errors.push("Tu contraseña debe tener como mínimo 8 caracteres");
-  } else {
-    password.classList.remove("is-invalid");
-    password.classList.add("is-valid");
+    if (avatar.value.match(allowedExtensions)) {
+      avatar.style.borderColor = "green";
+    } else {
+      avatar.style.borderColor = "red";
+      errores.push("Solo aceptamos extensiones: .jpg, .jpeg, .gif y .png");
+    }
   }
 
- 
+  //Validación de password
 
-  if (validExtension(avatar, )) {
-    avatar.classList.add("is-invalid");
-    errors.push("La duración debe ser un numero entre 60 y 360");
+  /*ver cómo hacer que cuando hacemos click en el imput password aparezca el mensaje small
+
+  password.addEventListener ("click", function (){
+    const msgContraseña = document.getElementById("msgContraseña");
+    msgContraseña.classList.remove ("hidden");
+  })
+
+  VER COMO HACER LO DEL OJO DE LA PASSWORD
+  */
+
+
+  if (password.value.trim() == "") {
+    password.style.borderColor = "red";
+    errores.push("Debes elegir una contraseña");
   } else {
-    avatar.classList.remove("is-invalid");
-    avatar.classList.add("is-valid");
+    if (password.value.trim().length < 8){
+      password.style.borderColor = "red";
+      errores.push("Tu contraseña debe tener 8 caracteres como mínimo.");
+    }else{      
+      password.style.borderColor = "green"; 
+    }
   }
 
+  console.log(errores);
 
-  console.log(errors);
-
-  return errors.filter((msg) => msg != null);
+  return errores.filter((msg) => msg != null);
 }
-
-//Declaración de funciones usadas arriba
-function isEmpty(input) {
-  return input.value.trim() == "";
-}
-
-function isLength(input, min) {
-  if (input.lenght >= min) {
-    return true;
-}
-}
-
-function isEmail(input) {
-  const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  if(input.value.match(mailformat)){
-    return true;
-  }else{
-    return false;
-  } 
-}
-
-
-function validExtension (input){  
-}
-
-
-function validateInput(input, validationFunction, message) {
-  if (validationFunction(input)) {
-    input.classList.add("is-invalid");
-    return message;
-  } else {
-    input.classList.remove("is-invalid");
-    input.classList.add("is-valid");
-    return null;
-  }
-}
-*/
+  

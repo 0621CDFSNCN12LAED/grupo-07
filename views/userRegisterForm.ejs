@@ -12,27 +12,28 @@
 					<div>
 						<form id="userRegisterForm" class="register-form" action="/user/register" method="POST" enctype="multipart/form-data">
 							<div>
-								<h2>Registrate</h2>
-							</div>
-							<ul class="errors">
-    						</ul>				
-							<div class="form-input">
+								<h2 class="text-center">Registrate</h2>
+							<!--</div>
+							<ul class="errores">
+    						</ul>-->
+							<ul id="errores" class="hidden"></ul>				
+							<div class="form-input margin-auto">
 								<label class="main-label" for="name"></label>
-								<input class="border-radius" id="userName" type="text" name="fullName"
+								<input class="" id="userName" type="text" name="fullName"
 									placeholder="Nombre y apellido"
 									value="<%= locals.oldData ? oldData.fullName : null%>" />
-									<small class="text-danger erName"></small>
+									<!--<small class="text-danger erName"></small>-->
 									<% if (locals.errors && errors.fullName) { %>
 									<div>
 										<%= errors.fullName.msg %>
 									</div>
-									<small class="text-danger"> <%= errors.fullName.msg%> </small>
+									
 									<% } %>
 									
 							</div>
-							<div class="form-input">
+							<div class="form-input margin-auto">
 								<label class="main-label" for="birthdate"></label>
-								<input class="border-radius bg-blanco" id="birthdate" type="date" name="birthdate"
+								<input class="bg-blanco" id="birthdate" type="date" name="birthdate"
 									placeholder="Fecha de nacimiento"
 									value="<%= locals.oldData ? oldData.birthdate : null%>" />
 								<% if (locals.errors && errors.birthdate) { %>
@@ -41,9 +42,9 @@
 									</div>
 									<% } %>
 							</div>
-							<div class="form-input">
+							<div class="form-input margin-auto">
 								<label class="main-label" for="email"></label>
-								<input class="border-radius" id="email" type="email" name="email"
+								<input class="" id="email" type="email" name="email"
 									placeholder="Dirección de email: persona@mail.com"
 									value="<%= locals.oldData ? oldData.email : null%>" />
 								<% if (locals.errors && errors.email) { %>
@@ -52,9 +53,9 @@
 									</div>
 									<% } %>
 							</div>
-							<div class="form-input">
+							<div class="form-input margin-auto">
 								<label class="main-label" for="avatar"></label>
-								<input class="border-radius" type="file" name="avatar" id="avatar" 
+								<input class="" type="file" name="avatar" id="avatar" 
 									value="<%= locals.oldData ? oldData.avatar : null%>" />
 								<% if (locals.errors && errors.avatar) { %>
 									<div>
@@ -62,10 +63,12 @@
 									</div>
 									<% } %>
 							</div>
-							<div class="form-input">
+							<div class="form-input margin-auto">
 								<label class="main-label" for="password"></label>
-								<input class="border-radius" id="password" type="password" name="password"
-									placeholder="Contraseña" />
+								<input class="" id="password" type="password" name="password"
+									placeholder="Contraseña" /><i class="far fa-eye-slash" id="togglePassword"></i> </i>
+								
+									<small id="msgContraseña" class="hidden">Tu contraseña debe contener por lo menos 8 caracteres y combinar: letras, números y caracteres especiales.</small>
 								<% if (locals.errors && errors.password) { %>
 									<div>
 										<%= errors.password.msg %>
@@ -73,14 +76,14 @@
 									<% } %>
 							</div>
 							
-							<div class="form-input">
+							<div class="form-input margin-auto">
 								<p class="register-he_leido tx-negro text-justify">
 									<input type="checkbox" value="1" required />
 									He leido y acepto el tratamiento de mis datos explicado en la
 									politica de privacidad y en los terminos y condiciones
 								</p>
 							</div>
-							<div class="register-buttons">
+							<div class="register-buttons margin-auto">
 								<button class="boton-form boton-filo" type="submit" id="btnSubmit">CREAR MI CUENTA</button>
 							</div>
 						</form>
