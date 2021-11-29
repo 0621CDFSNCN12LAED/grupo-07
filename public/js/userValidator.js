@@ -13,45 +13,6 @@ const errorList = document.querySelector("#errores");
 //Hacemos cosas con esos elementos
 fullName.focus();
 
-
-/*
-btnSubmit.addEventListener("click", function (e) {
-  e.preventDefault();
-  let errors = {};
-  if (fullName.value.length < 3) {
-    errors.fullName = "Tu nombre tiene que tener por lo menos dos letras";
-    fullName.classList.add ("is-invalid")
-  }
-  if (email.value.length = 0) {
-    errors.email = "Completa tu email";
-    email.classList.add("is-invalid");
-  }
-  
-  if (validarEmail(email)) {
-    errors.email = "Debes ingresar un mail válido";
-    email.classList.add("is-invalid");
-    
-  }
-
-  if (Object.keys(errors).length >= 1) {
-    erName.innerText = errors.fullName ? errors.fullName : "";
-  } else {
-    form.submit();
-  }
-});
-
-function validarEmail(email) {
-  expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  if (!expr.test(email)){
-    console.log("es falso");
-    return false;
-}
-console.log("es verdadero");
-}
-
-*/
-
-
 const requiredInputs = [
   fullName,
   birthdate,
