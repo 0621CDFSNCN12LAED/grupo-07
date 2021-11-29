@@ -1,156 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!--Acá va el head-->
-  <%- include ("partials/head.ejs") %>
+<script defer src="/js/productEditValidator.js" type="text/javascript"></script>
+<!--Acá va el head-->
+<%- include ("partials/head.ejs") %>
 
   <body class="body">
     <!--Acá va el header-->
     <%- include ("partials/header.ejs") %>
-    <main id="main-content">
-      <section class="padding-24">
-        <div>
-          <form
-            class="register-form"
-            action="/products/<%= product.id %>?_method=PUT"
-            method="POST"
-            enctype="multipart/form-data"
-          >
-            <div>
-              <h2 class="tx-blanco">
-                Editar producto: <i><%=product.name %></i>
-              </h2>
-            </div>
+      <main id="main-content">
+        <section class="padding-24">
+          <div>
+            <form id="editForm" class="register-form" action="/products/<%= product.id %>?_method=PUT" method="POST"
+              enctype="multipart/form-data">
+              <div>
+                <h2>
+                  Editar producto: <br><i>
+                    <%=product.name %>
+                  </i>
+                </h2>
+              <ul id="errores" class="hidden"></ul>
+              </div>
 
-            <div class="form-input">
-              <label class="main-label" for="name"></label>
-              <input
-                class="border-5"
-                type="text"
-                name="name"
-                placeholder="Nombre del producto"
-                value="<%=product.name%>"
-              />
-              <% if (locals.errors && errors.name) { %>
-									<div>
-										<%= errors.name.msg %>
-									</div>
-									<% } %>
-            </div>
-            <div class="form-input">
-              <label class="main-label" for="price"></label>
-              <input
-                class="border-5"
-                type="text"
-                name="price"
-                placeholder="Precio del producto: $12.99"
-                value="<%=product.price%>"
-                
-              />
-            </div>
-            <div class="form-input">
-              <label class="main-label" for="description"></label>
-              <input
-                class="border-5"
-                type="text"
-                name="description"
-                placeholder="Descripcion"
-                value="<%=product.description%>"                
-              />
-               <% if (locals.errors && errors.description) { %>
-									<div>
-										<%= errors.description.msg %>
-									</div>
-									<% } %>
-            </div>
-            <div class="form-input">
-              <label class="main-label" for="image"></label>
-              <img src="/images/product-images/<%= product.image %>" alt="" />
-              <input
-                class="border-5"
-                type="file"
-                name="image"
-                placeholder="Foto del producto"
-              />
-               <% if (locals.errors && errors.image) { %>
-									<div>
-										<%= errors.image.msg %>
-									</div>
-									<% } %>
-            </div>
-            <div class="form-input">
-              <label class="main-label" for="stock"></label>
-              <select
-                class="w-100"
-                type="text"
-                name="stock"
-                placeholder="Stock"
-                
-              >
-                
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-            </div>
-            <div class="form-input">
-              <label class="main-label" for="category"></label>
-              <select
-                class="border-5"
-                type="text"
-                name="category"
-                placeholder="Categoria"
-                
-                
-              >
-                <option value="Belleza" <%= product.category == "Belleza" ? "selected" : "" %>>Belleza
-                </option>
-                <option value="Higiene" <%= product.category == "Higiene" ? "selected" : "" %>>Higiene
-                </option>
-                <option value="Fitoterapia" <%= product.category == "Fitoterapia" ? "selected" : "" %>>Fitoterapia
-                </option>
-                
-              </select>
-            </div>
+              <div class="form-input">
+                <label class="main-label" for="name"></label>
+                <input id="editName" class="border-5" type="text" name="name" placeholder="Nombre del producto"
+                  value="<%=product.name%>" />
+                <% if (locals.errors && errors.name) { %>
+                  <div>
+                    <%= errors.name.msg %>
+                  </div>
+                  <% } %>
+              </div>
+              <div class="form-input">
+                <label class="main-label" for="price"></label>
+                <input id="editPrice" class="border-5" type="text" name="price"
+                  placeholder="Precio del producto: $12.99" value="<%=product.price%>" />
+              </div>
+              <div class="form-input">
+                <label class="main-label" for="description"></label>
+                <input id="editDescription" class="border-5" type="text" name="description" placeholder="Descripcion"
+                  value="<%=product.description%>" />
+                <% if (locals.errors && errors.description) { %>
+                  <div>
+                    <%= errors.description.msg %>
+                  </div>
+                  <% } %>
+              </div>
+              <div class="form-input">
+                <label class="main-label" for="image"></label>
+                <img src="/images/product-images/<%= product.image %>" alt="" />
+                <input class="border-5" type="file" name="image" placeholder="Foto del producto" />
+                <% if (locals.errors && errors.image) { %>
+                  <div>
+                    <%= errors.image.msg %>
+                  </div>
+                  <% } %>
+              </div>
+              <div class="form-input">
+                <label class="main-label" for="stock"></label>
+                <select id="editStock" class="w-100" type="text" name="stock" placeholder="Stock">
+                  <option value="" disabled selected>
+                    Stock
+                  </option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              <div class="form-input">
+                <label class="main-label" for="category"></label>
+                <select id="editCategory" class="border-5" type="text" name="category" placeholder="Categoria">
+                  <option value="" disabled selected>
+                    Categoría
+                  </option>
 
-            <div class="form-input">
-              <label class="main-label" for="destacado"></label>
-              <select
-                class="w-100"
-                type="text"
-                name="destacado"
-                placeholder="Destacado"
-                
-              >
-                <option value="" disabled selected>¿Destacado?</option>
-                <option value=1 <%= product.destacado == "si" ? "selected" : "" %>>Sí</option>
-                <option value=0 <%= product.destacado == "no" ? "selected" : "" %>>No</option>
-              </select>
-            </div>
-            <!-- <div class="form-input">
+                  <option value="Belleza" <%=product.category=="Belleza" ? "selected" : "" %>>Belleza
+                  </option>
+                  <option value="Higiene" <%=product.category=="Higiene" ? "selected" : "" %>>Higiene
+                  </option>
+                  <option value="Fitoterapia" <%=product.category=="Fitoterapia" ? "selected" : "" %>>Fitoterapia
+                  </option>
+
+                </select>
+              </div>
+
+              <div class="form-input">
+                <label class="main-label" for="destacado"></label>
+                <select id="editDestacado" class="w-100" type="text" name="destacado" placeholder="Destacado">
+                  <option value="" disabled selected>¿Destacado?</option>
+                  <option value=1 <%=product.destacado=="si" ? "selected" : "" %>>Sí</option>
+                  <option value=0 <%=product.destacado=="no" ? "selected" : "" %>>No</option>
+                </select>
+              </div>
+              <!-- <div class="form-input">
                 <label class="main-label" for="name"></label>
                 <select class="border-5" type="text" name="name" placeholder="Tamaños" required >
                   <option>tam1</option>
                   <option>tam2</option>
                 </select>
               </div> -->
-            <div class="register-buttons">
-              <button class="w-100 boton-filo tx-blanco bg-higiene-claro border-button" type="submit">Aceptar</button>
-              <button class="w-100 boton-filo tx-higiene-claro background-color border-button" type="reset">Cancelar</button>
-              
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
+              <div class="register-buttons">
+                <button class="w-100 boton-filo tx-blanco bg-higiene-claro border-button" type="submit">Aceptar</button>
+                <button class="w-100 boton-filo tx-higiene-claro background-color border-button"
+                  type="reset">Cancelar</button>
 
-    <!--Acá va el footer-->
-    <%- include ("partials/footer.ejs") %>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <!--Acá va el footer-->
+      <%- include ("partials/footer.ejs") %>
   </body>
+
 </html>
