@@ -60,7 +60,7 @@ function formIsInvalid() {
         price.style.borderColor = "red";
         errores.push("Ingrese el precio del producto");
     } else {
-        if (typeof price.value != "number") {
+        if (!price.value > 0) {
             price.style.borderColor = "red";
             errores.push("Ingrese un precio válido");
         } else {
@@ -98,21 +98,8 @@ function formIsInvalid() {
             );
         }
     }
-    /*
+    */
     
-
-
-    //Validación de password
-
-    /*ver cómo hacer que cuando hacemos click en el imput password aparezca el mensaje small
-
-  password.addEventListener ("click", function (){
-    const msgContraseña = document.getElementById("msgContraseña");
-    msgContraseña.classList.remove ("hidden");
-  })
-
-  VER COMO HACER LO DEL OJO DE LA PASSWORD
-  */
 
     if (!stock.value) {
         stock.style.borderColor = "red";
@@ -129,10 +116,10 @@ function formIsInvalid() {
     }
 
     if (!destacado.value) {
-        category.style.borderColor = "red";
+        destacado.style.borderColor = "red";
         errores.push("Debes indicar la categoría");
     } else {
-        category.style.borderColor = "green";
+        destacado.style.borderColor = "green";
     }
 
     console.log(errores);

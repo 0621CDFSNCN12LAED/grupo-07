@@ -60,7 +60,7 @@ function formIsInvalid() {
         price.style.borderColor = "red";
         errores.push("Ingrese el precio del producto");
     } else {
-        if (typeof price.value != Number) {
+        if (price.value >0) {
             price.style.borderColor = "red";
             errores.push("Ingrese un precio válido");
         } else {
@@ -73,9 +73,9 @@ function formIsInvalid() {
         description.style.borderColor = "red";
         errores.push("Ingrese una descripción del producto");
     } else {
-        if (description.value.trim().length < 10) {
+        if (description.value.trim().length < 20) {
             description.style.borderColor = "red";
-            errores.push("La descripción debe tener al menos diez letras");
+            errores.push("La descripción debe tener al menos veinte caracteres");
         } else {
             description.style.borderColor = "green";
         }
@@ -98,18 +98,6 @@ function formIsInvalid() {
         }
     }
 
-    //Validación de password
-
-    /*ver cómo hacer que cuando hacemos click en el imput password aparezca el mensaje small
-
-  password.addEventListener ("click", function (){
-    const msgContraseña = document.getElementById("msgContraseña");
-    msgContraseña.classList.remove ("hidden");
-  })
-
-  VER COMO HACER LO DEL OJO DE LA PASSWORD
-  */
-
     if (!stock.value) {
         stock.style.borderColor = "red";
         errores.push("Debes indicar el stock");
@@ -125,10 +113,10 @@ function formIsInvalid() {
     }
 
     if (!destacado.value) {
-        category.style.borderColor = "red";
-        errores.push("Debes indicar la categoría");
+        destacado.style.borderColor = "red";
+        errores.push("Debes indicar si el producto es destacado o no");
     } else {
-        category.style.borderColor = "green";
+        destacado.style.borderColor = "green";
     }
 
     console.log(errores);

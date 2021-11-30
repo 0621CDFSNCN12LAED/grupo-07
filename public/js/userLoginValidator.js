@@ -41,7 +41,7 @@ function formIsInvalid() {
             email.style.borderColor = "red";
             errores.push("Debes ingresar un mail válido");
         }
-    }
+    } /*faltaría validación de si el mal está en la base de datos*/
 
     //Validación de password
 
@@ -59,6 +59,7 @@ function formIsInvalid() {
         password.style.borderColor = "red";
         errores.push("Debes ingresar una contraseña");
     } else {
+        /*Faltaría un if donde reconozca si la contraseña coincide con la que está guardada en base de datos*/
         password.style.borderColor = "green";
     }
 

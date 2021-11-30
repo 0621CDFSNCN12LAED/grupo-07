@@ -151,7 +151,7 @@ const controller = {
         res.clearCookie("email");
         req.session.destroy();
         console.log("deslogueado");
-        return res.send("deslogueado");
+        return res.redirect("/");
     },
 };
 

@@ -376,6 +376,10 @@ footer {
   margin-top: 48px;
 }
 
+.margin-top-140{
+  margin-top: 140px;
+}
+
 .margin-bottom-48{
   margin-bottom: 48px;
 }
@@ -441,6 +445,21 @@ a{
 form i {
     margin-left: -30px;
     cursor: pointer;
+}
+
+/*Pag de error*/
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.centrado{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
