@@ -123,7 +123,7 @@
   border-style: none;
   font-size: 10px;
   padding: 5px;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
 }
 
 .boton-añadir-op {
@@ -133,7 +133,7 @@
   border-style: none;
   color: white;
   background-color: #a67d7e;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   padding: 5px;
   font-weight: bold;
 }
@@ -143,19 +143,19 @@
   border: 1px solid white;
   text-align: center;
   padding: 5%;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
 }
 
 .boton-añadir {
   /*width: 50%;*/
   /*margin-left: 25%;*/
   font-size: 14px;
-  color: rgb(77, 68, 68);
+  /*color: rgb(77, 68, 68);*/
   background-color: #daa4a1;
   border: 1px solid white;
   display: block;
   padding: 5%;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   text-align: center;
   margin-top: 15px;
 }

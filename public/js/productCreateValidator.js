@@ -60,7 +60,7 @@ function formIsInvalid() {
         price.style.borderColor = "red";
         errores.push("Ingrese el precio del producto");
     } else {
-        if (price.value >0) {
+        if (!price.value > 0) {
             price.style.borderColor = "red";
             errores.push("Ingrese un precio válido");
         } else {

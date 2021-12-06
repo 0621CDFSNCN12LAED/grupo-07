@@ -52,7 +52,8 @@
   </div>
 
   <!--SEGUNDA FILA NAVBAR, +TABLET MEDIA QUERY-->
-  <div class="flex w-90 hide show padding-24">
+    <div class="flex justify-between align-center w-100 padding-8-48">
+        <div class="flex w-80 hide show padding-24">
     <ul class="flex">
       <li class="margin-auto">
         <a href="../products">PRODUCTOS</a>
@@ -67,28 +68,19 @@
         <a href="../contacto">CONTACTO</a>
       </li>
     </ul>
-</div>
+        </div>
 
-<div class="flex w-10 hide show padding-24">
-    <ul class="flex">
+        <div class="flex w-20 hide show padding-24 ">
+        <ul class="flex">
       <!-- si tengo locals.isLogged = false (porque asi esta en el MD), quiero mostrar la parte del "else" -->
       <!-- porque esta seteado en "false" -->
-      <% if (locals.isLogged) { %>
-      <li class="margin-auto">
+        <% if (locals.isLogged) { %>
+        <li class="margin-auto">
         <a href="/user/userProfile" id="dropUser">
-          <!--<img
-            src="/images/avatars/<%= locals.userLogged.avatar %>"
-            width="40"
-            style="border-radius: 100%"
-          />-->
           ¡Hola, <%= locals.userLogged.fullName %>!
         </a>
-        <!--<ul class="flex w-30 justify-end">
-          <a href="/user/userProfile">Mi perfil</a>-->
-          <br />
-          <a href="/user/logout">Logout</a>
         </ul>
-      </li>
+        
 
       <ul class="flex w-30 justify-end">
         <% } else { %>
@@ -108,7 +100,7 @@
       </ul>
 
     </ul>
-    </div>
+        </div>
     </div>
     </div>
   </nav>

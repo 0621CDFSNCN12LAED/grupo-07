@@ -33,3 +33,10 @@ Sprint 5:
 Entendemos que estamos relegando la experiencia del usuario por lo funcional y que en los próximos sprint tendremos que comenzar a revertir esta situación. 
 Como en el sprint anterior, por diferencias horarias y responsabilidades individuales/personales, las reuniones nos fueron tan frecuentes como en los primeros sprint, pero creemos haber aprovechado el tiempo de las que sí sucedieron para resolver las consignas dadas. 
 A medida que avanzan los sprints vamos entendiendo cosas que tenemos que corregir de nuestro proyecto (sobre sprints anteriores) para que sea un todo que funcione correctamente.
+
+Sprint 6:
+De a poco fuimos reacomodando la parte visual del proyecto. Aún nos quedan algunas partes, pero avanzamos.
+
+Creo que este sprint fue uno de lo que nos generó más dudas. Hasta último momento estuvimos intentando resolver el logut, que finalmente lo hicimos gracias a una consulta en clase.
+
+Seguimos trabajando bien en equipo, reseptando nuestras opiniones y escuchando los aportes de cada uno para intentar resolver los problemas que se nos presentan de la mejor manera.

@@ -95,8 +95,8 @@
                 <label class="main-label" for="destacado"></label>
                 <select id="editDestacado" class="w-100" type="text" name="destacado" placeholder="Destacado">
                   <option value="" disabled selected>¿Destacado?</option>
-                  <option value=1 <%=product.destacado=="si" ? "selected" : "" %>>Sí</option>
-                  <option value=0 <%=product.destacado=="no" ? "selected" : "" %>>No</option>
+                  <option value=1 <%=product.destacado==1 ? "selected" : "" %>>Sí</option>
+                  <option value=0 <%=product.destacado==0 ? "selected" : "" %>>No</option>
                 </select>
               </div>
               <!-- <div class="form-input">

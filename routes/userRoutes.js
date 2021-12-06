@@ -42,10 +42,8 @@ router.put("/:id", uploadFile.single("avatar"), usersController.update);
 // Logout
 router.get("/logout", usersController.logout);
 
-/*Carritos
-router.get ("/:id/cart", cartController.list)
-
-//Detalle de un carrito
-router.get ("/:id/cart/:id", cartController.detail)
+/*Carrito
+router.get("/cart", userController.cart);
+router.get("/cart/:id", authMiddleware,userController.addCart);
 */
 module.exports = router;

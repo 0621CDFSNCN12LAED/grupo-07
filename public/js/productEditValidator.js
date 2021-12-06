@@ -8,6 +8,8 @@ const category = document.getElementById("editCategory");
 const destacado = document.getElementById("editDestacado");
 const errorList = document.querySelector("#errores");
 
+
+
 productName.focus();
 
 console.log(createForm.price);
@@ -73,32 +75,18 @@ function formIsInvalid() {
         description.style.borderColor = "red";
         errores.push("Ingrese una descripción del producto");
     } else {
-        if (description.value.trim().length < 10) {
+        if (description.value.trim().length < 20) {
             description.style.borderColor = "red";
-            errores.push("La descripción debe tener al menos diez letras");
+            errores.push("La descripción debe tener al menos veinte caracteres");
         } else {
             description.style.borderColor = "green";
         }
     }
 
-    //Validación de image REVISAR COMO DEJAR LA IMAGEN COMO OLD DATA
+    //Validación de image 
 
-    /* if (image.value == "") {
-        image.style.borderColor = "red";
-        errores.push("Porfa subí una foto para crear el producto");
-    } else {
-        const allowedExtensions = /(.*?)\.(jpg|gif|jpeg|png)$/;
 
-        if (image.value.match(allowedExtensions)) {
-            image.style.borderColor = "green";
-        } else {
-            image.style.borderColor = "red";
-            errores.push(
-                "Solo aceptamos extensiones: .jpg, .jpeg, .gif y .png"
-            );
-        }
-    }
-    */
+    
     
 
     if (!stock.value) {
