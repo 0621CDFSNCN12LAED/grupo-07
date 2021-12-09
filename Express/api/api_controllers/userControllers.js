@@ -16,4 +16,18 @@ module.exports = {
             data: users,
         });
     },
+    detail: async (req, res) => {
+        const user = await User.findByPk(req.params.id);
+        if (user) {
+            res.json(user);
+        } else {
+            res.json({
+                meta: {
+                    status: 404,
+                    url: "http://localhost:3000/api/users/" + req.params.id,
+                },
+                data: `No se encontró el usuario con id: ${req.params.id}`,
+            });
+        }
+    },
 };
