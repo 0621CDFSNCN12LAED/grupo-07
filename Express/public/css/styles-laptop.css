@@ -1,0 +1,62 @@
+/****media=min-width:768px - max-width: 1280px" *****/
+
+.ms-hide {
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+.bar1, .bar2, .bar3{
+  display: none;
+}
+
+.img-medicina{
+  width: 50%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.index-filo{
+  margin-bottom: 24px;
+}
+
+.content-medicine{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.content-gift{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  margin-right: 24px;
+  margin-left: 24px;
+  flex-direction: row-reverse;
+}
+
+.tx-medicine{
+  width: 50%;
+}
+
+
+.px-48{
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.py-24 {
+   padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.prod-detail{
+  width: 100%;
+  margin: auto;
+  padding: 24px;
+  align-items: center;
+}
