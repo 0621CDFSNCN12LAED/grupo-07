@@ -3,3 +3,12 @@
 .box {
   width: auto;
 }
+
+#img-detail {
+  max-width: 550px;
+  height: 550px;
+}
+
+.prod-detail{
+  align-items: flex-start;
+}

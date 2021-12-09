@@ -13,17 +13,18 @@
             <form id="editForm" class="register-form" action="/products/<%= product.id %>?_method=PUT" method="POST"
               enctype="multipart/form-data">
               <div>
-                <h2>
-                  Editar producto: <br><i>
+                <P>
+                  EDITAR PRODUCTO 
+                 </P> 
+                  <h2>
                     <%=product.name %>
-                  </i>
-                </h2>
+                  </h2>
               <ul id="errores" class="hidden"></ul>
               </div>
 
               <div class="form-input">
                 <label class="main-label" for="name"></label>
-                <input id="editName" class="border-5" type="text" name="name" placeholder="Nombre del producto"
+                <input id="editName" class="" type="text" name="name" placeholder="Nombre del producto"
                   value="<%=product.name%>" />
                 <% if (locals.errors && errors.name) { %>
                   <div>
@@ -33,12 +34,12 @@
               </div>
               <div class="form-input">
                 <label class="main-label" for="price"></label>
-                <input id="editPrice" class="border-5" type="number" step="0.01" name="price"
+                <input id="editPrice" class="" type="number" step="0.01" name="price"
                   placeholder="Precio del producto: $12.99" value="<%=product.price%>" />
               </div>
               <div class="form-input">
                 <label class="main-label" for="description"></label>
-                <input id="editDescription" class="border-5" type="text" name="description" placeholder="Descripcion"
+                <input id="editDescription" class="" type="text" name="description" placeholder="Descripcion"
                   value="<%=product.description%>" />
                 <% if (locals.errors && errors.description) { %>
                   <div>
@@ -48,13 +49,16 @@
               </div>
               <div class="form-input">
                 <label class="main-label" for="image"></label>
-                <img src="/images/product-images/<%= product.image %>" alt="" />
-                <input class="border-5" type="file" name="image" placeholder="Foto del producto" />
+                 
+                <input class="" type="file" name="image" placeholder="Foto del producto" />
                 <% if (locals.errors && errors.image) { %>
                   <div>
                     <%= errors.image.msg %>
                   </div>
                   <% } %>
+                  <div style=" max-width: 400px;">
+                <img src="/images/product-images/<%= product.image %>" alt="" class="flex" style="width: 100%; object-fit: cover; "/>
+              </div> 
               </div>
               <div class="form-input">
                 <label class="main-label" for="stock"></label>
@@ -62,21 +66,21 @@
                   <option value="" disabled selected>
                     Stock
                   </option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
+                  <option value="1" <%=product.stock=="1" ? "selected" : "" %>>1</option>
+                  <option value="2" <%=product.stock=="2" ? "selected" : "" %>>2</option>
+                  <option value="3" <%=product.stock=="3" ? "selected" : "" %>>3</option>
+                  <option value="4" <%=product.stock=="4" ? "selected" : "" %>>4</option>
+                  <option value="5" <%=product.stock=="5" ? "selected" : "" %>>5</option>
+                  <option value="6" <%=product.stock=="6" ? "selected" : "" %>>6</option>
+                  <option value="7" <%=product.stock=="7" ? "selected" : "" %>>7</option>
+                  <option value="8" <%=product.stock=="8" ? "selected" : "" %>>8</option>
+                  <option value="9" <%=product.stock=="9" ? "selected" : "" %>>9</option>
+                  <option value="10" <%=product.stock=="10" ? "selected" : "" %>>10</option>
                 </select>
               </div>
               <div class="form-input">
                 <label class="main-label" for="category"></label>
-                <select id="editCategory" class="border-5" type="text" name="category" placeholder="Categoria">
+                <select id="editCategory" class="w-100" type="text" name="category" placeholder="Categoria">
                   <option value="" disabled selected>
                     Categoría
                   </option>
@@ -106,10 +110,9 @@
                   <option>tam2</option>
                 </select>
               </div> -->
-              <div class="register-buttons">
-                <button class="w-100 boton-filo tx-blanco bg-higiene-claro border-button" type="submit">Aceptar</button>
-                <button class="w-100 boton-filo tx-higiene-claro background-color border-button"
-                  type="reset">Cancelar</button>
+              <div class="w-100">
+                <button class="w-100 boton-filo tx-blanco bg-verde-musgo border-button" type="submit">Aceptar</button>
+                <button class="w-100 boton-filo tx-verde-musgo border-button" type="reset">Cancelar</button>
 
               </div>
             </form>

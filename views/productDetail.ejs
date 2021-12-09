@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script
+        defer
+        src="/js/productDetail.js"
+        type="text/javascript"
+    ></script>
 <!--Acá va el head-->
 <%- include ("partials/head.ejs") %>
 
@@ -11,14 +16,14 @@
                 <!--Acá va el partial de producto-->
                 
                 <article class="detalle-producto br-bottom">
-                    <div class="w-100 flex-prod">
-                        <div class="img-pd">
+                    <div class="flex prod-detail">
+                        <div class=" tx-medicine w-100 ">
                             <img src="/images/product-images/<%= product.image %>" class="w-100"/>
                         </div>
-                    </div>
-
-                        <div class="texto-pd ">
-                            <div class="flex justify-between padding-8-48 align-center ">
+                    
+                        <div class="tx-medicine w-100 px-48 ">
+                        <div class="w-100">
+                            <div class="flex justify-between align-center w-100 ">
                                 <h2 class="text-into-block text-left tx-negro">
                                      <%= product.name %>
                                 </h2>
@@ -28,12 +33,19 @@
                             </div> 
                         </div> 
 
-                    <div class="w-100 padding-8-48">     
-                    <button class="boton-añadir w-100 ">
+                        <div class="py-24 ">
+                            <p class="">
+                                <%= product.description %>
+                            </p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo officiis consectetur aperiam incidunt, deserunt ipsa, nulla nemo omnis, ullam aliquid ipsum. Vero, ipsam obcaecati dignissimos numquam eveniet eius aspernatur assumenda?</p>
+                        </div>
+
+                    <div class="w-100">     
+                    
                     <% if (locals.userLogged) { %>
-                    <a href= "/products/productCart" >Añadir al carrito</a></button>
+                    <a  href= "/products/productCart" ><button class="boton-añadir  w-100 ">Añadir al carrito</button></a>
                     <% } else { %> 
-                    <a href= "/user/login" >Añadir al carrito</a></button>
+                    <a href= "/user/login" ><button class="boton-añadir  w-100 ">Añadir al carrito</button></a>
                     <% } %> 
 
                     <% if (locals.userLogged && userLogged.admin) { %> 
@@ -41,24 +53,18 @@
 
                     <form action="/products/<%= product.id %>?_method=DELETE" method="POST" >
                         <button type="submit" class="boton-añadir w-100">Eliminar</button></form>-->
-
-                        <form action="/products/<%= product.id %>/edit " method="GET" class="w-50">
+                    <div class="flex">   
+                        <form action="/products/<%= product.id %>/edit " method="GET" class="w-50 pd-r-8">
                             <button type="submit" class="boton-añadir w-100">Editar</button>
                         </form>
-                        <form action="/products/<%= product.id %>?_method=DELETE " method="POST" class="w-50">
-                            <button type="submit" class="boton-añadir w-100">Eliminar</button>
+                        <form action="/products/<%= product.id %>?_method=DELETE " method="POST" class="w-50 pd-l-8" id="boton-eliminar">
+                            <button type="submit" class="boton-añadir w-100 tx-white">Eliminar</button>
                         </form>
+                    </div> 
                     <% } %>
 
                     </div>   
-                    
-                    <div class="padding-8-48">
-                        <h3>
-                             <%= product.name %>
-                        </h3>
-                            <p class="">
-                                <%= product.description %>
-                            </p>
+                    </div>
                     </div>
                 </article>                 
                     <!--<button class="boton-cantidad-product">- 1 +</button>-->

@@ -2,9 +2,7 @@
 /**** media => min-width:641px ****/
 /*nav-bar*/
 
-.bar1, .bar2, .bar3{
-  display: none;
-}
+
 
 .fa-smile:hover{
     opacity: 1;
@@ -53,7 +51,7 @@ footer {
 .valores-flex {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .selec-wrapper-30 {
@@ -63,9 +61,7 @@ footer {
   width: 50%;
 }
 
-.valores p {
-  text-align: center;
-}
+
 
 
 /* Filosofia Hampi */
@@ -77,9 +73,9 @@ footer {
 
 
 .boton-filo:hover {
-  color: #84c3c3;
+  color: #b3977f;
   background-color: white;
-  border: 1px solid #84c3c3;
+  
   /*transition: color .45s cubic-bezier(.785, .135, .15, .86),border .45s cubic-bezier(.785, .135, .15, .86);*/
   transition: transform .45s cubic-bezier(.785, .135, .15, .86);
 }
@@ -183,14 +179,6 @@ a:hover {
   opacity: 0.3;
 }
 
-
-.ms-hide {
-  display: none;
-}
-
-.show{
-  display: block;
-}
 
 .ms-auto-margin {
   margin: auto;
@@ -325,4 +313,11 @@ contenedor-scroll {
 
 .margin-top-0{
   margin-top: 0px;
+}
+
+.prod-detail{
+  width: 100%;
+  margin: auto;
+  padding: 48px;
+  
 }

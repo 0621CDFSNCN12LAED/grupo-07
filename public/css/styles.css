@@ -174,13 +174,7 @@ header {
   
 }
 
-.index-filo{
-  margin-top: 24px;
-  margin-bottom: 24px;
-  background-image: url(/images/filosofia.png);
-  
-  
-}
+
 /*
 article {
   margin-bottom: 16px;
@@ -208,6 +202,7 @@ article {
   text-align: center;
   text-decoration: none;
   margin: 16px auto;
+  border: 1px solid #b3977f;
   
 }
 
@@ -218,9 +213,12 @@ article {
   /*border-radius: 5px;*/
   text-align: center;
   text-decoration: none;
-  margin: 16px auto;
-  width: 50%;
-  
+  margin-top: 24px ;  
+}
+
+.boton-contact:hover{
+  background-color: transparent;
+
 }
 
 .boton-agregar {
@@ -240,6 +238,7 @@ article {
   /*transition: color .45s cubic-bezier(.785, .135, .15, .86),border .45s cubic-bezier(.785, .135, .15, .86);*/
   transition: transform .45s cubic-bezier(.785, .135, .15, .86);
 }
+
 
 
 footer {
@@ -323,6 +322,14 @@ footer {
 
 .padding-bottom-24{
   padding-bottom:24px;
+}
+
+.pd-l-8{
+  padding-left: 8px;
+}
+
+.pd-r-8{
+  padding-right: 8px;
 }
 
 #frase-tienda p {

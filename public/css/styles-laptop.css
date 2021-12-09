@@ -1,13 +1,25 @@
 /****media=min-width:768px - max-width: 1280px" *****/
 
+.ms-hide {
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+.bar1, .bar2, .bar3{
+  display: none;
+}
+
 .img-medicina{
   width: 50%;
   height: 500px;
   object-fit: cover;
 }
 
-.boton-contact {
-  width: 20%;
+.index-filo{
+  margin-bottom: 24px;
 }
 
 .content-medicine{
@@ -29,4 +41,22 @@
 
 .tx-medicine{
   width: 50%;
+}
+
+
+.px-48{
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.py-24 {
+   padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.prod-detail{
+  width: 100%;
+  margin: auto;
+  padding: 24px;
+  align-items: center;
 }

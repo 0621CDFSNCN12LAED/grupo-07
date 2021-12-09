@@ -47,6 +47,10 @@ background-color: #f1e4d8
   background-color: #0a4c4c;
 }
 
+.bg-verde-musgo {
+  background-color: #848d7e ;
+}
+
 .bg-opacity{
   opacity: 30%;
 }
@@ -60,6 +64,7 @@ background-color: #f1e4d8
   background-image: url(/images/background/plantmedicine.jpg);
   background-size: cover;
   width: 100%;
+  
 }
 
 .bg-img-natural{
@@ -117,13 +122,15 @@ background-color: #f1e4d8
   border: #84c3c3;
 }
 
+
+
 .br-bottom {
   border-bottom: 1px solid lightgray;
 }
 
 h2 {
   font-size: 28px;
-  color: #0a4c4c;
+  
 }
 
 #dropUser {
