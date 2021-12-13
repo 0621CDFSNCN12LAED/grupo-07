@@ -6,8 +6,19 @@ module.exports = {
         return res.json({
             meta: {
                 status: 200,
-                total: products.length,
+                count: products.length,
                 url: "http://localhost:3000/api/products/",
+                countByCategory: {
+                    belleza: products.filter(
+                        (product) => product.category == "Belleza"
+                    ).length,
+                    higiene: products.filter(
+                        (product) => product.category == "Higiene"
+                    ).length,
+                    salud: products.filter(
+                        (product) => product.category == "Salud"
+                    ).length,
+                },
             },
             data: products,
         });

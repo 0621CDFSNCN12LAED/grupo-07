@@ -3,7 +3,7 @@ import React, { Component } from "react";
 const PRODUCTS_URL = "http://localhost:3000/api/products";
 // const PRODUCTS_URL = "/api/products";
 
-export default class GenresInDb extends Component {
+export default class ProductsInDb extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -35,10 +35,10 @@ export default class GenresInDb extends Component {
 
     componentDidMount() {
         console.log("Evento: componentDidMount");
-        this.fetchGenres();
+        this.fetchProducts();
     }
 
-    async fetchGenres() {
+    async fetchProducts() {
         //Fetch de los generos
         const result = await fetch(PRODUCTS_URL);
         const response = await result.json();

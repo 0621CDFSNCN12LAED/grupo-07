@@ -1,27 +1,63 @@
-import React from 'react';
-import ContentRowCenter from './ContentRowCenter';
-import ContentRowMovies from './ContentRowMovies';
-import Chart from './Chart';
+import ValueCard from "./valueCard";
+import React, { Component } from "react";
 
-function ContentRowTop(){
-    return(
-        <React.Fragment>
-				{/*<!-- Content Row Top -->*/}
-				<div className="container-fluid">
-					<div className="d-sm-flex aligns-items-center justify-content-between mb-4">
-						<h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
-					</div>
-				
-					{/*<!-- Content Row Movies-->*/}
-					<ContentRowMovies />
-					<ContentRowCenter />
-					<Chart />
-	
-				</div>
-				{/*<!--End Content Row Top-->*/}
+const productsURL = "http://localhost:3000/api/products";
+const userURL = "http://localhost:3000/api/users";
 
-        </React.Fragment>
-    )
+class ContentRowTop extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+    render() {
+        if (!this.state.product && !this.state.user) {
+            return <div>Cargando...</div>;
+        }
+        return (
+            <div className="row">
+                <ValueCard
+                    title="Productos en la Base de Datos"
+                    icon="fa-shopping-cart"
+                    color="primary"
+                    value={this.state.product}
+                />
+                <ValueCard
+                    title="Categotias en la Base de Datos"
+                    icon="fa-file"
+                    color="success"
+                    value="3"
+                />
+                <ValueCard
+                    title="Usuarios en la Base de Datos"
+                    icon="fa-user"
+                    color="warning"
+                    value={this.state.user}
+                />
+            </div>
+        );
+    }
+    componentDidMount() {
+        console.log("el componente se monto");
+        this.fetchProducts();
+        this.fetchUsers();
+    }
+    async fetchProducts() {
+        const result = await fetch(productsURL);
+        const response = await result.json();
 
+        const product = response.count;
+        console.log(product);
+
+        this.setState({ product: product });
+    }
+    async fetchUsers() {
+        const result = await fetch(userURL);
+        const response = await result.json();
+        const user = response.count;
+        console.log(user);
+
+        this.setState({ user: user });
+    }
 }
+
 export default ContentRowTop;
