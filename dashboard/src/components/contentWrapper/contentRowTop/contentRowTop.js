@@ -4,19 +4,19 @@ export default function ContentRowTop() {
   return (
     <div class="row">
       <ValueCard
-        title="Movies in Data Base"
+        title="Products in Database"
         icon="fa-film"
         color="primary"
         value="21"
       />
       <ValueCard
-        title="Total awards"
+        title="Total categories"
         icon="fa-award"
         color="success"
         value="79"
       />
       <ValueCard
-        title="Actors quantity"
+        title="Users in Database"
         icon="fa-user"
         color="warning"
         value="49"

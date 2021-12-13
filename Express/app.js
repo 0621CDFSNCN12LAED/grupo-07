@@ -4,6 +4,7 @@ const express = require("express");
 const session = require("express-session");
 const cookies = require("cookie-parser");
 const methodOverride = require("method-override");
+const cors = require("cors");
 
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 
@@ -20,6 +21,8 @@ app.use(
         saveUninitialized: true,
     })
 );
+
+app.use(cors());
 
 app.use(cookies());
 

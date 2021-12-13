@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/images/logo-DH.png";
+import image from "../assets/images/logo1.png";
 import { Link } from "react-router-dom";
 
 function SideBar() {
@@ -31,7 +31,7 @@ function SideBar() {
                 <li className="nav-item active">
                     <Link className="nav-Link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span>
+                        <span>Dashboard - Hampi Yura</span>
                     </Link>
                 </li>
 
