@@ -3,7 +3,7 @@ const { Product } = require("../../database/models");
 module.exports = {
     list: async (req, res) => {
         const products = await Product.findAll();
-        
+
         return res.json({
             meta: {
                 status: 200,
@@ -21,30 +21,32 @@ module.exports = {
                     ).length,
                 },
             },
-            data: products.map((product)=>{
+            data: products.map((product) => {
                 return {
-                  id: product.id,
-                  name: product.name,
-                  description: product.description,
-                  category: product.category,
-                  detail: "http://localhost:3000/api/products/" + product.id,
+                    id: product.id,
+                    name: product.name,
+                    description: product.description,
+                    category: product.category,
+                    detail: "http://localhost:3000/api/products/" + product.id,
+                    image: product.image,
                 };
-            })
+            }),
         });
     },
     detail: async (req, res) => {
         const product = await Product.findByPk(req.params.id);
         if (product) {
             res.json({
-              id: product.id,
-              name: product.name,
-              description: product.description,
-              price: product.price,
-              category: product.category,
-              stock: product.stock,
-              destacado: product.destacado ? "Sí": "No",
-              image:
-                "http://localhost:3000/images/product-images/" + product.image,
+                id: product.id,
+                name: product.name,
+                description: product.description,
+                price: product.price,
+                category: product.category,
+                stock: product.stock,
+                destacado: product.destacado ? "Sí" : "No",
+                image:
+                    "http://localhost:3000/images/product-images/" +
+                    product.image,
             });
         } else {
             res.json({
