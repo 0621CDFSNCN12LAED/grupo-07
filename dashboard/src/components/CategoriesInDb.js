@@ -21,25 +21,28 @@ export default class ProductsInDb extends Component {
         }
 
         return (
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-dark text-white shadow">
-                        <div class="card-body">
-                            Belleza (total de productos: {count[0]}
-                        </div>
-                    </div>
-                    <div class="card bg-dark text-white shadow">
-                        <div class="card-body">
-                            Higiene (total de productos: {count[1]}
-                        </div>
-                    </div>
-                    <div class="card bg-dark text-white shadow">
-                        <div class="card-body">
-                            Salud (total de productos: {count[2]}
-                        </div>
-                    </div>
+          <div class="row">
+            <div class="col-lg-12 mb-4">
+              <div class="card bg-dark text-white shadow mb-4">
+                <div class="card-body">
+                  <h4> Belleza</h4>
+                  <p>Total de productos: {count[0]}</p>
                 </div>
+              </div>
+              <div class="card bg-dark text-white shadow mb-4">
+                <div class="card-body">
+                  <h4> Higiene </h4>
+                  <p>Total de productos: {count[1]}</p>
+                </div>
+              </div>
+              <div class="card bg-dark text-white shadow mb-4">
+                <div class="card-body">
+                  <h4>Salud </h4>
+                  <p>Total de productos: {count[2]}</p>
+                </div>
+              </div>
             </div>
+          </div>
         );
     }
 

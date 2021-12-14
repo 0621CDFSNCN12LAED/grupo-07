@@ -16,16 +16,16 @@ class LastProductInDb extends Component {
         }
         return (
             <ContentCard title="Last product in Database">
-                <div className="text-center">
-                    <h2>{this.state.lastProduct.name}</h2>
+                <div className="text-left">
+                    <h3>{this.state.lastProduct.name}</h3>
                     <img
-                        className="img-fluid px-3 px-sm-4 mt-3 mb-4"
+                        className="img-fluid mt-3 mb-4"
                         style={{ width: "40rem" }}
                         src={`http://localhost:3000/images/product-images/${this.state.lastProduct.image}`}
                         alt="Imagen del producto"
                     />
                 </div>
-                <h2>Price: {this.state.lastProduct.price}</h2>
+                <p>Price: $ {this.state.lastProduct.price}</p>
                 <p>Description: {this.state.lastProduct.description}</p>
             </ContentCard>
         );
