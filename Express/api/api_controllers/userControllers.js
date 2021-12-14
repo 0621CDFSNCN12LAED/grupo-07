@@ -10,8 +10,12 @@ module.exports = {
         return res.json({
             meta: {
                 status: 200,
-                total: users.length,
+                count: users.length,
                 url: "http://localhost:3000/api/users/",
+                countByCategory: {
+                    admin: users.filter((user) => user.admin == 1).length,
+                    guest: users.filter((user) => user.category == 0).length,
+                },
             },
             data: users,
         });

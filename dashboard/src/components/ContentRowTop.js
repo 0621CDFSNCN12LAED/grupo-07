@@ -2,7 +2,9 @@ import ValueCard from "./valueCard";
 import React, { Component } from "react";
 
 const productsURL = "http://localhost:3000/api/products";
-const userURL = "http://localhost:3000/api/users";
+const usersURL = "http://localhost:3000/api/users";
+
+const count = []
 
 class ContentRowTop extends Component {
     constructor(props) {
@@ -10,7 +12,7 @@ class ContentRowTop extends Component {
         this.state = {};
     }
     render() {
-        if (!this.state.product && !this.state.user) {
+        if (!this.state.count) {
             return <div>Cargando...</div>;
         }
         return (
@@ -19,7 +21,7 @@ class ContentRowTop extends Component {
                     title="Productos en la Base de Datos"
                     icon="fa-shopping-cart"
                     color="primary"
-                    value={this.state.product}
+                    value={this.state.count[0]}
                 />
                 <ValueCard
                     title="Categotias en la Base de Datos"
@@ -31,32 +33,29 @@ class ContentRowTop extends Component {
                     title="Usuarios en la Base de Datos"
                     icon="fa-user"
                     color="warning"
-                    value={this.state.user}
+                    value={this.state.count[1]}
                 />
             </div>
         );
     }
     componentDidMount() {
         console.log("el componente se monto");
-        this.fetchProducts();
-        this.fetchUsers();
+        this.fetchAll();
     }
-    async fetchProducts() {
-        const result = await fetch(productsURL);
-        const response = await result.json();
+    async fetchAll() {
+        const result1 = await fetch(productsURL);
+        const products = await result1.json();
+        const productsCount = products.meta.count
+        count.push(productsCount)
+        
+        
+        const result2 = await fetch(usersURL);
+        const users = await result2.json();
+        const usersCount = users.meta.count
+        count.push(usersCount);
+   
 
-        const product = response.count;
-        console.log(product);
-
-        this.setState({ product: product });
-    }
-    async fetchUsers() {
-        const result = await fetch(userURL);
-        const response = await result.json();
-        const user = response.count;
-        console.log(user);
-
-        this.setState({ user: user });
+        this.setState({ count: count });
     }
 }
 
