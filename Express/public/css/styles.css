@@ -174,13 +174,9 @@ header {
   
 }
 
-
-/*
-article {
-  margin-bottom: 16px;
+.avatar {
+  text-align: center;
 }
-*/
-
 
 .img-dest {
   width: 100%;
@@ -429,15 +425,9 @@ footer {
   color: #0a4c4c;
 }
 
-a{
+a {
   text-decoration: none;
 }
-
-/*
-#newsletter{
-  border-radius: 10px;
-}
-*/
 
 
 /*Validaciones*/

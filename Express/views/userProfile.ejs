@@ -1,28 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
   <%- include('partials/head'); %>
-  <body>
+  <body class="body">
     <%- include('partials/header'); %>
 
     <!-- Container -->
-    <div>
-      <div>
-        <div>
+    <main id="main-content" class="padding-24">
+    
+      <div >
+        <div >
           <h2>Hola, <%= user.fullName %></h2>
-          <img src="/images/avatars/<%= user.avatar %> " width="100%" />
-          <br />
-          <br />
-          <div>Email: <%= user.email %></div>
-          <div>Fecha de cumpleaños: <%= user.birthdate %></div>
         </div>
-         <div>
-          <a  href="/user/logout">Logout</a>
+        <div class="flex padding-48 justify-between ">
+
+          <div class="tx-medicine"> 
+            <div class="avatar">
+            <img src="/images/avatars/<%= user.avatar %> " width="50%" />
+            <a href="/user/<%= user.id %>/edit"><i class="far fa-edit"></i></a>
+            </div>
+            <div class="flex">
+            <p> Email: <%= user.email %> </p>
+            <a href="/user/<%= user.id %>/edit"><i class="far fa-edit"></i></a>
+            </div>
+            <div class="flex">
+            <p> Fecha de cumpleaños: <%= user.birthdate %> </p>
+            <a href="/user/<%= user.id %>/edit"><i class="far fa-edit"></i></a>
+            </div>
+          
+            <div class="margin-top-16 ">
+              <a href="/user/logout">Logout</a>
+            </div>
+          </div>
+
+          <div class="w-100 tx-medicine">
+            
+            <div >
+              <a href="/user/<%= user.id %>/cart"><button class="boton-filo w-100 ">Mi carrito</button></a>
+            </div>
+             <div >
+              <a href="#"><button class="boton-filo w-100 ">Historial de compras</button></a>
+            </div>
+             <div >
+              <a href="#"><button class="boton-filo w-100 ">Métodos de pago</button></a>
+            </div>
+           
+          </div>    
+
+          
+          
+          
         </div>
-        <div>
-          <button class="boton-añadir w-100 "><a href="/user/<%= user.id %>/edit">Editar</a></button>
-        </div>
-      </div>
     </div>
+    
+
+    </main>
     <!-- //Container -->
 
     <%- include ("./partials/footer.ejs") %>

@@ -55,7 +55,7 @@
 							</div>
 							<div class="form-input margin-auto">
 								<label class="main-label" for="avatar"></label>
-								<input class="" type="file" name="avatar" id="avatar" 
+								<input class="" type="file" name="avatar" id="avatar" accept="image/*"
 									value="<%= locals.oldData ? oldData.avatar : null%>" />
 								<% if (locals.errors && errors.avatar) { %>
 									<div>

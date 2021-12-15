@@ -50,7 +50,7 @@
               <div class="form-input">
                 <label class="main-label" for="image"></label>
                  
-                <input class="" type="file" name="image" placeholder="Foto del producto" />
+                <input class="" type="file" name="image" placeholder="Foto del producto" accept="image/*" />
                 <% if (locals.errors && errors.image) { %>
                   <div>
                     <%= errors.image.msg %>

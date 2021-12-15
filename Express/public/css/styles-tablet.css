@@ -175,9 +175,7 @@ header {
 
 
 
-a:hover {
-  opacity: 0.3;
-}
+
 
 
 .ms-auto-margin {
@@ -226,13 +224,7 @@ contenedor-scroll {
   /*padding-left: 30px;*/
 }
 
-/*
-.card {
-  width: 50%;
-  height: 300px;
-  padding: 5%;
-}
-*/
+
 
 .card {
   width: 30%;
@@ -268,13 +260,7 @@ contenedor-scroll {
 .boton-cantidad-op {
   display: none;
 }
-/*
-.boton-añadir-op {
-  width: 50%;
-  margin-left: 25%;
-  padding: 5px;
-}
-*/
+
 
 .boton-añadir-op {
   width: 80%;

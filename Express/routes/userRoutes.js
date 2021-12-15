@@ -43,7 +43,7 @@ router.put("/:id", uploadFile.single("avatar"), usersController.update);
 router.get("/logout", usersController.logout);
 
 /*Carrito
-router.get("/cart", userController.cart);
-router.get("/cart/:id", authMiddleware,userController.addCart);
-*/
+router.get("/cart", usersController.cart);
+router.get("/:id/cart", authMiddleware, usersController.addCart);*/
+
 module.exports = router;
