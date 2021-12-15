@@ -87,8 +87,8 @@ const controller = {
     res.redirect("/products");
   },
 
-  productCart: (req, res) => {
-    res.render("productCart");
+  cart: (req, res) => {
+    res.render("Cart");
   },
 };
 

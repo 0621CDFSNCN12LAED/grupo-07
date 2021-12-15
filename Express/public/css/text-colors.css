@@ -159,6 +159,10 @@ h2 {
   text-align: left;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .text-into-block{
   display: block;
 }
@@ -187,3 +191,4 @@ h2 {
 .tx-34{
   font-size: 34px;
 }
+

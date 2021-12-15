@@ -24,7 +24,7 @@ router.post(
 );
 
 /*** BUY PRODUCT ***/
-router.get("/productCart", productsControllers.productCart);
+router.get("/cart", productsControllers.cart);
 
 /*** GET ONE PRODUCT ***/
 router.get("/:id", productsControllers.productDetail);

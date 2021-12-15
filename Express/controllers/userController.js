@@ -135,6 +135,9 @@ const controller = {
         res.redirect("/user/userProfile");
     },
 
+
+  
+
     /* CARRITO
     cart: async (req, res) => {
         let prod = await db.Cart.findAll({

@@ -65,12 +65,7 @@
   text-align: center;
   /*padding: 5%;*/
 }
-/*
-.detalle-producto {
-  width: 100%;
-  border-bottom: solid 4px #daa4a1;
-}
-*/
+
 
 .titulo-otros {
   /*margin-left: 10%;*/
@@ -82,9 +77,7 @@
   display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
-  /*padding-bottom: 20%;
-  padding-right: 10px;
-  */
+  
 }
 
 .contenedor-scroll .card {
@@ -93,8 +86,6 @@
 
 .card {
   width: 50%;
-  /*height: 250px;*/
-  /*padding-left: 10px;*/
 }
 
 .contenedor {
@@ -123,7 +114,6 @@
   border-style: none;
   font-size: 10px;
   padding: 5px;
-  /*border-radius: 5px;*/
 }
 
 .boton-añadir-op {
@@ -133,7 +123,6 @@
   border-style: none;
   color: white;
   background-color: #a67d7e;
-  /*border-radius: 5px;*/
   padding: 5px;
   font-weight: bold;
 }
@@ -149,19 +138,17 @@
   border: 1px solid white;
   text-align: center;
   padding: 5%;
-  /*border-radius: 5px;*/
+ 
 }
 
 .boton-añadir {
-  /*width: 50%;*/
-  /*margin-left: 25%;*/
   font-size: 14px;
   color: white;
   background-color: #a67d7e;
   border: 1px solid #a67d7e;
   display: block;
   padding: 5%;
-  /*border-radius: 5px;*/
+  
   text-align: center;
   margin-top: 15px;
 }
@@ -181,5 +168,23 @@
 #img-detail {
   max-width: 300px;
   height: 300px;
+}
+
+.prod-cart-box{
+  border: 1px solid #848d7e;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.p-cart {
+  width: 200px;
+  
+  
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.overflow-ellipsis {
+  text-overflow: ellipsis;
 }
 
