@@ -29,6 +29,7 @@ module.exports = {
                     category: product.category,
                     detail: "http://localhost:3000/api/products/" + product.id,
                     image: product.image,
+                    price: product.price,
                 };
             }),
         });

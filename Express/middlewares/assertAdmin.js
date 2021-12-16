@@ -6,7 +6,7 @@ module.exports = (req, res, next) => {
     next();
   } else {
     res.send(
-      "Lo siento, no tienes permiso para acceder a esta parte de neustra web"
+      "Lo siento, no tienes permiso para acceder a esta parte de nuestra web"
     );
   }
 };
