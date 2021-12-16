@@ -48,12 +48,12 @@ CREATE TABLE carts (
 -- carts_products table
 CREATE TABLE carts_products (
   id INT PRIMARY KEY AUTO_INCREMENT,
-  precio_unidad DECIMAL NOT NULL,
-  cantidad INT NOT NULL,
-  id_product INT NOT NULL,
-  FOREIGN KEY (id_product) REFERENCES products(id),
-  id_cart INT NOT NULL,
-  FOREIGN KEY (id_cart) REFERENCES carts(id)
+  priceUnit DECIMAL NOT NULL,
+  quantity INT NOT NULL,
+  productId INT NOT NULL,
+  FOREIGN KEY (productId) REFERENCES products(id),
+  cartId INT NOT NULL,
+  FOREIGN KEY (cartId) REFERENCES carts(id)
 );
 
 
@@ -139,8 +139,7 @@ VALUES
           10,
           0);
 
-
-drop database hampi_db
+;
 -- BORRAR LA COLUMNA DELETED DE PRODUCTOS Y AGREGAR COLUMNA deletedAt VALOR TIMESTAMP
 -- AGREGAR COLUMNAS: createdAt, updateAt
 -- EL DELETEDAT TIENE QUE TENER UN VALOR POR DEFECTO NULL EN LA DEFINICION DE LA TABLA (DEFAULT NULL)

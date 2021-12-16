@@ -42,10 +42,13 @@ const mainRoutes = require("./routes/mainRoutes");
 const productsRoutes = require("./routes/productsRoutes");
 const userRoutes = require("./routes/userRoutes");
 const apiRouter = require("./api/api_routes");
+const cartRouter = require("./routes/cartRoutes");
 
 app.use("/", mainRoutes);
 app.use("/products", productsRoutes);
 app.use("/user", userRoutes);
+app.use("/carrito", cartRouter);
+
 
 // Api routing
 
