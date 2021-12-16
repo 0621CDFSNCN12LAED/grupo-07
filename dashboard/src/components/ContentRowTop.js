@@ -13,7 +13,7 @@ class ContentRowTop extends Component {
     }
     render() {
         if (!this.state.count) {
-            return <div>Cargando... Juan</div>;
+            return <div>Cargando... </div>;
         }
         return (
             <div className="row">
@@ -25,7 +25,7 @@ class ContentRowTop extends Component {
                 />
                 <ValueCard
                     title="Categotias en la Base de Datos"
-                    icon="fa-file"
+                    icon="fa-tags"
                     color="success"
                     value={3}
                 />

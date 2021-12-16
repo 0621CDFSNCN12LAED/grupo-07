@@ -1,37 +1,31 @@
 
 <header id="header" class="flex">
 
-  <div id="frase-tienda" class="bg-crema-b text-center tx-verde-musgo w-100 tx-12 ">
-    <p class="margin-0">🌱 Tienda online de productos artesanales y naturales.🌱</p>
+  <div id="frase-tienda" class="bg-crema text-center tx-crema-b w-100 tx-12 ">
+    <p class="margin-0">🌱 Anatomía de nuestros cuerpos - Alternativas para la salud 🌱</p>
   </div>
 
 
   <nav id="main-nav" >
-    <div class="w-100 flex bg-crema">
+    <div id="header-shadow" class="w-100 flex pt-24">
 
-      <!--PRIMERA FILA NAVBAR-->
+      <!--SIDE NAVBAR-->
       <div class="flex justify-between align-center w-100 padding-8-48">
-    
-    
-        <!--ICON BURGER
-          <a href="#" class="icon-burger">
-              <i class="fas fa-bars"></i>
-            </a>
-        -->
 
+        <div class="w-20">
         <div id="cruz" class="container myFunction" onclick="openNav(this)">
           <div class="bar1"></div>
           <div class="bar2"></div>
           <div class="bar3"></div>
         </div>
-
-        <div id="mySidenav" class="sidenav">
+        </div>
+        <div id="mySidenav" class="sidenav ">
   
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav(this)">&times;</a>
-          <a href="../products">Productos</a>
-          <a href="../fitoterapia">Fitoterapia</a>
-          <a href="../filosofia">Filosofía Hampi</a>
-          <a href="../contacto">Contacto</a>
+          <a href="../products">🛍️ Productos</a>
+          <a href="../fitoterapia">🌱 Fitoterapia</a>
+          <a href="../filosofia">💚 Filosofía Hampi</a>
+          <a href="../contacto">📞 Contacto</a>
   
           <% if (locals.isLogged) { %>
             <a  href="/user/userProfile">Mi perfil</a>
@@ -41,66 +35,42 @@
         </div>
 
     <!--LOGO HAMPI-->
-    <a href="/" class="ms-auto-margin">
+    <a href="/" class="w-60 ms-auto-margin text-center">
       <img class="logo-hy" src="/images/logo1.png" alt="Logo Hampi Yura" />
     </a>
 
-    <!--LOGIN ICON-->
-    <a href="/user/login" class="ms-hide">
-      <i class="far fa-smile"></i>
-    </a>
-  </div>
-
-  <!--SEGUNDA FILA NAVBAR, +TABLET MEDIA QUERY-->
-    <div class="flex justify-between align-center w-100 padding-8-48">
-        <div class="flex w-80 hide show padding-24">
-    <ul class="flex">
-      <li class="margin-auto">
-        <a href="../products">PRODUCTOS</a>
-      </li>
-      <li class="margin-auto">
-        <a href="../fitoterapia">FITOTERAPIA</a>
-      </li>
-      <li class="margin-auto">
-        <a href="../filosofia">FILOSOFÍA HAMPI</a>
-      </li>
-      <li class="margin-auto">
-        <a href="../contacto">CONTACTO</a>
-      </li>
-    </ul>
-        </div>
-
-        <div class="flex w-20 hide show padding-24 ">
-        <ul class="flex">
+    <!--LOGIN LOGIN-->
+    <div class="w-20 py-24 ">
+        
       <!-- si tengo locals.isLogged = false (porque asi esta en el MD), quiero mostrar la parte del "else" -->
       <!-- porque esta seteado en "false" -->
         <% if (locals.isLogged) { %>
-        <li class="margin-auto">
+        <li class="">
         <a href="/user/userProfile" id="dropUser">
           ¡Hola, <%= locals.userLogged.fullName %>!
         </a>
-        </ul>
-        
-
-      <ul class="flex w-30 justify-end">
+              
         <% } else { %>
-        <!--<li class="margin-auto w-50">
-          <a href="/user/register">Register</a>
-        </li>
-        <li class="margin-auto w-50">
-          <a href="/user/login">Login</a>
-        </li>-->
-        <li class="margin-auto">
+        <li class="text-right">
         <a href="/user/login">
-          <i class="far fa-smile"></i>
+          <i class="far fa-user-circle"></i>
         </a>
         </li>
 
         <% } %>
-      </ul>
+      
 
-    </ul>
+    
         </div>
+
+
+
+
+
+  </div>
+
+
+    
     </div>
     </div>
   </nav>

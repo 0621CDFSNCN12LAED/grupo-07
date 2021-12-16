@@ -2,12 +2,19 @@
 /**** media => min-width:641px ****/
 /*nav-bar*/
 
+#img-header{
+  margin-top: -208px;
+  z-index: -1;
+  position: relative;
+}
 
-
-.fa-smile:hover{
-    opacity: 1;
-    transform: rotate(360deg);
-    transition: transform ease-in-out 500ms
+#img-header div {
+  position: absolute;
+  bottom: 30%;
+  font-size: 24px;
+  color: white;
+  left: 30px;
+  text-shadow: 2px 2px grey;
 }
 
 

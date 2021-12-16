@@ -10,9 +10,31 @@
     <%- include ("./partials/header.ejs") %>
 
     <main id="main-content">
+    
+    <div id="img-header" class="w-100">
+      <img src="/images/background/index-header-2.jpg" alt="" width="100%">
+      <div>
+        Tienda online de productos naturales
+      </div>
+    </div>
+   
+    <section class="padding-24 ">
+        <div class="content-gift align-center">
+          <img src="/images/gift.jpg" class="img-gift">
+          <div class="padding-48 tx-14 tx-medicine text-center">
+            <p class="" style="margin-bottom: -16px;">Estas fiestas</p>
+            <h2 class="tx-cuidadopiel-claro ">REGALÁ HAMPI</h2>
+            <p>Las plantas de interior son una apuesta segura para sacar sonrisas y celebrar cualquier ocasión. 
+            Sorprende a esa persona especial con un regalo que durará toda la vida</p>
+            <a href="../products" class="tx-verde-musgo" style="text-decoration:underline">
+              VER PRODUCTOS
+            </a>
+          </div>
+        </div>
+    </section>
 
     <!--Sección 3 secciones: productos, fitoterapia, filosofia-->
-      <section class="margin-top-16">
+      <section id="three-sections" class="margin-top-16">
         <div class="selec-flex">
           <div class="selec-wrapper">
             <a href="/products">
@@ -48,47 +70,92 @@
       </section>
 
 <section class="bg-img-natural">
-      <div class="frases-home padding-16">
-        <p>Anatomía de nuestrxs cuerpxs</p>
-        <p>Alternativas para la salud</p>
-      </div>
-
+      
 <!-- Valores -->
       
-      <div class="bg-crema-b padding-24">
-        <div class="margin-bottom-48">
+      <div id="valores" class="bg-crema-b padding-24 margin-top-48">
+        <div class="margin-bottom-48 text-center">
           <h2 class="tx-verde-musgo">
             Nuestro compromiso con vos y el medio ambiente
           </h2>
           <p class="tx-verde-musgo tx-14">Estamos comprometidos con reducir nuestro impacto medio ambiental.
           Cada compra contribuye a proteger la naturaleza.</p>
         </div>
-        <div class="valores-flex ">
+        <div class="valores-flex text-center">
           <div class=" selec-wrapper-30">
             <div class="valores">
               <i class="fab fa-pagelines"></i>
-              <p>Tinturas madre y microdosis</p>
-              <p class="tx-14 text-left">Traemos la naturaleza a tu vida. En Selvaviva queremos ayudarte a reconectar con ella y que disfrutes transformando cualquier espacio en algo mágico.</p>
+              <p class="tx-negro">Tinturas madre y microdosis</p>
+              <p class="tx-14 text-center">Traemos la naturaleza a tu vida. En Selvaviva queremos ayudarte a reconectar con ella y que disfrutes transformando cualquier espacio en algo mágico.</p>
             </div>
           </div>
           <div class=" selec-wrapper-30">
             <div class="valores">
               <i class="fas fa-air-freshener"></i>
-              <p>Cosmética natural y vegana</p>
-              <p class="tx-14 text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat velit vel atque nihil natus, veniam, mollitia quisquam labore voluptatibus at pariatur !</p>
+              <p class="tx-negro">Cosmética natural y vegana</p>
+              <p class="tx-14 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat velit vel atque nihil natus, veniam, mollitia quisquam labore voluptatibus at pariatur !</p>
             </div>
           </div>
           <div class=" selec-wrapper-30">
             <div class="valores">
               <i class="fas fa-globe-americas"></i>
-              <p>Cuidado del medio ambiente</p>
-              <p class="tx-14 text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem amet eius in reiciendis dolores voluptas iusto est adipisci doloremque incidunt numquam !</p>
+              <p class="tx-negro">Cuidado del medio ambiente</p>
+              <p class="tx-14 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem amet eius in reiciendis dolores voluptas iusto est adipisci doloremque incidunt numquam !</p>
             </div>
           </div>
         </div>
       </div>
 
-<!-- Incluir partial de product que tenga categoría destacado que pueda ir rotando-->
+      <section>
+        <div class="content-medicine align-center">
+        <img src="/images/background/hampihome.jpg" class="img-medicina">
+        <div class="padding-48 tx-14 tx-medicine text-center">
+          <h3 class="tx-20">Las plantas y sus propiedades</h3>
+          <p>La fitoterapia consiste en el tratamiento médico de algunas enfermedades basado en el empleo de plantas y sustancias
+          vegetales, y se practica desde hace más de 7.000 años. Para curar una gripe, para aliviar el estrés,
+          descasar mejor por la noche, "a veces sólo tenemos que dejar cuidarnos por la naturaleza".</p>
+          <a href="../fitoterapia" class="tx-verde-musgo" style="text-decoration:underline">
+          LEER MÁS SOBRE SUS PROPIEDADES
+           </a>
+        </div>
+        </div>
+      </section>
+      <section>
+        <div class="content-gift align-center">
+          <img src="/images/background/regala.jpg" class="img-medicina">
+          <div class="padding-48 tx-14 tx-medicine text-center">
+            <h3 class="tx-20">Regalá Hampi y sumate al cambio</h3>
+            <p>Las plantas de interior son una apuesta segura para sacar sonrisas y celebrar cualquier ocasión. 
+            Sorprende a esa persona especial con un regalo que durará toda la vida</p>
+            <a href="../products" class="tx-verde-musgo" style="text-decoration:underline">
+              VER PRODUCTOS
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--Filosofía-->
+            <section>
+              <div class="index-filo bg-verde-musgo">
+                <div class="filo-wrapper padding-48">
+                  <h2 class="text-center tx-blanco">Filosofía Hampi</h2>
+                  <p class="tx-blanco text-center interlineado-18">
+                    Este proyecto nace con la idea de poder devolverle a este mundo una forma sana de reencontrarnos con nuestras
+                    memorias ancestrales a través de las plantas medicinales que la Pachamama nos regala.
+                  </p>
+                  <a href="../filosofia">
+                    <button class=" boton-filo tx-blanco bg-crema  w-100">Descubrí más sobre
+                      nosotrxs</button>
+                  </a>
+                </div>
+              </div>
+            </section>
+
+            <!---->
+      
+
+
+      <!-- Incluir partial de product que tenga categoría destacado que pueda ir rotando-->
 
       <div>
         <h2 class="text-center tx-negro">Productos destacados</h2>
@@ -163,68 +230,7 @@
         </div>
         </div>
       </section>
-
-      <!--Filosofía-->
-            <section>
-              <div class="index-filo bg-verde-musgo">
-                <div class="filo-wrapper padding-48">
-                  <h2 class="text-center tx-blanco">Filosofía Hampi</h2>
-                  <p class="tx-blanco text-center interlineado-18">
-                    Este proyecto nace con la idea de poder devolverle a este mundo una forma sana de reencontrarnos con nuestras
-                    memorias ancestrales a través de las plantas medicinales que la Pachamama nos regala.
-                  </p>
-                  <a href="../filosofia">
-                    <button class=" boton-filo tx-blanco bg-crema  w-100">Descubrí más sobre
-                      nosotrxs</button>
-                  </a>
-                </div>
-              </div>
-            </section>
-
-            <!---->
-      <section>
-        <div class="content-medicine">
-        <img src="/images/background/hampihome.jpg" class="img-medicina">
-        <div class="padding-48 tx-14 tx-medicine ">
-          <h3 class="tx-20">Las plantas y sus propiedades</h3>
-          <p>La fitoterapia consiste en el tratamiento médico de algunas enfermedades basado en el empleo de plantas y sustancias
-          vegetales, y se practica desde hace más de 7.000 años. Para curar una gripe, para aliviar el estrés,
-          descasar mejor por la noche, "a veces sólo tenemos que dejar cuidarnos por la naturaleza".</p>
-          <a href="../fitoterapia">
-          <button class="  tx-blanco bg-cuidadopiel-oscuro border-button boton-agregar w-100">Leer más sobre sus propiedades</button>
-           </a>
-        </div>
-        </div>
-      </section>
-      <section>
-        <div class="content-gift">
-          <img src="/images/background/regala.jpg" class="img-medicina">
-          <div class="padding-48 tx-14 tx-medicine ">
-            <h3 class="tx-20">Regalá Hampi y sumate al cambio</h3>
-            <p>Las plantas de interior son una apuesta segura para sacar sonrisas y celebrar cualquier ocasión. 
-            Sorprende a esa persona especial con un regalo que durará toda la vida</p>
-            <a href="../products">
-              <button class="tx-blanco bg-cuidadopiel-oscuro border-button w-100  boton-agregar">Ver productos</button>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!--Newsletter-->
-            <section>
-              <div class="bg-img-medicina">
-                <div class="tx-medicine padding-48 tx-20 tx-blanco text-left">
-                  <p>Bienvenidx a nuestra familia!</p>
-                  <small>Sé la/el primerx en enterarte de todas nuestras novedades, ofertas y los mejores consejos para el cuidado de tu salud</small>
-                  <form action="/" method="POST" class="margin-top-16">
-                    <input name="newsletter" id="newsletter" type="email"></input>
-                  </form>
-                  <a href="#">
-                  <button class="boton-contact tx-blanco bg-verde-musgo">Suscribite :)</button>
-                  </a>
-                </div>
-              </div>
-            </section>
+      
     </main>
 
     <!--Acá va el footer-->

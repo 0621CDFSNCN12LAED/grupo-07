@@ -14,24 +14,39 @@ body {
   color: #454545;
   background: #fff;
   line-height: 1.65;
-  /*font-family:  sans-serif;
-  font-size: 14px;
-  background-color: whitesmoke;
-  */
 }
 
 header {
-  /*height: 130px;*/
   justify-content: space-around;
   margin: 0 auto;
-  position: fixed;
+  position: static;
   top: 0px;
   width: 100%;
-  /*padding: 24px 24px 24px 24px;*/
+}
+
+#img-header{
+  margin-top: -316px;
+  z-index: -1;
+  position: relative;
+}
+
+#img-header div {
+  position: absolute;
+  bottom: 20%;
+  font-size: 16pxpx;
+  color: white;
+  left: 30px;
+  text-shadow: 2px 2px grey;
+}
+
+#header-shadow:hover{
+  box-shadow: 0px 0.5px white;
 }
 
 #frase-tienda{
-  height: 48pxpx;
+  height: 50px;
+  align-items: center;
+  padding: 8px;
 }
 .logo-hy {
   width: 150px;
@@ -44,6 +59,10 @@ header {
   margin: 6px 0;
   transition: 0.4s;
   
+}
+
+#cruz:hover {
+  opacity: 0.5;
 }
 
 .change .bar1 {
@@ -65,7 +84,7 @@ header {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: whitesmoke;
+  background-color: #f1e4d8;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -75,10 +94,14 @@ header {
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
-  color: #0a4c4c;
+  font-size: 16px;
+  color: #848d7e;
   display: block;
   transition: 0.3s;
+}
+
+.sidenav a:hover{
+  margin-left: 8px;
 }
 
 
@@ -90,15 +113,8 @@ header {
   margin-left: 50px;
 }
 
-/*
-.icon-burger {
-  font-size: 24px;
-  color: whitesmoke;
-}
-*/
-
-.fa-smile {
-  font-size: 24px;
+.fa-user-circle {
+  font-size: 30px;
   color: whitesmoke;
 }
 
@@ -150,6 +166,20 @@ header {
   margin-right: 10px;
 }
 
+.content-medicine{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 24px ;
+}
+
+.content-gift{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 24px;
+  flex-direction: row-reverse;
+}
+
+
 .product-wrapper {
   padding: 16px;
 }
@@ -184,9 +214,9 @@ header {
   object-fit: cover;
 }
 
-.img-medicina{
+.img-medicina, .img-gift{
   width: 100%;
-  height: 500px;
+  height: 300px;
   object-fit: cover;
 }
 
@@ -292,6 +322,11 @@ footer {
   align-items: center;
 }
 
+.py-24{
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
 .padding-8 {
   padding: 8px;
 }
@@ -310,6 +345,10 @@ footer {
 
 .padding-8-48{
   padding: 8px 48px;
+}
+
+.pt-24 {
+  padding-top: 24px;
 }
 
 .padding-top{
@@ -344,6 +383,10 @@ footer {
 .w-50 {
   width: 50%;
 }
+.w-60 {
+  width: 60%;
+}
+
 .w-70 {
   width: 70%;
 }
@@ -357,6 +400,7 @@ footer {
 .w-90 {
   width: 90%;
 }
+
 .w-100 {
   width: 100%;
 }

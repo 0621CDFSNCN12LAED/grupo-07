@@ -37,7 +37,7 @@ export default class ProductsInDb extends Component {
               </div>
               <div className="card bg-dark text-white shadow mb-4">
                 <div className="card-body">
-                  <h4>Salud </h4>
+                  <h4>Fitoterapia </h4>
                   <p>Total de productos: {count[2]}</p>
                 </div>
               </div>
@@ -58,7 +58,7 @@ export default class ProductsInDb extends Component {
 
         count.push(products.meta.countByCategory.belleza);
         count.push(products.meta.countByCategory.higiene);
-        count.push(products.meta.countByCategory.salud);
+        count.push(products.meta.countByCategory.fitoterapia);
 
         console.log(count);
 

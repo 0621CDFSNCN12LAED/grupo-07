@@ -5,33 +5,33 @@ module.exports = {
         const products = await Product.findAll();
 
         return res.json({
-            meta: {
-                status: 200,
-                count: products.length,
-                url: "http://localhost:3000/api/products/",
-                countByCategory: {
-                    belleza: products.filter(
-                        (product) => product.category == "Belleza"
-                    ).length,
-                    higiene: products.filter(
-                        (product) => product.category == "Higiene"
-                    ).length,
-                    salud: products.filter(
-                        (product) => product.category == "Salud"
-                    ).length,
-                },
+          meta: {
+            status: 200,
+            count: products.length,
+            url: "http://localhost:3000/api/products/",
+            countByCategory: {
+              belleza: products.filter(
+                (product) => product.category == "Belleza"
+              ).length,
+              higiene: products.filter(
+                (product) => product.category == "Higiene"
+              ).length,
+              fitoterapia: products.filter(
+                (product) => product.category == "Fitoterapia"
+              ).length,
             },
-            data: products.map((product) => {
-                return {
-                    id: product.id,
-                    name: product.name,
-                    description: product.description,
-                    category: product.category,
-                    detail: "http://localhost:3000/api/products/" + product.id,
-                    image: product.image,
-                    price: product.price,
-                };
-            }),
+          },
+          data: products.map((product) => {
+            return {
+              id: product.id,
+              name: product.name,
+              description: product.description,
+              category: product.category,
+              detail: "http://localhost:3000/api/products/" + product.id,
+              image: product.image,
+              price: product.price,
+            };
+          }),
         });
     },
     detail: async (req, res) => {

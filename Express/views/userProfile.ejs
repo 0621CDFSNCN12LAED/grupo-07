@@ -43,7 +43,11 @@
              <div >
               <a href="#"><button class="boton-filo w-100 ">Métodos de pago</button></a>
             </div>
-           
+            <% if (locals.userLogged && userLogged.admin) { %>
+            <div >
+              <a href="/products/create"><button class="boton-filo w-100 ">Crear producto</button></a>
+            </div>
+            <% } %>
           </div>    
 
           
