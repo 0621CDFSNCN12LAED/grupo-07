@@ -15,18 +15,18 @@ export default class ProductsInDb extends Component {
 
     render() {
         if (!this.state.products) {
-            return <div class="row">CARGANDO!!!</div>;
+            return <div className="row">CARGANDO!!!</div>;
         }
 
         return (
-            <div class="row">
+            <div className="row">
                 {this.state.products.map((product) => {
                     return (
-                        <div class="col-lg-12 mb-4">
-                            <div class="card bg-dark text-white shadow">
-                                <div class="card-body">{product.name}</div>
-                            </div>
+                      <div className="col-lg-12 mb-4">
+                        <div className="card bg-dark text-white shadow">
+                          <div className="card-body">{product.name}</div>
                         </div>
+                      </div>
                     );
                 })}
             </div>

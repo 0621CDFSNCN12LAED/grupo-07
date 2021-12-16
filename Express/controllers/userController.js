@@ -50,13 +50,7 @@ const controller = {
         const createdUser = await User.create(usuario);
 
         return res.redirect("/user/login");
-        /*
-    await User.create({
-      ...req.body,
-      password: bcryptjs.hashSync(req.body.password, 10),
-      avatar: req.file.filename,
-    });
-    return res.redirect("/user/login");*/
+        
     },
 
     //Login de usuarios
@@ -136,15 +130,13 @@ const controller = {
             }
         );
 
-        /*         console.log("pasó");
-
-        let userToLogin = await User.findOne({
-            where: { email: req.body.email },
-        });
-        req.session.userLogged = userToLogin; */
+        
 
         res.redirect("/user/userProfile");
     },
+
+
+  
 
     /* CARRITO
     cart: async (req, res) => {

@@ -118,10 +118,19 @@ background-color: #f1e4d8
   color: #0a4c4c;
 }
 
+a {
+  color: #0a4c4c;
+}
+
+a:hover {
+  text-decoration: underline;
+  opacity: 0.5;
+}
+
+
 .border-button {
   border: #84c3c3;
 }
-
 
 
 .br-bottom {
@@ -129,8 +138,7 @@ background-color: #f1e4d8
 }
 
 h2 {
-  font-size: 28px;
-  
+  font-size: 28px; 
 }
 
 #dropUser {
@@ -149,6 +157,10 @@ h2 {
 
 .text-left {
   text-align: left;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .text-into-block{
@@ -179,3 +191,4 @@ h2 {
 .tx-34{
   font-size: 34px;
 }
+

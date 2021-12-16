@@ -9,18 +9,16 @@ import CategoriesInDb from "./CategoriesInDb";
 
 export default function ContentWrapper() {
     return (
-      <div id="content-wrapper" class="d-flex flex-column">
-        <div id="content">
+      <div id="content-wrapper " className="d-flex flex-column">
+        <div id="content bg-hampi">
           <TopNavBar />
 
-          <div class="container-fluid">
-            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-              <h1 class="h3 mb-0 text-gray-800">Hampi Yura Dashboard</h1>
-            </div>
+          <div className="container-fluid mt-5">
+            
 
             <ContentRowTop />
 
-            <div class="row">
+            <div className="row">
               <ContentCard title="List of products in Database">
                 <ProductsInDb />
               </ContentCard>

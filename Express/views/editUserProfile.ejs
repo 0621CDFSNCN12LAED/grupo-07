@@ -16,7 +16,7 @@
 
 							<div class="form-input">
 								<label class="main-label" for="name"></label>
-								<input class="border-radius" id="name" type="text" name="fullName"
+								<input class="" id="name" type="text" name="fullName"
 									placeholder="Nombre y apellido"
 									value="<%=user.fullName%>"
                 />
@@ -24,28 +24,31 @@
 
 							<div class="form-input">
 								<label class="main-label" for="birthdate"></label>
-								<input class="border-radius bg-blanco" id="birthdate" type="date" name="birthdate"
+								<input class=" " id="birthdate" type="date" name="birthdate"
 									placeholder="Fecha de nacimiento"
 									value="<%= user.birthdate%>" />
 							</div>
               
 							<div class="form-input">
 								<label class="main-label" for="email"></label>
-								<input class="border-radius" id="email" type="email" name="email"
+								<input class="" id="email" type="email" name="email"
 									placeholder="Dirección de email: persona@mail.com"
 									value="<%= user.email %>" />
 								
 							</div>
 							<div class="form-input">
 								<label class="main-label" for="avatar"></label>
-								<input class="border-radius" type="file" name="avatar" 
+								<input class="" type="file" name="avatar" accept="image/*"
 									value="<%= user.avatar %>" />
 								
 							</div>
 							
 							
-							<div class="register-buttons">
-								<button class="boton-form" type="submit">ACEPTAR</button>
+							<div class="register-buttons w-100">
+								<button class="boton-filo bg-crema w-100" type="submit">ACEPTAR</button>
+							</div>
+							<div class="register-buttons w-100">
+								<button class="boton-filo bg-white w-100" type="back">CANCELAR</button>
 							</div>
 						</form>
 					</div>
