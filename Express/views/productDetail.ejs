@@ -12,10 +12,10 @@
         <!--Acá va el header-->
         <%- include ("partials/header.ejs") %>
 
-            <main id="main-content">
+            <main id="main-content ">
                 <!--Acá va el partial de producto-->
                 
-                <article class="detalle-producto br-bottom">
+                <article class="detalle-producto br-bottom padding-24 margin-top-48">
                     <div class="flex prod-detail">
                         <div class=" tx-medicine w-100 ">
                             <img src="/images/product-images/<%= product.image %>" class="w-100"/>
@@ -43,9 +43,9 @@
                     <div class="w-100">     
                     
                     <% if (locals.userLogged) { %>
-                    <a  href= "/carrito" ><button class="boton-añadir  w-100 ">Añadir al carrito</button></a>
+                    <a  id="añadir" href= "/carrito" ><button class="boton-añadir  w-100 ">Añadir al carrito</button></a>
                     <% } else { %> 
-                    <a href= "/user/login" ><button class="boton-añadir  w-100 ">Añadir al carrito</button></a>
+                    <a id="añadir" href= "/user/login" ><button class="boton-añadir  w-100 ">Añadir al carrito</button></a>
                     <% } %> 
 
                     <% if (locals.userLogged && userLogged.admin) { %> 
@@ -71,63 +71,77 @@
 
 
                 <!--Carrusel de imgs-->
-                <section class="margin-top-48 margin-bottom-48">
-                    <h3 class="titulo-otros">Otros productos que también te pueden gustar ♡</h3>
+                <div class="padding-24">
+        <h4 class="text-left tx-negro">Otros productos que también te pueden gustar ♡</h4>
+        <div class="contenedor-scroll">
+          <div class="padding-16 selec-wrapper-50 selec-wrapper-25">
+            <article class="box box-shadow">
+              <img
+                src="/images/product-images/crema-humectante-dia.png"
+                class=" img-dest"
+              />
+              <div class="padding-8">
+                <p class="tx-12">Producto 1</p>
+                <p class="tx-12">$12.99</p>
+                <div>
+                  <button class=" boton-agregar tx-blanco bg-cuidadopiel-oscuro border-button w-100">Agregar</button>
+                </div>
+              </div>
+            </article>
+          </div>
 
-                    <div class="contenedor-scroll">
-                        <div class="card padding-8 margin-bottom-16">
-                            <article>
-                                <img src="/images/product-images/prod6.jpg" class="img-dest" />
+          <div class="padding-16 selec-wrapper-50 selec-wrapper-25 margin-left">
+            <article class="box box-shadow">
+              <img
+                src="/images/product-images/shampoo-seco.jpg"
+                class=" img-dest"
+              />
+              <div class="padding-8">
+                <p class="tx-12">Producto 2</p>
+                <p class="tx-12">$9.99</p>
+                <div>
+                  <button class=" boton-agregar tx-blanco bg-cuidadopiel-oscuro border-button w-100">Agregar</button>
+                </div>
+              </div>
+            </article>
+          </div>
 
-                                <div class="contenedor">
-                                    <p class="prod">Producto 1</p>
-                                    <p class="price">$12.99</p>
-                                </div>
-                                <button class="boton-añadir-op">Añadir al carrito</button>
-                                <button class="boton-cantidad-op">- 1 +</button>
+          <div class="padding-16 selec-wrapper-50 selec-wrapper-25 margin-left">
+            <article class="box box-shadow">
+              <img
+                src="/images/product-images/shampoo-rulos.jpg"
+                class=" img-dest"
+              />
+              <div class="padding-8">
+                <p class="tx-12">Producto 3</p>
+                <p class="tx-12">$17.99</p>
+                <div>
+                  <button class=" boton-agregar tx-blanco bg-cuidadopiel-oscuro border-button w-100">Agregar</button>
+                </div>
+              </div>
+            </article>
+          </div>
 
-                            </article>
-                        </div>
-
-                        <div class="card padding-8 margin-bottom-16">
-                            <article>
-                                <img src="/images/product-images/prod7.jpg" class="img-dest" />
-                                <div class="contenedor">
-                                    <p class="prod">Producto 1</p>
-                                    <p class="price">$12.99</p>
-                                </div>
-                                <button class="boton-añadir-op">Añadir al carrito</button>
-                                <button class="boton-cantidad-op">- 1 +</button>
-                            </article>
-                        </div>
-
-                        <div class="card padding-8 margin-bottom-16">
-                            <article>
-                                <img src="/images/product-images/prod8.jpg" class="img-dest" />
-                                <div class="contenedor">
-                                    <p class="prod">Producto 1</p>
-                                    <p class="price">$12.99</p>
-                                </div>
-                                <button class="boton-añadir-op">Añadir al carrito</button>
-                                <button class="boton-cantidad-op">- 1 +</button>
-                            </article>
-                        </div>
-
-                        <div class="card padding-8 margin-bottom-16">
-                            <article>
-                                <img src="/images/product-images/prod9.jpg" class="img-dest" />
-                                <div class="contenedor">
-                                    <p class="prod">Producto 1</p>
-                                    <p class="price">$12.99</p>
-                                </div>
-                                <button class="boton-añadir-op">Añadir al carrito</button>
-                                <button class="boton-cantidad-op">- 1 +</button>
-                            </article>
-
-                        </div>
-                    </div>
-                    </div>
-                </section>
+          <div class="padding-16 selec-wrapper-50 selec-wrapper-25 margin-left">
+            <article class="box box-shadow">
+              <img
+                src="/images/product-images/pasta-dental.png"
+                class=" img-dest"
+              />
+              <div class="padding-8">
+                <p class="tx-12">Producto 4</p>
+                <p class="tx-12">$15.99</p>
+                <div>
+                  <button class=" boton-agregar tx-blanco bg-cuidadopiel-oscuro border-button w-100">Agregar</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        
+            
+          </article>
+         </div>
+        </div>
             </main>
             <!--Acá va el footer-->
             <%- include ("partials/footer.ejs") %>

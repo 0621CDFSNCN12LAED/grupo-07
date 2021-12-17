@@ -3,8 +3,12 @@ const form = document.getElementById("userLoginForm");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const errorList = document.querySelector("#errores");
+const inputs = document.querySelector("#userLoginForm input");
 
 email.focus();
+inputs.addEventListener ("focus", (event)=>{
+    event.target.style.borderColor = "grey";
+})
 
 const requiredInputs = [email, password];
 

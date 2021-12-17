@@ -112,6 +112,6 @@
   align-items: center;
 }
 
-.avatar {
-  text-align: left;
+#añadir:hover {
+text-decoration: none;
 }

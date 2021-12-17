@@ -8,11 +8,12 @@
 		<!--Acá va el header-->
 		<%- include ("partials/header.ejs") %>
 			<main id="main-content">
-				<section class="padding-24">
+				<section class="padding-24 margin-bottom-48">
 					<div>
 						<form id="userRegisterForm" class="register-form" action="/user/register" method="POST" enctype="multipart/form-data">
 							<div>
 								<h2 class="text-center">Registrate</h2>
+								<p class="text-center">Por favor completá la siguiente información</p>
 							<!--</div>
 							<ul class="errores">
     						</ul>-->
@@ -33,7 +34,7 @@
 							</div>
 							<div class="form-input margin-auto">
 								<label class="main-label" for="birthdate"></label>
-								<input class="bg-blanco" id="birthdate" type="date" name="birthdate"
+								<input class="" id="birthdate" type="date" name="birthdate"
 									placeholder="Fecha de nacimiento"
 									value="<%= locals.oldData ? oldData.birthdate : null%>" />
 								<% if (locals.errors && errors.birthdate) { %>
@@ -76,15 +77,16 @@
 									<% } %>
 							</div>
 							
-							<div class="form-input margin-auto">
-								<p class="register-he_leido tx-negro text-justify">
-									<input type="checkbox" value="1" required />
+							<div class="form-input margin-auto flex w-100 margin-top-16 align-center">
+								<input type="checkbox" value="1" class="w-10" required />
+								<small class="w-90 register-he_leido tx-negro text-justify">
+									
 									He leido y acepto el tratamiento de mis datos explicado en la
-									politica de privacidad y en los terminos y condiciones
-								</p>
+									politica de privacidad y en los terminos y condiciones.
+								</small>
 							</div>
-							<div class="register-buttons margin-auto">
-								<button class="boton-form boton-filo" type="submit" id="btnSubmit">CREAR MI CUENTA</button>
+							<div class=" margin-auto">
+								<button class="boton-form w-100" type="submit" id="btnSubmit">CREAR MI CUENTA</button>
 							</div>
 						</form>
 					</div>

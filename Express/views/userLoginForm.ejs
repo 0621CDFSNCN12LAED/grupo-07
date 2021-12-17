@@ -21,8 +21,9 @@
                         method="POST"
                         id="userLoginForm"
                     >
-                        <div>
-                            <h2>Login</h2>
+                        <div class="text-center">
+                            <h2>Iniciar sesión</h2>
+                            <p>Introducí tu correo electrónico y contraseña:</p>
                         </div>
                         <ul id="errores" class="hidden"></ul>
                         <div class="form-input">
@@ -54,14 +55,15 @@
                             <div><%= errors.password.msg %></div>
                             <% } %>
                         </div>
-                        <div class="form-input">
-                            <p class="register-he_leido tx-negro text-justify">
-                                <input type="checkbox" name="remember_user" />
+                        <div class="form-input w-100 flex align-center margin-top-16">
+                            <input type="checkbox" class="w-10" name="remember_user" />
+                            <small class="w-90 register-he_leido tx-negro text-justify">
+                                
                                 Recordame
-                            </p>
+                            </small>
                         </div>
-                        <div class="register-buttons">
-                            <button class="boton-form boton-filo" type="submit">
+                        <div class="w-100">
+                            <button class="boton-form" type="submit">
                                 Ingresar
                             </button>
                         </div>

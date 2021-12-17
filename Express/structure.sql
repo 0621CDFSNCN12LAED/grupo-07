@@ -137,7 +137,69 @@ VALUES
          null,
          "Higiene",
           10,
-          0);
+          0),
+        
+        (default,
+         "Pasta dental",
+         300,
+         "Pasta dental para que tengas lo mejores dientes",
+         "pasta-dental.png",
+         null,
+         "Higiene",
+         5,
+        1),
+    
+        (default,
+         "Protector solar facial",
+         1000,
+         "Cuidá tu cara con este increíble protector",
+        "pasta-dental.png",
+        null,
+         "Belleza",
+         10,
+         1),
+    
+    
+        (default,
+         "Crema humectante - día",
+         900,
+         "Crema humectante para el día",
+         "crema-humectante-dia.png",
+         null,
+         "Belleza",
+        5,
+        1),
+    
+        (default,
+         "Crema humectante - noche",
+         900,
+         "Crema humectante para la noche",
+         "pasta-dental.png",
+         null,
+         "Belleza",
+        10,
+        0),
+
+        (default,
+         "Protector solar facial",
+         1000,
+         "Cuidá tu cara con este increíble protector",
+        "pasta-dental.png",
+        null,
+         "Belleza",
+         10,
+         1),
+    
+        (default,
+         "Cannabis microdosis",
+         1500,
+         "Tintura madre",
+         "cannabis.png",
+         null,
+         "Higiene",
+          10,
+          0)
+          ;
 
 ;
 -- BORRAR LA COLUMNA DELETED DE PRODUCTOS Y AGREGAR COLUMNA deletedAt VALOR TIMESTAMP

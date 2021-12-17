@@ -8,9 +8,12 @@ const avatar = document.getElementById("avatar");
 const btnSubmit = document.getElementById("btnSubmit");
 const erName = document.querySelector(".erName");
 const errorList = document.querySelector("#errores");
+const inputs = document.querySelector("#userRegisterForm input");
 
-//Hacemos cosas con esos elementos
 fullName.focus();
+inputs.addEventListener("focus", (event) => {
+  event.target.style.borderColor = "gray";
+});
 
 const requiredInputs = [fullName, birthdate, email, password, avatar];
 

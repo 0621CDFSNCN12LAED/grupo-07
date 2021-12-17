@@ -115,7 +115,7 @@ footer {
 .form-input input[type="checkbox"],
 .form-input input[type="radio"] {
   width: auto;
-  margin-bottom: 10px;
+  
 }
 .required-message {
   margin-top: 0;
@@ -202,8 +202,8 @@ footer {
 /* Detalle de producto */
 
 .detalle-producto {
-  padding-bottom: 15px;
-  border-bottom: solid 4px #daa4a1;
+  margin-bottom: 48px;
+  border-bottom: solid 1px #daa4a1;
 }
 
 
