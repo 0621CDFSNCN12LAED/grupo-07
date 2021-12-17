@@ -50,10 +50,10 @@ CREATE TABLE carts_products (
   id INT PRIMARY KEY AUTO_INCREMENT,
   priceUnit DECIMAL NOT NULL,
   quantity INT NOT NULL,
-  productId INT NOT NULL,
-  FOREIGN KEY (productId) REFERENCES products(id),
-  cartId INT NOT NULL,
-  FOREIGN KEY (cartId) REFERENCES carts(id)
+  id_product INT NOT NULL,
+  FOREIGN KEY (id_product) REFERENCES products(id),
+  id_cart INT NOT NULL,
+  FOREIGN KEY (id_cart) REFERENCES carts(id)
 );
 
 

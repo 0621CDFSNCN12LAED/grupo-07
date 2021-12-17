@@ -1,4 +1,4 @@
-const { User, Cart, carts_products } = require("../database/models");
+const { User, Cart, Carts_products, Product } = require("../database/models");
 
 const fs = require("fs");
 const path = require("path");
@@ -24,54 +24,53 @@ const controller = {
         }
     },
     add: async (req, res) => {
-        console.log("estas aca");
         const cartsUser = await Cart.findAll({
             where: { id_user: req.session.userLogged.id },
         });
-        const biggestId = await carts_products.max("id");
+        const biggestId = await Carts_products.max("id");
         const biggestIdCart = await Cart.max("id");
         console.log(cartsUser);
 
         if (!cartsUser[0]) {
             await Cart.create({
-                id: biggestIdCart + 1,
-                // status: "in-p",
+                id: biggestIdCart + 2,
+                status: "in-p",
                 id_user: req.session.userLogged.id,
             });
 
             const selectedProduct = await Product.findByPk(req.params.id);
+            console.log("el producto seleccionado es " + selectedProduct)
             const cartsUser = await Cart.findAll({
                 where: {
-                    id_user: req.session.userLogged.id /* status: "in-p" */,
+                    id_user: req.session.userLogged.id, status: "in-p"
                 },
             });
 
-            await carts_products.create({
+            await Carts_products.create({
                 id: biggestId + 1,
                 priceUnit: selectedProduct.price,
                 quantity: 1,
-                productId: selectedProduct.id,
-                cartId: cartsUser[0].id,
+                id_product: selectedProduct.id,
+                id_cart: cartsUser[0].id,
             });
         }
         if (cartsUser[0]) {
             const selectedProduct = await Product.findByPk(req.params.id);
             const cartsUser = await Cart.findAll({
-                where: { id_user: req.session.userLogged.id, /* status: "in-p" */ },
+                where: { id_user: req.session.userLogged.id, status: "in-p"},
             });
-            console.log("llego hasta aca");
 
-            await carts_products.create({
+            await Carts_products.create({
                 id: biggestId + 1,
                 priceUnit: selectedProduct.price,
                 quantity: 1,
-                productId: selectedProduct.id,
-                cartId: cartsUser[0].id,
+                id_product: selectedProduct.id,
+                id_cart: cartsUser[0].id,
             });
         } else {
             res.redirect("/products");
         }
-        res.redirect("/products");
+        res.redirect("/carrito");
     },
 };
 

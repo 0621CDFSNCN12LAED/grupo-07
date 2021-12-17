@@ -8,8 +8,8 @@ module.exports = (sequelize) => {
         },
         priceUnit: DataTypes.INTEGER,
         quantity: DataTypes.INTEGER,
-        productId: DataTypes.INTEGER,
-        cartId: DataTypes.INTEGER,
+        id_product: DataTypes.INTEGER,
+        id_cart: DataTypes.INTEGER,
     };
 
     const Carts_products = sequelize.define("Carts_products", cols, {
