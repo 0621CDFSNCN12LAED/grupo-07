@@ -22,20 +22,20 @@ export default class ProductsInDb extends Component {
 
         return (
           <div className="row">
-            <div className="col-lg-12 mb-4">
-              <div className="card bg-dark text-white shadow mb-4">
+            <div className="row col-lg-12 mb-4 m-auto justify-content-evenly">
+              <div className="col-lg-3 mr-4 card bg-hampi text-verde-musgo shadow mb-4">
                 <div className="card-body">
                   <h4> Belleza</h4>
                   <p>Total de productos: {count[0]}</p>
                 </div>
               </div>
-              <div className="card bg-dark text-white shadow mb-4">
+              <div className="col-lg-3 mr-4 card bg-hampi text-verde-musgo shadow mb-4">
                 <div className="card-body">
                   <h4> Higiene </h4>
                   <p>Total de productos: {count[1]}</p>
                 </div>
               </div>
-              <div className="card bg-dark text-white shadow mb-4">
+              <div className="col-lg-3 mr-4 card bg-hampi text-verde-musgo shadow mb-4">
                 <div className="card-body">
                   <h4>Fitoterapia </h4>
                   <p>Total de productos: {count[2]}</p>

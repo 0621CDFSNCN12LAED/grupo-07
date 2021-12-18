@@ -6089,6 +6089,10 @@ button.bg-dark:hover {
 .justify-content-around {
     justify-content: space-around !important;
 }
+
+.justify-content-evenly {
+    justify-content: space-evenly !important;
+}
 .align-items-start {
     align-items: flex-start !important;
 }
@@ -8566,6 +8570,10 @@ button.bg-dark:hover {
 }
 .text-primary {
     color: #4e73df !important;
+}
+
+.text-verge-musgo{
+color: #848d7e
 }
 a.text-primary:focus,
 a.text-primary:hover {

@@ -20,13 +20,15 @@ class LastProductInDb extends Component {
               <h2>{this.state.lastProduct.name}</h2>
               <img
                 className="img-fluid px-3 px-sm-4 mt-3 mb-4"
-                style={{ width: "40rem" }}
+                style={{ width: "20rem" }}
                 src={`http://localhost:3000/images/product-images/${this.state.lastProduct.image}`}
                 alt="Imagen del producto"
               />
             </div>
-            <p>Price: {this.state.lastProduct.price}</p>
-            <p>Description: {this.state.lastProduct.description}</p>
+            <p className="text-center">Price: {this.state.lastProduct.price}</p>
+            <p className="text-center">
+              Description: {this.state.lastProduct.description}
+            </p>
           </ContentCard>
         );
     }

@@ -115,3 +115,7 @@
 #añadir:hover {
 text-decoration: none;
 }
+
+#filo-index a:hover {
+  text-decoration: none;
+}

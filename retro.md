@@ -40,3 +40,7 @@ De a poco fuimos reacomodando la parte visual del proyecto. Aún nos quedan algu
 Creo que este sprint fue uno de lo que nos generó más dudas. Hasta último momento estuvimos intentando resolver el logut, que finalmente lo hicimos gracias a una consulta en clase.
 
 Seguimos trabajando bien en equipo, reseptando nuestras opiniones y escuchando los aportes de cada uno para intentar resolver los problemas que se nos presentan de la mejor manera.
+
+Sprint 7:
+
+Este sprint fue un poco más "corto" que los últimos porque ya teníamos hecha una parte de las validaciones desde antes. Creo que eso ayudó a que podamos adelantar con otras cosas que teníamos pendientes. Algunas validaciones nos costaron más que otras, pero por suerte en el rabbit hole de internet todo se encuentra :`
